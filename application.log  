@@ -1,0 +1,67 @@
+2020-10-08 16:09:17,468 INFO app.repositories.ingredients Thread-2 : Going to delete and item with [id:10]
+2020-10-08 16:09:18,640 INFO app.repositories.ingredients Thread-3 : Going to delete and item with [id:10]
+2020-10-08 16:09:19,457 INFO app.repositories.ingredients Thread-4 : Going to delete and item with [id:10]
+2020-10-08 16:10:34,177 INFO app.repositories.ingredients Thread-2 : Going to delete and item with [id:10]
+2020-10-08 16:10:35,452 INFO app.repositories.ingredients Thread-2 : Going to delete and item with [id:10]
+2020-10-08 22:06:10,747 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredients [ids:3,2,hola]
+2020-10-08 22:08:23,283 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredients [ids:3,2,hola][error:(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "hola"
+LINE 3: WHERE ingredients.id IN ('3', '2', 'hola')
+                                           ^
+
+[SQL: SELECT ingredients.id AS ingredients_id, ingredients.name AS ingredients_name, ingredients.type AS ingredients_type, ingredients.price AS ingredients_price, ingredients.currency AS ingredients_currency, ingredients.measure_unit AS ingredients_measure_unit, ingredients.storage AS ingredients_storage, ingredients.expiration_time AS ingredients_expiration_time, ingredients.date_created AS ingredients_date_created, ingredients.last_updated AS ingredients_last_updated 
+FROM ingredients 
+WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
+[parameters: {'id_1': '3', 'id_2': '2', 'id_3': 'hola'}]
+(Background on this error at: http://sqlalche.me/e/13/9h9h)]
+2020-10-08 22:09:48,946 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredients [ids:3,2,hola][error:(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "hola"
+LINE 3: WHERE ingredients.id IN ('3', '2', 'hola')
+                                           ^
+
+[SQL: SELECT ingredients.id AS ingredients_id, ingredients.name AS ingredients_name, ingredients.type AS ingredients_type, ingredients.price AS ingredients_price, ingredients.currency AS ingredients_currency, ingredients.measure_unit AS ingredients_measure_unit, ingredients.storage AS ingredients_storage, ingredients.expiration_time AS ingredients_expiration_time, ingredients.date_created AS ingredients_date_created, ingredients.last_updated AS ingredients_last_updated 
+FROM ingredients 
+WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
+[parameters: {'id_1': '3', 'id_2': '2', 'id_3': 'hola'}]
+(Background on this error at: http://sqlalche.me/e/13/9h9h)]
+2020-10-08 22:28:39,791 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:testeando ando]
+2020-10-08 22:28:58,485 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:testeando ando]
+2020-10-08 22:29:42,981 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:1][error:testeando ando]
+2020-10-08 22:30:05,883 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:33:15,268 ERROR app.repositories.ingredients Thread-4 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:33:32,746 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:33:49,425 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:36:28,958 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:38:57,376 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:39:15,896 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:39:17,483 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:39:29,372 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:39:32,150 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:1][error:invalid literal for int() with base 10: 'hola']
+2020-10-08 22:44:19,203 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredients [ids:3,2,h][error:(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "h"
+LINE 3: WHERE ingredients.id IN ('3', '2', 'h')
+                                           ^
+
+[SQL: SELECT ingredients.id AS ingredients_id, ingredients.name AS ingredients_name, ingredients.type AS ingredients_type, ingredients.price AS ingredients_price, ingredients.currency AS ingredients_currency, ingredients.measure_unit AS ingredients_measure_unit, ingredients.storage AS ingredients_storage, ingredients.expiration_time AS ingredients_expiration_time, ingredients.date_created AS ingredients_date_created, ingredients.last_updated AS ingredients_last_updated 
+FROM ingredients 
+WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
+[parameters: {'id_1': '3', 'id_2': '2', 'id_3': 'h'}]
+(Background on this error at: http://sqlalche.me/e/13/9h9h)]
+2020-10-11 00:25:12,584 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:26:13,617 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:28:06,277 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:31:45,364 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:33:31,044 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:33:57,392 DEBUG app.repositories.ingredients Thread-3 : there was an error validating ingredient
+2020-10-11 00:34:22,379 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:34:35,866 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:35:47,478 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient
+2020-10-11 00:36:11,434 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient{'food_group': ['Missing data for required field.'], 'veggie_friendly': ['Missing data for required field.']}
+2020-10-11 00:36:41,587 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [%s]
+2020-10-11 00:36:58,232 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ['Missing data for required field.'], 'veggie_friendly': ['Missing data for required field.']}]
+2020-10-11 00:42:54,668 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["%s 'food_group' is not a valid supported meal"], 'storage': ["%s 'storage' is not a valid supported meal"]}]
+2020-10-11 00:43:30,229 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:44:43,184 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:45:03,436 DEBUG app.repositories.ingredients Thread-4 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:45:54,617 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:46:01,114 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:47:03,664 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 00:47:41,370 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
+2020-10-11 01:13:10,786 DEBUG app.repositories.recipes Thread-2 : there was an error validating recipe: [{'meal_type': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'veggie_friendly': ['Missing data for required field.'], 'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.']}]

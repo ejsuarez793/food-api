@@ -1,0 +1,4 @@
+
+
+class IngredientsRestService:
+    pass
