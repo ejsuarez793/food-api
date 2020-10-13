@@ -31,7 +31,7 @@ def create_recipe(data):
         data['id'] = str(uuid.uuid4())
         validated_data = recipe_schema.load(data)
         new_recipe = Recipe(**validated_data)
-    except ValidationError as e:
+    except Exception as e:
         log.debug('there was an error validating recipe: [{error}]'.format(error=str(e)))
         return None, {'msg': 'there was an error validating recipe', 'status_code': 400}
 

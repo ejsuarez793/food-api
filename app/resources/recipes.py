@@ -5,8 +5,11 @@ from marshmallow import RAISE
 from app.repositories import recipes
 from app.validators.recipes import RecipeSearchQueryParser
 from app.validators.recipes import RecipeSearchQuery
+from app.validators.recipes_recommendations import RecipesRecommendationsQueryParser, RecipesRecommendationsQueryParams
 
 recipeSearchQueryParser = RecipeSearchQueryParser()
+
+rrqp = RecipesRecommendationsQueryParser()
 
 
 class Recipe(Resource):
@@ -39,3 +42,12 @@ class RecipeById(Resource):
 
     def delete(self, id: str):
         return recipes.delete_recipe(id), 204
+
+
+class RecipeRecommendation(Resource):
+
+    @rrqp.use_args(RecipesRecommendationsQueryParams(unknown=RAISE), location='query')
+    def get(self, params: 'RecipesRecommendationsQueryParams'):
+        print(type(params))
+        print(params)
+        pass

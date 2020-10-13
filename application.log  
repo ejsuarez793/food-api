@@ -65,3 +65,294 @@ WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
 2020-10-11 00:47:03,664 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
 2020-10-11 00:47:41,370 DEBUG app.repositories.ingredients Thread-2 : there was an error validating ingredient: [{'food_group': ["vegetable 'food_group' is not a valid supported meal"], 'storage': ["refrigerate 'storage' is not a valid supported meal"]}]
 2020-10-11 01:13:10,786 DEBUG app.repositories.recipes Thread-2 : there was an error validating recipe: [{'meal_type': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'veggie_friendly': ['Missing data for required field.'], 'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.']}]
+2020-10-12 16:13:51,478 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:14:13,037 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:14:33,950 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:15:46,448 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:48:44,727 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:54:14,093 INFO app.resources.jobs.populate_db Thread-3 : Starting db populate job...
+2020-10-12 16:56:24,129 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:56:56,322 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:56:56,322 INFO app.repositories.jobs.populate_db Thread-2 : Going to read recipes input file...
+2020-10-12 16:57:30,697 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 16:57:30,698 INFO app.repositories.jobs.populate_db Thread-2 : Going to read recipes input file...
+2020-10-12 16:57:30,698 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file. [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 16:57:30,698 INFO app.repositories.jobs.populate_db Thread-2 : Finished reading recipes input files. [recipes:0]
+2020-10-12 17:05:25,602 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 17:05:25,603 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 17:05:25,603 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file. [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 17:05:25,603 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files. [recipes:0]
+2020-10-12 17:05:25,603 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 17:05:25,603 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:0]
+2020-10-12 17:08:02,455 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 17:08:02,455 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 17:08:02,455 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 17:08:02,455 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:0]
+2020-10-12 17:08:02,455 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 17:08:02,455 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:0]
+2020-10-12 19:35:51,917 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:35:51,917 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:35:51,918 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 19:38:33,922 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:38:33,922 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:38:33,922 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: './recipes_to_load.csv']
+2020-10-12 19:47:59,481 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:47:59,481 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:47:59,481 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 19:48:18,296 INFO app.resources.jobs.populate_db Thread-3 : Starting db populate job...
+2020-10-12 19:48:18,297 INFO app.repositories.jobs.populate_db Thread-3 : going to read recipes input file...
+2020-10-12 19:48:18,297 ERROR app.repositories.jobs.populate_db Thread-3 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: 'recipes_to_load.csv']
+2020-10-12 19:48:45,022 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:48:45,022 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:48:45,022 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading recipes to load file [error:[Errno 2] No such file or directory: '../../../recipes_to_load.csv']
+2020-10-12 19:49:06,117 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:49:06,117 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:49:06,117 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:49:06,118 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:49:06,422 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:50:22,138 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:50:22,139 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:50:22,140 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:50:22,140 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:50:22,232 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: ("Connection broken: ConnectionResetError(54, 'Connection reset by peer')", ConnectionResetError(54, 'Connection reset by peer'))]
+2020-10-12 19:50:22,232 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:3]
+2020-10-12 19:52:41,236 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:52:41,236 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:52:41,238 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:52:41,238 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:52:41,593 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:55:09,058 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:55:09,059 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:55:09,060 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:55:09,060 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:55:09,321 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:56:14,200 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:56:14,200 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:56:14,201 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:56:14,201 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:56:14,446 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:56:33,804 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:56:33,805 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:56:33,806 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:56:33,806 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:56:33,816 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,821 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,826 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,831 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,835 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,840 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,844 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,850 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,854 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,862 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,866 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,871 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:56:33,872 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:58:31,329 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:58:31,329 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:58:31,330 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:58:31,331 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:58:31,342 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,347 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,352 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,357 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,362 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,366 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,371 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,376 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,381 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,386 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,391 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,396 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:58:31,398 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:59:06,363 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:59:06,363 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:59:06,365 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:59:06,365 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:59:06,376 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,381 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,385 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,390 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,395 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,399 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,404 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,408 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,413 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,418 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,422 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,427 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:06,428 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 19:59:59,170 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 19:59:59,170 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 19:59:59,171 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 19:59:59,171 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 19:59:59,189 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,194 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,199 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,204 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,210 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,215 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,219 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,224 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,229 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,235 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,241 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,245 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 19:59:59,247 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 20:06:11,856 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:06:11,856 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:06:11,858 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:06:11,859 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:06:11,870 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,874 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,879 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,884 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,888 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,893 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,898 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,902 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,907 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,911 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,916 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,921 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: ['str' object does not support item assignment]
+2020-10-12 20:06:11,922 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 20:10:22,198 INFO app.resources.jobs.populate_db Thread-3 : Starting db populate job...
+2020-10-12 20:10:22,199 INFO app.repositories.jobs.populate_db Thread-3 : going to read recipes input file...
+2020-10-12 20:10:22,200 INFO app.repositories.jobs.populate_db Thread-3 : finished reading recipes input files [recipes:12]
+2020-10-12 20:10:22,200 INFO app.repositories.jobs.populate_db Thread-3 : going to make POST requests for recipes...
+2020-10-12 20:10:22,225 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,231 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,237 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,273 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,279 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,285 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,292 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,299 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: [{'meal_type': ["%s 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:10:22,315 INFO app.repositories.jobs.populate_db Thread-3 : finished making POST requests for recipes [success:4][errors:8]
+2020-10-12 20:11:23,177 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:11:23,177 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:11:23,177 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:11:23,178 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:11:23,235 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: [{'meal_type': ["breakfast/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,242 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: [{'meal_type': ["breakfast/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,264 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: [{'meal_type': ["breakfast/snack 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,299 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: [{'meal_type': ["lunch/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,304 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: [{'meal_type': ["lunch/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,309 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: [{'meal_type': ["breakfast/lunch/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,314 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: [{'meal_type': ["lunch/dinner 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,321 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: [{'meal_type': ["breakfast/snack 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:11:23,331 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:4][errors:8]
+2020-10-12 20:27:01,467 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:27:01,468 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:27:01,470 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:27:01,470 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:27:01,489 DEBUG app.repositories.recipes Thread-3 : there was an error validating recipe: [{'meal_type': ["['shake'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,495 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: [{'meal_type': ["['breakfast', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,501 DEBUG app.repositories.recipes Thread-5 : there was an error validating recipe: [{'meal_type': ["['breakfast', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,506 DEBUG app.repositories.recipes Thread-6 : there was an error validating recipe: [{'meal_type': ["['breakfast', 'snack'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,511 DEBUG app.repositories.recipes Thread-7 : there was an error validating recipe: [{'meal_type': ["['breakfast'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,516 DEBUG app.repositories.recipes Thread-8 : there was an error validating recipe: [{'meal_type': ["['breakfast'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,521 DEBUG app.repositories.recipes Thread-9 : there was an error validating recipe: [{'meal_type': ["['lunch', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,528 DEBUG app.repositories.recipes Thread-10 : there was an error validating recipe: [{'meal_type': ["['lunch', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,534 DEBUG app.repositories.recipes Thread-11 : there was an error validating recipe: [{'meal_type': ["['breakfast', 'lunch', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,541 DEBUG app.repositories.recipes Thread-12 : there was an error validating recipe: [{'meal_type': ["['lunch', 'dinner'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,547 DEBUG app.repositories.recipes Thread-13 : there was an error validating recipe: [{'meal_type': ["['breakfast', 'snack'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,552 DEBUG app.repositories.recipes Thread-14 : there was an error validating recipe: [{'meal_type': ["['breakfast'] 'meal_type' is not a valid supported meal"]}]
+2020-10-12 20:27:01,554 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:12]
+2020-10-12 20:28:42,378 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:28:42,378 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:28:42,380 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:28:42,380 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:28:42,549 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-12 20:53:56,092 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:53:56,093 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:53:56,094 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:53:56,094 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:53:56,249 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-12 20:53:56,249 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2020-10-12 20:53:56,250 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error reading ingredients to load file [error:invalid literal for int() with base 10: 'ARS']
+2020-10-12 20:54:11,410 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:54:11,413 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:54:11,413 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:54:11,414 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:54:11,556 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-12 20:54:11,557 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2020-10-12 20:54:11,557 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:38]
+2020-10-12 20:54:11,557 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2020-10-12 20:54:11,558 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Object of type Decimal is not JSON serializable]
+2020-10-12 20:57:03,858 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 20:57:03,858 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 20:57:03,859 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 20:57:03,860 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 20:57:04,006 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-12 20:57:04,006 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2020-10-12 20:57:04,007 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:38]
+2020-10-12 20:57:04,007 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2020-10-12 20:57:04,012 DEBUG app.repositories.recipes Thread-15 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,016 DEBUG app.repositories.recipes Thread-16 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,021 DEBUG app.repositories.recipes Thread-17 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,026 DEBUG app.repositories.recipes Thread-18 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,030 DEBUG app.repositories.recipes Thread-19 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,034 DEBUG app.repositories.recipes Thread-20 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,039 DEBUG app.repositories.recipes Thread-21 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,044 DEBUG app.repositories.recipes Thread-22 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,048 DEBUG app.repositories.recipes Thread-23 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,053 DEBUG app.repositories.recipes Thread-24 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,057 DEBUG app.repositories.recipes Thread-25 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,061 DEBUG app.repositories.recipes Thread-26 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,066 DEBUG app.repositories.recipes Thread-27 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,071 DEBUG app.repositories.recipes Thread-28 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,078 DEBUG app.repositories.recipes Thread-29 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,091 DEBUG app.repositories.recipes Thread-30 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,100 DEBUG app.repositories.recipes Thread-31 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,114 DEBUG app.repositories.recipes Thread-32 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,123 DEBUG app.repositories.recipes Thread-33 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,134 DEBUG app.repositories.recipes Thread-34 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,145 DEBUG app.repositories.recipes Thread-35 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,154 DEBUG app.repositories.recipes Thread-36 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,168 DEBUG app.repositories.recipes Thread-37 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,178 DEBUG app.repositories.recipes Thread-38 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,185 DEBUG app.repositories.recipes Thread-39 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,193 DEBUG app.repositories.recipes Thread-40 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,200 DEBUG app.repositories.recipes Thread-41 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,207 DEBUG app.repositories.recipes Thread-42 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,218 DEBUG app.repositories.recipes Thread-43 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,224 DEBUG app.repositories.recipes Thread-44 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,231 DEBUG app.repositories.recipes Thread-45 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,236 DEBUG app.repositories.recipes Thread-46 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,241 DEBUG app.repositories.recipes Thread-47 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,247 DEBUG app.repositories.recipes Thread-48 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,253 DEBUG app.repositories.recipes Thread-49 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,259 DEBUG app.repositories.recipes Thread-50 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,266 DEBUG app.repositories.recipes Thread-51 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,273 DEBUG app.repositories.recipes Thread-52 : there was an error validating recipe: [{'cook_technique': ['Missing data for required field.'], 'cook_time': ['Missing data for required field.'], 'wash_time': ['Missing data for required field.'], 'steps': ['Missing data for required field.'], 'ingredients': ['Missing data for required field.'], 'info': ['Missing data for required field.'], 'meal_type': ['Missing data for required field.']}]
+2020-10-12 20:57:04,274 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:0][errors:38]
+2020-10-12 21:27:55,539 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-12 21:27:55,540 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-12 21:27:55,542 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-12 21:27:55,542 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-12 21:27:55,710 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-12 21:27:55,711 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2020-10-12 21:27:55,711 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:38]
+2020-10-12 21:27:55,712 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2020-10-12 21:27:55,780 DEBUG app.repositories.ingredients Thread-21 : there was an error validating ingredient: [{'storage': ["dry/refrigerated 'storage' is not a valid supported meal"]}]
+2020-10-12 21:27:56,117 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:37][errors:1]
+2020-10-12 23:00:24,292 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:01:11,411 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:01:46,854 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:01:49,583 ERROR app.validators.recipes_recommendations Thread-3 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:02:22,249 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:03:06,155 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:03:43,007 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:04:31,337 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:05:07,282 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:05:20,362 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:06:47,751 ERROR app.validators.recipes_recommendations Thread-3 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:06:47,783 ERROR app.validators.recipes_recommendations Thread-4 : there was an error validating params [error:could not convert string to float: '10.0veggie_only=true']
+2020-10-12 23:08:08,385 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:08:08,417 ERROR app.validators.recipes_recommendations Thread-3 : there was an error validating params [error:could not convert string to float: '10.0veggie_only=true']
+2020-10-12 23:18:51,014 ERROR app.validators.recipes_recommendations Thread-3 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-12 23:24:44,206 ERROR app.validators.recipes_recommendations Thread-4 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-13 00:55:41,598 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-13 00:55:56,355 ERROR app.validators.recipes_recommendations Thread-2 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']
+2020-10-13 00:56:43,967 ERROR app.validators.recipes_recommendations Thread-3 : there was an error validating params [error:int() argument must be a string, a bytes-like object or a number, not 'NoneType']

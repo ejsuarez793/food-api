@@ -1,0 +1,13 @@
+name,veggie_friendly,meal_type,cook_time,wash_time,cook_technique,ingredients,info,steps
+Smoothie de frutos rojos,TRUE,shake,10,10,single_cooking,placeholder,placeholder,placeholder
+Omellete con pan tostado y aguacate,TRUE,breakfast/dinner,25,20,single_cooking,placeholder,placeholder,placeholder
+Desayuno criollo,FALSE,breakfast/dinner,60,45,single_cooking,placeholder,placeholder,placeholder
+Ensalada de frutas,TRUE,breakfast/snack,20,10,single_cooking,placeholder,placeholder,placeholder
+Cereal con granola,TRUE,breakfast,10,10,single_cooking,placeholder,placeholder,placeholder
+Croissant potente,FALSE,breakfast,30,20,single_cooking,placeholder,placeholder,placeholder
+Vegetales al horno,TRUE,lunch/dinner,75,20,batch_cooking,placeholder,placeholder,placeholder
+pollo al horno,FALSE,lunch/dinner,90,45,batch_cooking,placeholder,placeholder,placeholder
+caraotas negras,TRUE,breakfast/lunch/dinner,270,30,batch_cooking,placeholder,placeholder,placeholder
+arroz,TRUE,lunch/dinner,50,30,batch_cooking,placeholder,placeholder,placeholder
+french toast con nutella,TRUE,breakfast/snack,30,10,single_cooking,placeholder,placeholder,placeholder
+caldito de papas con arepa,TRUE,breakfast,60,30,single_cooking,placeholder,placeholder,placeholder
