@@ -1,0 +1,40 @@
+name,food_group,veggie_friendly,price,currency,storage,expiration_time
+frutos rojos congelados,fruits,TRUE,100,ARS,frozen,90
+banana,fruits,TRUE,100,ARS,dry,7
+leche,dairies,TRUE,100,ARS,refrigerated,7
+miel,sweets,TRUE,100,ARS,dry,9999
+helado,dairies,TRUE,100,ARS,frozen,90
+yogurt,dairies,TRUE,100,ARS,refrigerated,14
+huevos,proteins,TRUE,100,ARS,dry,30
+huevos,proteins,VERDADERO,100,ARS,refrigerated,45
+tomate,vegetables,TRUE,100,ARS,dry,7
+cebolla,vegetables,TRUE,100,ARS,dry,30
+pimenton,vegetables,TRUE,100,ARS,refrigerated,14
+jamon,proteins,FALSE,100,ARS,refrigerated,7
+queso,dairies,TRUE,100,ARS,refrigerated,7
+aceite,fats,TRUE,100,ARS,dry,9999
+pan,grains,TRUE,100,ARS,dry,30
+aguacate,vegetables,TRUE,100,ARS,dry,5
+harina pan,grains,TRUE,100,ARS,dry,90
+caraotas,grains,TRUE,100,ARS,dry,90
+carne vacío,proteins,FALSE,100,ARS,frozen,90
+sal,condiments,TRUE,100,ARS,dry,9999
+pimienta,condiments,TRUE,100,ARS,dry,9999
+manzana,fruits,TRUE,100,ARS,dry,7
+pera,fruits,TRUE,100,ARS,dry,7
+kiwi,fruits,TRUE,100,ARS,dry,7
+fresa,fruits,TRUE,100,ARS,dry,7
+nutella,sweets,TRUE,100,ARS,dry,90
+azucar impalpable,sweets,TRUE,100,ARS,dry,9999
+cereal de maiz,grains,TRUE,100,ARS,dry,9999
+granola,grains,TRUE,100,ARS,dry,9999
+avena,grains,TRUE,100,ARS,dry,9999
+croissant,grains,TRUE,100,ARS,dry,30
+zanahoria,vegetables,TRUE,100,ARS,refrigerated,30
+berenjena,vegetables,TRUE,100,ARS,refrigerated,7
+batata,vegetables,TRUE,100,ARS,refrigerated,30
+zukini,vegetables,TRUE,100,ARS,refrigerated,14
+brocoli,vegetables,TRUE,100,ARS,refrigerated,14
+zapallo,vegetables,TRUE,100,ARS,dry,30
+pollo,proteins,FALSE,100,ARS,frozen,90
+arroz,grains,TRUE,100,ARS,dry,9999
