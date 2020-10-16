@@ -2378,3 +2378,7 @@ WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
 2020-10-15 23:57:40,265 INFO werkzeug Thread-10 : 127.0.0.1 - - [15/Oct/2020 23:57:40] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2019-10-14&offset=2&limit=1 HTTP/1.1[0m" 400 -
 2020-10-15 23:57:45,227 INFO werkzeug Thread-11 : 127.0.0.1 - - [15/Oct/2020 23:57:45] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=1 HTTP/1.1[0m" 200 -
 2020-10-15 23:57:48,202 INFO werkzeug Thread-12 : 127.0.0.1 - - [15/Oct/2020 23:57:48] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=1 HTTP/1.1[0m" 200 -
+2020-10-16 00:01:10,322 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes.py', reloading
+2020-10-16 00:01:10,415 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 00:01:10,941 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 00:01:10,955 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726

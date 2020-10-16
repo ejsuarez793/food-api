@@ -6,7 +6,6 @@ from flask import request
 from webargs.flaskparser import FlaskParser
 from marshmallow import fields, post_load, Schema, ValidationError
 from werkzeug.exceptions import BadRequest
-from app.utils.utils import validate_dates, validate_offset, validate_limit
 
 log = logging.getLogger(__name__)
 
