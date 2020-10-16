@@ -11,7 +11,7 @@ class Recipe(db.Model):
     id = db.Column(db.String(), primary_key=True)
     name = db.Column(db.String(), nullable=False)
     veggie_friendly = db.Column(db.Boolean(), nullable=False)
-    meal_type = db.Column(db.String, nullable=False)
+    meal_type = db.Column(db.JSON, nullable=False)
     cook_time = db.Column(db.Integer, nullable=False)
     wash_time = db.Column(db.Integer, nullable=False)
     cook_technique = db.Column(db.String, nullable=False)
@@ -53,11 +53,16 @@ class RecipeSchema(ma.SQLAlchemyAutoSchema):
     @validates_schema
     def validate_types_values(self, data, **kwargs):
         errors = {}
-        if data['meal_type'] not in ['breakfast', 'lunch', 'dinner', 'snack', 'drink', 'shake']:
-            errors['meal_type'] = ['%s \'meal_type\' is not a valid supported meal'.format(data['meal_type'])]
+        not_supported_meals = []
+        for meal in data['meal_type']:
+            if meal not in ['breakfast', 'lunch', 'dinner', 'snack', 'drink', 'shake']:  # Todo: dejar esto en una config lista duplicada en otro lado
+                not_supported_meals.append(meal)
+
+        if not_supported_meals:
+            errors['meal_type'] = ['{} \'meal_type\' is not a valid supported meal'.format(','.join(not_supported_meals))]
 
         if data['cook_technique'] not in ['batch_cooking', 'single_cooking']:
-            errors['cook_technique'] = ['%s \'cook_technique\' is not a valid supported cooking technique'.format(data['cook_technique'])]
+            errors['cook_technique'] = ['{} \'cook_technique\' is not a valid supported cooking technique'.format(data['cook_technique'])]
 
         if errors:
             raise ValidationError(errors)
