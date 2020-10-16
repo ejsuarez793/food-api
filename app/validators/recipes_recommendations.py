@@ -50,25 +50,29 @@ def _validate_params(request, schema):
         price = Decimal(request.args.get('price')) if request.args.get('price') is not None else 0
         veggie_only = bool(request.args.get('veggie_only')) if request.args.get('veggie_only') is not None else False
     except Exception as e:
-        error_msg = 'there was an error parsing params [error:{}]'.format(str(e))
-        log.error(error_msg)
-        raise Exception(error_msg)
+        log.error('there was an error parsing params [error:{}]'.format(str(e)))
+        raise ValidationError('there was an error parsing params. please check data types')
 
+    errors = {}
     if days < 0 or days > 7:
-        raise ValidationError(message='\'days\' param is not between 0 and 7')
+        errors['days'] = 'param \'days\' is not between 0 and 7'
 
     if snacks_number < 0 or snacks_number > 2:
-        raise ValidationError(message='\'snacks_number\' param is not between 0 and 2')
+        errors['snacks_number'] = 'param \'snacks_number\' is not between 0 and 2'
 
     for meal in meals:
         if meal not in ['breakfast', 'lunch', 'dinner', 'snack', 'drink', 'shake']:  # Todo: dejar esto en una config lista duplicada en otro lado
-            raise ValidationError(message='\'meals\' param contains a value not supported for a meal')
+            errors['meals'] = 'param \'meals\' contains a value not supported for a meal'
+            continue
 
     if time < 0 and time > 450: # 450 minutes is 7.5 hours of cooking + washing
-        raise ValidationError(message='\'time\' param is not between 0 and 450')
+        errors['time'] = 'param \'time\' is not between 0 and 450'
 
     if price < 0:
-        raise ValidationError(message='\'price\' param is below 0')
+        errors['price'] = 'param \'price\' is below 0'
+
+    if errors:
+        raise ValidationError(errors)
 
     params = dict(days=days, snacks_number=snacks_number, meals=meals, time=time, price=price, veggie_only=veggie_only)
     return params

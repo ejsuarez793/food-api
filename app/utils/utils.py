@@ -20,7 +20,7 @@ def validate_offset(str_num: str):
 
         return num
     except:
-        raise ValueError("incorrect value, not a number")
+        raise ValueError("incorrect 'offset' value, not a number")
 
 
 def validate_limit(str_num: str):
@@ -34,4 +34,4 @@ def validate_limit(str_num: str):
             return 20
         return num
     except:
-        raise ValueError("incorrect value, not a number")
+        raise ValueError("incorrect 'limit' value, not a number")

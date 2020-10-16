@@ -2281,3 +2281,100 @@ WHERE ingredients.id IN (%(id_1)s, %(id_2)s, %(id_3)s)]
 2020-10-13 02:31:54,941 WARNING werkzeug MainThread :  * Debugger is active!
 2020-10-13 02:31:54,947 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
 2020-10-13 02:31:54,952 INFO werkzeug Thread-2 : 127.0.0.1 - - [13/Oct/2020 02:31:54] "[31m[1mGET /recipes/recommendations?days=8&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:16:17,978 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:16:17,979 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:16:18,775 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:16:18,790 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:17:07,495 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:17:07] "[31m[1mGET /recipes/recommendations?days=8&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:26:15,774 ERROR app.validators.recipes_recommendations Thread-3 : there was an error parsing params [error:invalid literal for int() with base 10: 'hola']
+2020-10-15 23:26:15,797 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:26:15] "[35m[1mGET /recipes/recommendations?days=hola&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-15 23:26:51,950 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:26:51,951 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:26:52,604 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:26:52,612 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:26:52,792 ERROR app.validators.recipes_recommendations Thread-2 : there was an error parsing params [error:invalid literal for int() with base 10: 'hola']
+2020-10-15 23:26:52,793 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:26:52] "[31m[1mGET /recipes/recommendations?days=hola&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:27:52,750 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes_recommendations.py', reloading
+2020-10-15 23:27:52,835 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:27:53,419 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:27:53,425 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:28:10,757 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes_recommendations.py', reloading
+2020-10-15 23:28:10,837 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:28:11,418 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:28:11,424 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:28:11,634 ERROR app.validators.recipes_recommendations Thread-2 : there was an error parsing params [error:invalid literal for int() with base 10: 'hola']
+2020-10-15 23:28:11,635 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:28:11] "[31m[1mGET /recipes/recommendations?days=hola&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:28:34,940 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:28:34,941 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:28:35,479 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:28:35,485 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:28:35,489 ERROR app.validators.recipes_recommendations Thread-2 : there was an error parsing params [error:invalid literal for int() with base 10: 'hola']
+2020-10-15 23:28:35,490 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:28:35] "[31m[1mGET /recipes/recommendations?days=hola&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:32:26,060 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes_recommendations.py', reloading
+2020-10-15 23:32:26,118 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:32:26,726 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:32:26,733 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:32:43,075 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:32:43] "[31m[1mGET /recipes/recommendations?days=8&snacks_number=2&meals=breakfast,dinner&time=100&price=10.0&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:33:07,753 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:33:07] "[31m[1mGET /recipes/recommendations?days=8&snacks_number=3&meals=breakfast,dinner,holi&time=451&price=-1&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-15 23:35:22,208 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes_recommendations.py', reloading
+2020-10-15 23:35:22,289 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:35:22,844 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:35:22,854 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:37:46,585 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes.py', reloading
+2020-10-15 23:37:46,756 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:37:47,578 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:37:47,585 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:38:39,847 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:38:39] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=1 HTTP/1.1[0m" 200 -
+2020-10-15 23:38:42,573 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:38:42] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=-1 HTTP/1.1[0m" 200 -
+2020-10-15 23:38:45,462 INFO werkzeug Thread-4 : 127.0.0.1 - - [15/Oct/2020 23:38:45] "[35m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 500 -
+2020-10-15 23:41:02,072 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:41:02,073 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:41:02,811 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:41:02,818 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:41:02,825 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:41:02] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:42:45,038 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:42:45,039 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:42:45,631 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:42:45,637 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:42:45,644 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:42:45] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:43:31,398 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:43:31,399 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:43:32,021 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:43:32,031 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:43:32,041 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:43:32] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:43:33,178 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:43:33] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:43:41,140 INFO werkzeug Thread-4 : 127.0.0.1 - - [15/Oct/2020 23:43:41] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:43:41,240 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/validators/recipes.py', reloading
+2020-10-15 23:43:41,306 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:43:41,850 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:43:41,857 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:43:41,871 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:43:41] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:43:45,330 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:43:45,331 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:43:45,875 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:43:45,884 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:43:46,075 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:43:46] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:56:21,881 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:56:21,882 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:56:22,484 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:56:22,492 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:56:23,868 ERROR app.validators.recipes Thread-2 : there was an error parsing params [error:invalid literal for int() with base 10: 'hla']
+2020-10-15 23:56:23,869 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:56:23] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=hla HTTP/1.1[0m" 400 -
+2020-10-15 23:56:27,680 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:56:27] "[35m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=0 HTTP/1.1[0m" 500 -
+2020-10-15 23:56:47,721 INFO werkzeug Thread-4 : 127.0.0.1 - - [15/Oct/2020 23:56:47] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=10 HTTP/1.1[0m" 200 -
+2020-10-15 23:56:52,250 INFO werkzeug Thread-5 : 127.0.0.1 - - [15/Oct/2020 23:56:52] "[35m[1mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=0 HTTP/1.1[0m" 500 -
+2020-10-15 23:57:03,031 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-15 23:57:03,032 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-15 23:57:03,570 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-15 23:57:03,584 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-15 23:57:04,578 INFO werkzeug Thread-2 : 127.0.0.1 - - [15/Oct/2020 23:57:04] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=0 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:08,664 INFO werkzeug Thread-3 : 127.0.0.1 - - [15/Oct/2020 23:57:08] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=0&limit=20 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:13,247 INFO werkzeug Thread-4 : 127.0.0.1 - - [15/Oct/2020 23:57:13] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-04&offset=-1&limit=20 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:19,628 INFO werkzeug Thread-5 : 127.0.0.1 - - [15/Oct/2020 23:57:19] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=20 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:22,241 INFO werkzeug Thread-6 : 127.0.0.1 - - [15/Oct/2020 23:57:22] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=1 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:25,951 INFO werkzeug Thread-7 : 127.0.0.1 - - [15/Oct/2020 23:57:25] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=2&limit=1 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:33,607 INFO werkzeug Thread-8 : 127.0.0.1 - - [15/Oct/2020 23:57:33] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2019-10-15&offset=2&limit=1 HTTP/1.1[0m" 400 -
+2020-10-15 23:57:38,139 INFO werkzeug Thread-9 : 127.0.0.1 - - [15/Oct/2020 23:57:38] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2019-10-14&offset=2&limit=1 HTTP/1.1[0m" 400 -
+2020-10-15 23:57:40,265 INFO werkzeug Thread-10 : 127.0.0.1 - - [15/Oct/2020 23:57:40] "[31m[1mGET /recipes?date_from=2020-09-01&date_to=2019-10-14&offset=2&limit=1 HTTP/1.1[0m" 400 -
+2020-10-15 23:57:45,227 INFO werkzeug Thread-11 : 127.0.0.1 - - [15/Oct/2020 23:57:45] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=1 HTTP/1.1[0m" 200 -
+2020-10-15 23:57:48,202 INFO werkzeug Thread-12 : 127.0.0.1 - - [15/Oct/2020 23:57:48] "[37mGET /recipes?date_from=2020-09-01&date_to=2020-10-15&offset=-1&limit=1 HTTP/1.1[0m" 200 -
