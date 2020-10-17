@@ -22,7 +22,7 @@ def multiget(ids: list):
     try:
         validated_ids = [int(id) for id in ids]
     except Exception as e:
-        log.debug('invalid params for ingredients multiget [ids:%s]',','.join(ids))
+        log.debug('invalid params for ingredients multiget [ids:%s]', ','.join(ids))
         return None, {'msg': 'invalid params for multiget', 'status_code': 400}
 
     try:

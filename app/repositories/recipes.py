@@ -1,11 +1,12 @@
 import uuid
 import logging
-from marshmallow import ValidationError
 
 from app import db
 from app.models.recipes import Recipe, RecipeSchema, RecipePaginationSchema
+from app.dao import recipes_dao
 
 log = logging.getLogger(__name__)
+
 
 def get_by_id(id: str):
     return RecipeSchema().dump(Recipe.get_by_id(id))
@@ -55,7 +56,7 @@ def update_recipe(id, data):
 
     recipe_schema = RecipeSchema()
     output = recipe_schema.dump(recipe)
-    return jsonify(output)
+    return output
 
 
 def delete_recipe(id):
@@ -65,3 +66,8 @@ def delete_recipe(id):
 
     Recipe.query.filter(Recipe.id == id).delete()
     db.session.commit()
+
+
+def get_recommendations(params):
+    print(params)
+    return recipes_dao.get_recommendations(params.veggie_only, params.meals)

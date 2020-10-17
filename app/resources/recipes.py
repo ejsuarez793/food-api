@@ -48,6 +48,4 @@ class RecipeRecommendation(Resource):
 
     @rrqp.use_args(RecipesRecommendationsQueryParams(unknown=RAISE), location='query')
     def get(self, params: 'RecipesRecommendationsQueryParams'):
-        print(type(params))
-        print(params)
-        pass
+        return recipes.get_recommendations(params)
