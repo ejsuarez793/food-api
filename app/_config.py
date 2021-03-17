@@ -1,6 +1,9 @@
-# config.py
+"""
+This config file is not being used currently, when it does, please complete this docstring
+"""
 
-class Config(object):
+
+class Config:  # https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object
     """
     Common configurations
     """
