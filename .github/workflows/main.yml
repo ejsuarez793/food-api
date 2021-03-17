@@ -38,10 +38,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; pylint 2*; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       # Runs the Super-Linter action
       - name: Python Code Quality and Lint
-        uses: ricardochaves/python-lint@v1.3.0
+        uses: ricardochaves/python-lint@v2.6.0
         with:
           python-root-list: "app"
+          extra-pylint-options: "pip install -r requirements.txt ; pylint **/*.py"
