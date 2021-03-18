@@ -16,6 +16,7 @@ log = logging.getLogger(__name__)
 def get(ingredient_id: int) -> Union[Dict, Dict]:
     """
     Get ingredient by id
+
     :param ingredient_id: int
     :return: Ingredient object if found, None and an error if otherwhise
     """
@@ -33,8 +34,10 @@ def get(ingredient_id: int) -> Union[Dict, Dict]:
 def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
     """
     Executes a multiget search given a list of ids
+
     :param ids: List of ints representing the ids to lookup
-    :return: List of Dict with the ingredients found if an error occurs then returns None with an error msg
+    :return: List of Dict with the ingredients found if an error occurs
+    then returns None with an error msg
     """
 
     try:
@@ -55,8 +58,10 @@ def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
 
 def create(data: Dict) -> Union[Dict, Dict]:
     """
-    Creates an ingredient from data dict and returns the newly created ingredient and None error dict.
-    On error returns None an a dict with error msg and error status code
+    Creates an ingredient from data dict and returns the newly created ingredient
+    and None error dict otherwise returns None object an a dict with error msg and
+    error status code
+
     :param data: dict with ingredient data
     :return: dict with ingredient data or error dict
     """
@@ -81,6 +86,7 @@ def create(data: Dict) -> Union[Dict, Dict]:
 
 def delete(id: int) -> Union[Dict, Dict]:
     """
+    Deletes ingredient by id
 
     :param id: Id of the ingredient to delete
     :return: empty union of two dicts on success, otherwise a dict with error msg
