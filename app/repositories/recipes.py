@@ -16,7 +16,7 @@ from app.models.recipes import Recipe, RecipeSchema, RecipePaginationSchema
 log = logging.getLogger(__name__)
 
 
-def get_by_id(id: str) -> Dict:
+def get_by_id(recipe_id: str) -> Dict:
     """
     Get recipe by id
 
@@ -24,7 +24,7 @@ def get_by_id(id: str) -> Dict:
     :return: Recipe dict if found
     """
 
-    return RecipeSchema().dump(Recipe.get_by_id(id))
+    return RecipeSchema().dump(Recipe.get_by_id(recipe_id))
 
 
 def get_with_params(params: Dict) -> Dict:
@@ -96,7 +96,7 @@ def update_recipe(recipe_id: str, data: Dict) -> Union[Dict, Dict]:
     return output
 
 
-def delete_recipe(id: str):
+def delete_recipe(recipe_id: str):
     """
     Delete recipe by id
     :param id: id uuid string
@@ -104,9 +104,9 @@ def delete_recipe(id: str):
     """
 
     # ToDo: agregar try except aqui
-    recipe = Recipe.query.filter(Recipe.id == id).first()
+    recipe = Recipe.query.filter(Recipe.id == recipe_id).first()
     if not recipe:
         return
 
-    Recipe.query.filter(Recipe.id == id).delete()
+    Recipe.query.filter(Recipe.id == recipe_id).delete()
     db.session.commit()
