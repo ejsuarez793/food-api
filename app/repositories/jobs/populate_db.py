@@ -42,9 +42,14 @@ def read_recipes() -> Union[Dict, Dict]:
                 recipe['info'] = row['info']
                 recipe['steps'] = row['steps']
                 recipes.append(recipe)
+    except OSError:
+        error_msg = 'there was an error opening recipes '\
+                    f'file [filename:{recipe_filename}]'
+        log.exception(error_msg)
+        return None, {'msg': error_msg, 'status_code': 500}
     except ValueError:
-        error_msg = 'there was an error reading recipes '\
-                    f'to load file [filename:{recipe_filename}]'
+        error_msg = 'there was an error parsing recipes ' \
+                    f'file [filename:{recipe_filename}]'
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
@@ -99,10 +104,15 @@ def read_ingredients():
                 ingredient['storage'] = row['storage']
                 ingredient['expiration_time'] = int(row['expiration_time'])
                 ingredients.append(ingredient)
-    except Exception:
-        error_msg = 'there was an error reading ingredients ' \
-                    f'to load file [filename:{ingredients_filename}]'
-        log.error(error_msg)
+    except OSError:
+        error_msg = 'there was an error opening incredients '\
+                    f'file [filename:{ingredients_filename}]'
+        log.exception(error_msg)
+        return None, {'msg': error_msg, 'status_code': 500}
+    except ValueError:
+        error_msg = 'there was an error parsing incredients ' \
+                    f'file [filename:{ingredients_filename}]'
+        log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
     log.info('finished reading ingredients input files '
