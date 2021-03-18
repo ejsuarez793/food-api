@@ -101,15 +101,15 @@ def create(data: Dict) -> Union[Dict, Dict]:
 
 def delete(ingredient_id: int) -> Union[Dict, Dict]:
     """
-    Deletes ingredient by id
+    Deletes ingredient by id, first check if exists and then deletes it
+    It returns the same error msg and status code 500 when items does not exists or occurs
+    a database error on deletion
 
     :param ingredient_id: Id of the ingredient to delete
     :return: empty union of two dicts on success, otherwise a dict
         with error msg
     """
 
-    # Todo: este validacion del .first() hace falta? o solo
-    #  el .delete() ya esta
     try:
         recipe = Ingredient.query\
             .filter(Ingredient.id == ingredient_id).first()
