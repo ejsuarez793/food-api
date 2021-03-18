@@ -23,9 +23,9 @@ def get(ingredient_id: int) -> Union[Dict, Dict]:
 
     try:
         ingredient = Ingredient.get_by_id(ingredient_id)
-    except Exception as e:
+    except Exception as exception:
         log.error('there was a database error while getting ingredient [id:{}][error:{}]'
-                  .format(ingredient_id, str(e)))
+                  .format(ingredient_id, str(exception)))
         return None, {'msg': 'there was and error while looking for ingredient', 'status_code': 500}
 
     return IngredientSchema().dump(ingredient), None
