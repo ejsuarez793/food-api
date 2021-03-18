@@ -127,5 +127,5 @@ def read_ingredients():
         return None, {'msg': error_msg, 'status_code': 500}
 
     log.info('finished making POST requests for ingredients '
-             '[success:{}][errors:{}]'.format(len(success), len(errors)))
+             '[success:%d][errors:%d]', len(success), len(errors))
     return {'msg': 'job finished', 'status_code': 200}, None
