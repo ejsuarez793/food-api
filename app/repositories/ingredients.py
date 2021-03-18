@@ -27,7 +27,7 @@ def get(ingredient_id: int) -> Union[Dict, Dict]:
         ingredient = Ingredient.get_by_id(ingredient_id)
     except SQLAlchemyError:
         log.exception('there was a database error while '
-                  'getting ingredient [id:%d]', ingredient_id)
+                      'getting ingredient [id:%d]', ingredient_id)
         return None, \
                {'msg': 'there was and error while looking for ingredient',
                 'status_code': 500}
@@ -56,8 +56,8 @@ def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
         ingredients = Ingredient.multiget(validated_ids)
     except SQLAlchemyError:
         log.exception('there was a database error while getting '
-                  'ingredients [ids:%s]',
-                  ','.join(validated_ids))
+                      'ingredients [ids:%s]',
+                      ','.join(validated_ids))
         return None, \
                {'msg': 'there was an error getting ingredients',
                 'status_code': 500}
