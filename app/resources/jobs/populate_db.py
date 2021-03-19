@@ -1,3 +1,8 @@
+"""
+PopulateDb Resource entrypoint that starts the jobs that
+populate database
+"""
+
 import logging
 from flask_restx import Resource
 
@@ -7,6 +12,10 @@ log = logging.getLogger(__name__)
 
 
 class PopulateDb(Resource):
+    """
+    PopulateDb class that only uses post method
+    """
+
     @staticmethod
     def post():
         log.info("Starting db populate job...")
