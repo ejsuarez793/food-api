@@ -49,6 +49,7 @@ class IngredientById(Resource):
     """
     IngredientById Resource, used to methods that allow id-based operations
     """
+
     def get(self, ingredient_id: int):
         """
         get method by id
