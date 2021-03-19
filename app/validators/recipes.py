@@ -56,13 +56,13 @@ def _validate_params(req: 'request'):
         if date_params_available:
             date_from = datetime.datetime.strptime(str_date_from, '%Y-%m-%d')
             date_to = datetime.datetime.strptime(str_date_to, '%Y-%m-%d')
-    except ValueError:
+    except ValueError as exception:
         log.exception(
             'there was an error parsing params'
         )
         raise ValidationError(
             'there was an error parsing params. please check data types'
-        )
+        ) from exception
 
     errors = {}
     if date_params_available and date_from > date_to:

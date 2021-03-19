@@ -75,13 +75,13 @@ def _validate_params(request):
             if request.args.get('veggie_only') is not None
             else False
         )
-    except ValueError:
+    except ValueError as exception:
         log.exception(
             'there was an error parsing params'
         )
         raise ValidationError(
             'there was an error parsing params. please check data types'
-        )
+        ) from exception
 
     errors = {}
     if days < 0 or days > 7:
