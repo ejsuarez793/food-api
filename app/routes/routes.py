@@ -24,7 +24,7 @@ def register_routes(api: 'Api'):
     # recipes
     api.add_resource(Recipe, '/recipes', methods=['GET', 'POST'])
     api.add_resource(
-        RecipeById, '/recipes/<string:id>', methods=['GET', 'PUT', 'DELETE']
+        RecipeById, '/recipes/<string:recipe_id>', methods=['GET', 'PUT', 'DELETE']
     )
     api.add_resource(
         RecipeRecommendation, '/recipes/recommendations', methods=['GET']
@@ -34,7 +34,7 @@ def register_routes(api: 'Api'):
     api.add_resource(Ingredient, '/ingredients', methods=['GET', 'POST'])
     api.add_resource(
         IngredientById,
-        '/ingredients/<int:id>',
+        '/ingredients/<int:ingredient_id>',
         methods=['GET', 'PUT', 'DELETE'],
     )
 

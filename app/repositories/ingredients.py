@@ -34,8 +34,13 @@ def get(ingredient_id: int) -> Union[Dict, Dict]:
             'msg': 'there was and error while looking for ingredient',
             'status_code': 500,
         }
-
-    return IngredientSchema().dump(ingredient), None
+    ingredient_dict = IngredientSchema().dump(ingredient)
+    if not ingredient_dict:
+        return None, {
+            'msg': f'ingredient with id {ingredient_id} not found',
+            'status_code': 404,
+        }
+    return ingredient_dict, None
 
 
 def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
