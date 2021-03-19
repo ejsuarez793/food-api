@@ -9,6 +9,7 @@ from werkzeug.exceptions import BadRequest
 
 log = logging.getLogger(__name__)
 
+
 @dataclass
 class RecipeQueryParams:
     offset: int
@@ -17,7 +18,9 @@ class RecipeQueryParams:
     date_to: str
 
 
-class RecipeSearchQuery(Schema): ## Todo: ver diferencia de ma.Schema vs Schema
+class RecipeSearchQuery(
+    Schema
+):  ## Todo: ver diferencia de ma.Schema vs Schema
     offset = fields.Integer()
     limit = fields.Integer()
     date_to = fields.String()
@@ -30,33 +33,42 @@ class RecipeSearchQuery(Schema): ## Todo: ver diferencia de ma.Schema vs Schema
 
 class RecipeSearchQueryParser(FlaskParser):
     def load_querystring(self, req, schema):
-        return _validate_params(req, schema)
+        return _validate_params(req)
 
-    def handle_error(self, error, req, schema, error_status_code, error_headers):
+    def handle_error(
+        self, error, req, schema, error_status_code, error_headers
+    ):
         raise BadRequest(error.messages)
 
 
-def _validate_params(request: 'request', schema):
-    str_date_to = request.args.get('date_to')
-    str_date_from = request.args.get('date_from')
-    offset = request.args.get('offset')
-    limit = request.args.get('limit')
+def _validate_params(req: 'request'):
+    str_date_to = req.args.get('date_to')
+    str_date_from = req.args.get('date_from')
+    offset = req.args.get('offset')
+    limit = req.args.get('limit')
 
-    dateParamsAvailable = str_date_from is not None and str_date_to is not None
+    date_params_available = (
+        str_date_from is not None and str_date_to is not None
+    )
     try:
         offset = int(offset) if offset is not None else 0
         limit = int(limit) if limit is not None else 10
-        if dateParamsAvailable:
+        if date_params_available:
             date_from = datetime.datetime.strptime(str_date_from, '%Y-%m-%d')
             date_to = datetime.datetime.strptime(str_date_to, '%Y-%m-%d')
-    except Exception as e:
-        log.error('there was an error parsing params [error:{}]'.format(str(e)))
-        raise ValidationError('there was an error parsing params. please check data types')
-
+    except ValueError as exception:
+        log.exception(
+            'there was an error parsing params'
+        )
+        raise ValidationError(
+            'there was an error parsing params. please check data types'
+        ) from exception
 
     errors = {}
-    if dateParamsAvailable and date_from > date_to:
-        errors['date_from'] = 'param \'date_from\' cant be greater than \'date_to\''
+    if date_params_available and date_from > date_to:
+        errors[
+            'date_from'
+        ] = 'param \'date_from\' cant be greater than \'date_to\''
 
     # we do not raise error for bad limit and offset params, we adjust them
     offset = 0 if offset < 0 else offset
@@ -65,5 +77,11 @@ def _validate_params(request: 'request', schema):
     if errors:
         raise ValidationError(errors)
 
-
-    return dict({'offset': offset, 'limit': limit, 'date_from': str_date_from, 'date_to': str_date_to})
+    return dict(
+        {
+            'offset': offset,
+            'limit': limit,
+            'date_from': str_date_from,
+            'date_to': str_date_to,
+        }
+    )

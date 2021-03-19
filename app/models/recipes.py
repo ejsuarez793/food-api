@@ -1,8 +1,6 @@
-from app import db
-from app import ma
-
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
+from app import db, ma
 from app.models.pagination import PaginationSchema
 
 
@@ -18,8 +16,16 @@ class Recipe(db.Model):
     ingredients = db.Column(db.JSON, nullable=False)
     info = db.Column(db.JSON, nullable=False)
     steps = db.Column(db.JSON, nullable=False)
-    date_created = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())
-    last_updated = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())
+    date_created = db.Column(
+        db.TIMESTAMP,
+        default=db.func.now(),
+        onupdate=db.func.current_timestamp(),
+    )
+    last_updated = db.Column(
+        db.TIMESTAMP,
+        default=db.func.now(),
+        onupdate=db.func.current_timestamp(),
+    )
 
     @staticmethod
     def get_by_id(id):
@@ -31,7 +37,9 @@ class Recipe(db.Model):
 
     @staticmethod
     def get_by_date_range(date_from, date_to):
-        return Recipe.query.filter(Recipe.date_created.between(date_from, date_to)).all()
+        return Recipe.query.filter(
+            Recipe.date_created.between(date_from, date_to)
+        ).all()
 
     @staticmethod
     def get_by_pagination(params):
@@ -39,15 +47,19 @@ class Recipe(db.Model):
         return Recipe.query.paginate(page, params.limit, False)
 
     @staticmethod
-    def get_by_pagination_and_date_range(params):
+    def get_by_pagination_and_date(params):
         page = int((params.offset / params.limit) + 1)
-        return Recipe.query.filter(Recipe.date_created.between(params.date_from, params.date_to)).paginate(page, params.limit, False)
+        return Recipe.query.filter(
+            Recipe.date_created.between(params.date_from, params.date_to)
+        ).paginate(page, params.limit, False)
 
 
 class RecipeSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Recipe
-        load_instance = False  # Todo: Entender bien esto, si va True pincha el POST
+        load_instance = (
+            False  # Todo: Entender bien esto, si va True pincha el POST
+        )
         unknown = EXCLUDE
 
     @validates_schema
@@ -55,14 +67,28 @@ class RecipeSchema(ma.SQLAlchemyAutoSchema):
         errors = {}
         not_supported_meals = []
         for meal in data['meal_type']:
-            if meal not in ['breakfast', 'lunch', 'dinner', 'snack', 'drink', 'shake']:  # Todo: dejar esto en una config lista duplicada en otro lado
+            if meal not in [
+                'breakfast',
+                'lunch',
+                'dinner',
+                'snack',
+                'drink',
+                'shake',
+            ]:  # Todo: dejar esto en una config lista duplicada en otro lado
                 not_supported_meals.append(meal)
 
         if not_supported_meals:
-            errors['meal_type'] = ['{} \'meal_type\' is not a valid supported meal'.format(','.join(not_supported_meals))]
+            errors['meal_type'] = [
+                '{} \'meal_type\' is not a valid supported meal'.format(
+                    ','.join(not_supported_meals)
+                )
+            ]
 
         if data['cook_technique'] not in ['batch_cooking', 'single_cooking']:
-            errors['cook_technique'] = ['{} \'cook_technique\' is not a valid supported cooking technique'.format(data['cook_technique'])]
+            errors['cook_technique'] = [
+                f' {data["cook_technique"]} \'cook_technique\' is not a valid ' 
+                'supported cooking technique'
+            ]
 
         if errors:
             raise ValidationError(errors)
@@ -71,4 +97,3 @@ class RecipeSchema(ma.SQLAlchemyAutoSchema):
 class RecipePaginationSchema(ma.Schema):
     paging = fields.Nested(PaginationSchema())
     results = fields.Nested(RecipeSchema(), many=True)
-

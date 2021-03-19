@@ -1,0 +1,30 @@
+2021-03-18 22:08:51,478 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-03-18 22:08:51,480 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:08:52,023 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:08:52,040 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-03-18 22:09:14,232 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2021 22:09:14] "[33mGET /ingredient/1 HTTP/1.1[0m" 404 -
+2021-03-18 22:09:20,663 INFO werkzeug Thread-3 : 127.0.0.1 - - [18/Mar/2021 22:09:20] "[35m[1mGET /ingredients/1 HTTP/1.1[0m" 500 -
+2021-03-18 22:10:10,553 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-03-18 22:10:10,554 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:10:11,085 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:10:11,090 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-03-18 22:10:14,338 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2021 22:10:14] "[37mGET /ingredients/1 HTTP/1.1[0m" 200 -
+2021-03-18 22:10:21,345 INFO werkzeug Thread-3 : 127.0.0.1 - - [18/Mar/2021 22:10:21] "[37mGET /ingredients/9999 HTTP/1.1[0m" 200 -
+2021-03-18 22:11:51,370 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-03-18 22:11:51,374 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:11:51,897 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:11:51,902 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-03-18 22:11:55,550 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2021 22:11:55] "[33mGET /ingredients/9999 HTTP/1.1[0m" 404 -
+2021-03-18 22:12:11,392 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-03-18 22:12:11,392 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:12:11,930 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:12:11,936 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-03-18 22:12:13,418 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2021 22:12:13] "[37mGET /ingredients/9999 HTTP/1.1[0m" 200 -
+2021-03-18 22:14:08,588 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/ingredients.py', reloading
+2021-03-18 22:14:08,702 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:14:09,239 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:14:09,245 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-03-18 22:17:01,048 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/resources/ingredients.py', reloading
+2021-03-18 22:17:01,137 INFO werkzeug MainThread :  * Restarting with stat
+2021-03-18 22:17:01,604 WARNING werkzeug MainThread :  * Debugger is active!
+2021-03-18 22:17:01,609 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
