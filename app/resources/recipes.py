@@ -25,6 +25,10 @@ rrqp = RecipesRecommendationsQueryParser()
 
 
 class Recipe(Resource):
+    """
+    Recipe Resource for general CRUD methods
+    """
+
     @recipeSearchQueryParser.use_args(
         RecipeSearchQuery(unknown=RAISE), location='query'
     )
@@ -60,6 +64,10 @@ class Recipe(Resource):
 
 
 class RecipeById(Resource):
+    """
+    RecipeById for id-based methods
+    """
+
     def get(self, recipe_id: str):
         """
         Get recipe by id
@@ -90,6 +98,10 @@ class RecipeById(Resource):
 
 
 class RecipeRecommendation(Resource):
+    """
+    RecipeRecommendation for recommendations methods
+    """
+
     @rrqp.use_args(
         RecipesRecommendationsQueryParams(unknown=RAISE), location='query'
     )
