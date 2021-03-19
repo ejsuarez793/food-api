@@ -33,7 +33,7 @@ class RecipeSearchQuery(
 
 class RecipeSearchQueryParser(FlaskParser):
     def load_querystring(self, req, schema):
-        return _validate_params(req, schema)
+        return _validate_params(req)
 
     def handle_error(
         self, error, req, schema, error_status_code, error_headers
@@ -41,31 +41,31 @@ class RecipeSearchQueryParser(FlaskParser):
         raise BadRequest(error.messages)
 
 
-def _validate_params(request: 'request', schema):
-    str_date_to = request.args.get('date_to')
-    str_date_from = request.args.get('date_from')
-    offset = request.args.get('offset')
-    limit = request.args.get('limit')
+def _validate_params(req: 'request'):
+    str_date_to = req.args.get('date_to')
+    str_date_from = req.args.get('date_from')
+    offset = req.args.get('offset')
+    limit = req.args.get('limit')
 
-    dateParamsAvailable = (
+    date_params_available = (
         str_date_from is not None and str_date_to is not None
     )
     try:
         offset = int(offset) if offset is not None else 0
         limit = int(limit) if limit is not None else 10
-        if dateParamsAvailable:
+        if date_params_available:
             date_from = datetime.datetime.strptime(str_date_from, '%Y-%m-%d')
             date_to = datetime.datetime.strptime(str_date_to, '%Y-%m-%d')
-    except Exception as e:
-        log.error(
-            'there was an error parsing params [error:{}]'.format(str(e))
+    except ValueError:
+        log.exception(
+            'there was an error parsing params'
         )
         raise ValidationError(
             'there was an error parsing params. please check data types'
         )
 
     errors = {}
-    if dateParamsAvailable and date_from > date_to:
+    if date_params_available and date_from > date_to:
         errors[
             'date_from'
         ] = 'param \'date_from\' cant be greater than \'date_to\''

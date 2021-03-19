@@ -1,8 +1,6 @@
-from app import db
-from app import ma
-
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
+from app import db, ma
 from app.models.pagination import PaginationSchema
 
 

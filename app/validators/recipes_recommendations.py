@@ -75,9 +75,9 @@ def _validate_params(request):
             if request.args.get('veggie_only') is not None
             else False
         )
-    except Exception as e:
-        log.error(
-            'there was an error parsing params [error:{}]'.format(str(e))
+    except ValueError:
+        log.exception(
+            'there was an error parsing params'
         )
         raise ValidationError(
             'there was an error parsing params. please check data types'
