@@ -1,6 +1,6 @@
-from app import ma
-
 from marshmallow import fields
+
+from app import ma
 
 
 class PaginationSchema(ma.Schema):

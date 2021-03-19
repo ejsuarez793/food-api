@@ -47,7 +47,7 @@ class Recipe(db.Model):
         return Recipe.query.paginate(page, params.limit, False)
 
     @staticmethod
-    def get_by_pagination_and_date_range(params):
+    def get_by_pagination_and_date(params):
         page = int((params.offset / params.limit) + 1)
         return Recipe.query.filter(
             Recipe.date_created.between(params.date_from, params.date_to)
@@ -86,9 +86,8 @@ class RecipeSchema(ma.SQLAlchemyAutoSchema):
 
         if data['cook_technique'] not in ['batch_cooking', 'single_cooking']:
             errors['cook_technique'] = [
-                '{} \'cook_technique\' is not a valid supported cooking technique'.format(
-                    data['cook_technique']
-                )
+                f' {data["cook_technique"]} \'cook_technique\' is not a valid ' 
+                'supported cooking technique'
             ]
 
         if errors:

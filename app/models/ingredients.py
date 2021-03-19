@@ -90,7 +90,8 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
             'condiments',
         ]:
             errors['food_group'] = [
-                f'{data["food_group"]} \'food_group\' is not a valid supported meal'
+                f'{data["food_group"]} \'food_group\' is not a valid ' 
+                'supported meal'
             ]
 
         if data['storage'] not in ['dry', 'refrigerated', 'frozen']:

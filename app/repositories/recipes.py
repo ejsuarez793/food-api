@@ -39,7 +39,7 @@ def get_with_params(params: Dict) -> Dict:
         params.date_from is not None and params.date_to is not None
     )
     if is_date_filtered_search:
-        result = Recipe.get_by_pagination_and_date_range(params)
+        result = Recipe.get_by_pagination_and_date(params)
     else:
         result = Recipe.get_by_pagination(params)
     res = {
