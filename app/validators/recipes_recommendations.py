@@ -35,7 +35,7 @@ class RecipesRecommendationsQueryParams(Schema):
 
 class RecipesRecommendationsQueryParser(FlaskParser):
     def load_querystring(self, req, schema):
-        return _validate_params(req, schema)
+        return _validate_params(req)
 
     def handle_error(
         self, error, req, schema, error_status_code, error_headers
@@ -43,7 +43,7 @@ class RecipesRecommendationsQueryParser(FlaskParser):
         raise BadRequest(error.messages)
 
 
-def _validate_params(request, schema):
+def _validate_params(request):
     try:
         days = (
             int(request.args.get('days'))
