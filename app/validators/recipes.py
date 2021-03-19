@@ -47,7 +47,9 @@ def _validate_params(request: 'request', schema):
     offset = request.args.get('offset')
     limit = request.args.get('limit')
 
-    dateParamsAvailable = str_date_from is not None and str_date_to is not None
+    dateParamsAvailable = (
+        str_date_from is not None and str_date_to is not None
+    )
     try:
         offset = int(offset) if offset is not None else 0
         limit = int(limit) if limit is not None else 10

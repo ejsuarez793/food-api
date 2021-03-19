@@ -81,7 +81,8 @@ def read_recipes() -> Union[Dict, Dict]:
         return None, {'msg': error_msg, 'status_code': 500}
 
     log.info(
-        'finished making POST requests for recipes ' '[success:%d][errors:%d]',
+        'finished making POST requests for recipes '
+        '[success:%d][errors:%d]',
         len(success),
         len(errors),
     )

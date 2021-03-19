@@ -58,13 +58,16 @@ def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
         log.debug(
             'invalid params for ingredients multiget [ids:%s]', ','.join(ids)
         )
-        return None, {'msg': 'invalid params for multiget', 'status_code': 400}
+        return None, {
+            'msg': 'invalid params for multiget',
+            'status_code': 400,
+        }
 
     try:
         ingredients = Ingredient.multiget(validated_ids)
     except SQLAlchemyError:
         log.exception(
-            'there was a database error while getting ' 'ingredients [ids:%s]',
+            'there was a database error while getting ingredients [ids:%s]',
             ','.join(validated_ids),
         )
         return None, {
@@ -115,8 +118,8 @@ def create(data: Dict) -> Union[Dict, Dict]:
 def delete(ingredient_id: int) -> Union[Dict, Dict]:
     """
     Deletes ingredient by id, first check if exists and then deletes it
-    It returns the same error msg and status code 500 when items does not exists or occurs
-    a database error on deletion
+    It returns the same error msg and status code 500 when items does not
+    exists or occurs a database error on deletion
 
     :param ingredient_id: Id of the ingredient to delete
     :return: empty union of two dicts on success, otherwise a dict
