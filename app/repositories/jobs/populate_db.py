@@ -43,18 +43,24 @@ def read_recipes() -> Union[Dict, Dict]:
                 recipe['steps'] = row['steps']
                 recipes.append(recipe)
     except OSError:
-        error_msg = 'there was an error opening recipes '\
-                    f'file [filename:{recipe_filename}]'
+        error_msg = (
+            'there was an error opening recipes '
+            f'file [filename:{recipe_filename}]'
+        )
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
     except ValueError:
-        error_msg = 'there was an error parsing recipes ' \
-                    f'file [filename:{recipe_filename}]'
+        error_msg = (
+            'there was an error parsing recipes '
+            f'file [filename:{recipe_filename}]'
+        )
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
-    log.info('finished reading recipes input files'
-             '[total_recipes:%d]', len(recipes))
+    log.info(
+        'finished reading recipes input files' '[total_recipes:%d]',
+        len(recipes),
+    )
 
     success = []
     errors = []
@@ -62,9 +68,9 @@ def read_recipes() -> Union[Dict, Dict]:
     try:
         headers = {'content-type': 'application/json'}
         for recipe in recipes:
-            res = r.post(url=API_ENDPOINT_RECIPES,
-                         json=recipe,
-                         headers=headers)
+            res = r.post(
+                url=API_ENDPOINT_RECIPES, json=recipe, headers=headers
+            )
             if res.status_code == 201:
                 success.append(recipe)
             else:
@@ -74,8 +80,11 @@ def read_recipes() -> Union[Dict, Dict]:
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
-    log.info('finished making POST requests for recipes '
-             '[success:%d][errors:%d]', len(success), len(errors))
+    log.info(
+        'finished making POST requests for recipes ' '[success:%d][errors:%d]',
+        len(success),
+        len(errors),
+    )
     return {'msg': 'job finished', 'status_code': 200}, None
 
 
@@ -105,18 +114,24 @@ def read_ingredients():
                 ingredient['expiration_time'] = int(row['expiration_time'])
                 ingredients.append(ingredient)
     except OSError:
-        error_msg = 'there was an error opening incredients '\
-                    f'file [filename:{ingredients_filename}]'
+        error_msg = (
+            'there was an error opening incredients '
+            f'file [filename:{ingredients_filename}]'
+        )
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
     except ValueError:
-        error_msg = 'there was an error parsing incredients ' \
-                    f'file [filename:{ingredients_filename}]'
+        error_msg = (
+            'there was an error parsing incredients '
+            f'file [filename:{ingredients_filename}]'
+        )
         log.exception(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
-    log.info('finished reading ingredients input files '
-             '[recipes:%d]', len(ingredients))
+    log.info(
+        'finished reading ingredients input files ' '[recipes:%d]',
+        len(ingredients),
+    )
 
     success = []
     errors = []
@@ -124,9 +139,9 @@ def read_ingredients():
     try:
         headers = {'content-type': 'application/json'}
         for ingredient in ingredients:
-            res = r.post(url=API_ENDPOINT_INGREDIENTS,
-                         json=ingredient,
-                         headers=headers)
+            res = r.post(
+                url=API_ENDPOINT_INGREDIENTS, json=ingredient, headers=headers
+            )
             if res.status_code == 201:
                 success.append(ingredient)
             else:
@@ -136,6 +151,10 @@ def read_ingredients():
         log.error(error_msg)
         return None, {'msg': error_msg, 'status_code': 500}
 
-    log.info('finished making POST requests for ingredients '
-             '[success:%d][errors:%d]', len(success), len(errors))
+    log.info(
+        'finished making POST requests for ingredients '
+        '[success:%d][errors:%d]',
+        len(success),
+        len(errors),
+    )
     return {'msg': 'job finished', 'status_code': 200}, None

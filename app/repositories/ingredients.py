@@ -26,11 +26,14 @@ def get(ingredient_id: int) -> Union[Dict, Dict]:
     try:
         ingredient = Ingredient.get_by_id(ingredient_id)
     except SQLAlchemyError:
-        log.exception('there was a database error while '
-                      'getting ingredient [id:%d]', ingredient_id)
-        return None, \
-               {'msg': 'there was and error while looking for ingredient',
-                'status_code': 500}
+        log.exception(
+            'there was a database error while ' 'getting ingredient [id:%d]',
+            ingredient_id,
+        )
+        return None, {
+            'msg': 'there was and error while looking for ingredient',
+            'status_code': 500,
+        }
 
     return IngredientSchema().dump(ingredient), None
 
@@ -47,20 +50,22 @@ def multiget(ids: List[int]) -> Union[List[Dict], Dict]:
     try:
         validated_ids = [int(id) for id in ids]
     except ValueError:
-        log.debug('invalid params for ingredients multiget [ids:%s]',
-                  ','.join(ids))
-        return None, \
-               {'msg': 'invalid params for multiget', 'status_code': 400}
+        log.debug(
+            'invalid params for ingredients multiget [ids:%s]', ','.join(ids)
+        )
+        return None, {'msg': 'invalid params for multiget', 'status_code': 400}
 
     try:
         ingredients = Ingredient.multiget(validated_ids)
     except SQLAlchemyError:
-        log.exception('there was a database error while getting '
-                      'ingredients [ids:%s]',
-                      ','.join(validated_ids))
-        return None, \
-               {'msg': 'there was an error getting ingredients',
-                'status_code': 500}
+        log.exception(
+            'there was a database error while getting ' 'ingredients [ids:%s]',
+            ','.join(validated_ids),
+        )
+        return None, {
+            'msg': 'there was an error getting ingredients',
+            'status_code': 500,
+        }
 
     return IngredientSchema(many=True).dump(ingredients), None
 
@@ -80,20 +85,24 @@ def create(data: Dict) -> Union[Dict, Dict]:
         validated_data = schema.load(data)
         new_ingredient = Ingredient(**validated_data)
     except ValidationError as exception:
-        log.debug('there was an error validating ingredient: [error:%s]',
-                  str(exception))
-        return None, \
-               {'msg': 'there was an error validating ingredient',
-                'status_code': 400}
+        log.debug(
+            'there was an error validating ingredient: [error:%s]',
+            str(exception),
+        )
+        return None, {
+            'msg': 'there was an error validating ingredient',
+            'status_code': 400,
+        }
 
     try:
         db.session.add(new_ingredient)
         db.session.commit()
     except SQLAlchemyError:
         log.exception('there was a database error creating ingredient')
-        return None, \
-               {'msg': 'there was an error creating ingredient',
-                'status_code': 500}
+        return None, {
+            'msg': 'there was an error creating ingredient',
+            'status_code': 500,
+        }
 
     return schema.dump(new_ingredient), None
 
@@ -110,14 +119,19 @@ def delete(ingredient_id: int) -> Union[Dict, Dict]:
     """
 
     try:
-        recipe = Ingredient.query\
-            .filter(Ingredient.id == ingredient_id).first()
+        recipe = Ingredient.query.filter(
+            Ingredient.id == ingredient_id
+        ).first()
     except SQLAlchemyError:
-        log.exception('there was a database error finding ingredient '
-                      'for deletion [id:%d]', ingredient_id)
-        return None, \
-               {'msg': 'there was an error deleting ingredient',
-                'status_code': 500}
+        log.exception(
+            'there was a database error finding ingredient '
+            'for deletion [id:%d]',
+            ingredient_id,
+        )
+        return None, {
+            'msg': 'there was an error deleting ingredient',
+            'status_code': 500,
+        }
 
     if not recipe:
         return {}, None
@@ -126,10 +140,13 @@ def delete(ingredient_id: int) -> Union[Dict, Dict]:
         Ingredient.query.filter(Ingredient.id == ingredient_id).delete()
         db.session.commit()
     except SQLAlchemyError:
-        log.error('there was a database error deleting ingredient '
-                  '[id:%d]', ingredient_id)
-        return None, \
-               {'msg': 'there was an error deleting ingredient',
-                'status_code': 500}
+        log.error(
+            'there was a database error deleting ingredient ' '[id:%d]',
+            ingredient_id,
+        )
+        return None, {
+            'msg': 'there was an error deleting ingredient',
+            'status_code': 500,
+        }
 
     return {}, None

@@ -35,14 +35,17 @@ def get_with_params(params: Dict) -> Dict:
     """
 
     # Todo: mejorar los try catch aquí, agregar SQLAlchemyException
-    is_date_filtered_search = params.date_from is not None and \
-                              params.date_to is not None
+    is_date_filtered_search = (
+        params.date_from is not None and params.date_to is not None
+    )
     if is_date_filtered_search:
         result = Recipe.get_by_pagination_and_date_range(params)
     else:
         result = Recipe.get_by_pagination(params)
-    res = {'paging': {'offset': params.offset, 'limit': params.limit},
-           'results': result.items}
+    res = {
+        'paging': {'offset': params.offset, 'limit': params.limit},
+        'results': result.items,
+    }
     rps = RecipePaginationSchema()
     return rps.dump(res)
 
@@ -61,15 +64,25 @@ def create_recipe(data: Dict) -> Union[Dict, Dict]:
         validated_data = recipe_schema.load(data)
         new_recipe = Recipe(**validated_data)
     except MarshmallowError:
-        log.exception('there was an error validating recipe: [data:%s]', str(data))
-        return None, {'msg': 'there was an error validating recipe', 'status_code': 400}
+        log.exception(
+            'there was an error validating recipe: [data:%s]', str(data)
+        )
+        return None, {
+            'msg': 'there was an error validating recipe',
+            'status_code': 400,
+        }
 
     try:
         db.session.add(new_recipe)
         db.session.commit()
     except SQLAlchemyError:
-        log.exception('there was an error creating recipe: [data:%s]', str(data))
-        return None, {'msg': 'there was an error creating recipe', 'status_code': 500}
+        log.exception(
+            'there was an error creating recipe: [data:%s]', str(data)
+        )
+        return None, {
+            'msg': 'there was an error creating recipe',
+            'status_code': 500,
+        }
 
     return recipe_schema.dump(new_recipe), None
 

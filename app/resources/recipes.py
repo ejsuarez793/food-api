@@ -14,7 +14,10 @@ from marshmallow import RAISE
 from app.repositories import recipes
 from app.validators.recipes import RecipeSearchQueryParser
 from app.validators.recipes import RecipeSearchQuery
-from app.validators.recipes_recommendations import RecipesRecommendationsQueryParser, RecipesRecommendationsQueryParams
+from app.validators.recipes_recommendations import (
+    RecipesRecommendationsQueryParser,
+    RecipesRecommendationsQueryParams,
+)
 
 recipeSearchQueryParser = RecipeSearchQueryParser()
 
@@ -22,9 +25,9 @@ rrqp = RecipesRecommendationsQueryParser()
 
 
 class Recipe(Resource):
-
-    @recipeSearchQueryParser.use_args(RecipeSearchQuery(unknown=RAISE),
-                                      location='query')
+    @recipeSearchQueryParser.use_args(
+        RecipeSearchQuery(unknown=RAISE), location='query'
+    )
     def get(self, params: 'RecipeSearchQuery'):
         """
         Get recipes based of query params
@@ -37,11 +40,11 @@ class Recipe(Resource):
         try:
             return recipes.get_with_params(params)
         except ValueError:
-            return make_response(jsonify({'msg': 'bad_request'}),
-                                 400)
+            return make_response(jsonify({'msg': 'bad_request'}), 400)
         except:
-            return make_response(jsonify({'msg': 'internal_server_error'}),
-                                 500)
+            return make_response(
+                jsonify({'msg': 'internal_server_error'}), 500
+            )
 
     def post(self):
         """
@@ -57,7 +60,6 @@ class Recipe(Resource):
 
 
 class RecipeById(Resource):
-
     def get(self, recipe_id: str):
         """
         Get recipe by id
@@ -88,9 +90,9 @@ class RecipeById(Resource):
 
 
 class RecipeRecommendation(Resource):
-
-    @rrqp.use_args(RecipesRecommendationsQueryParams(unknown=RAISE),
-                   location='query')
+    @rrqp.use_args(
+        RecipesRecommendationsQueryParams(unknown=RAISE), location='query'
+    )
     def get(self, params: 'RecipesRecommendationsQueryParams'):
         print(type(params))
         print(params)

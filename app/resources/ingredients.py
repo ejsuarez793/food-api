@@ -41,4 +41,3 @@ class IngredientById(Resource):
         if err:
             return err, err['status_code']
         return make_response(response, 204)
-

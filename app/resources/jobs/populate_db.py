@@ -7,7 +7,6 @@ log = logging.getLogger(__name__)
 
 
 class PopulateDb(Resource):
-
     @staticmethod
     def post():
         log.info("Starting db populate job...")
