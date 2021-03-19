@@ -18,6 +18,11 @@ class PopulateDb(Resource):
 
     @staticmethod
     def post():
+        """
+        post method that runs read_recipes and read_ingredients methods
+        :return: response with status of the job run
+        """
+
         log.info("Starting db populate job...")
         response, err = read_recipes()
         if err:

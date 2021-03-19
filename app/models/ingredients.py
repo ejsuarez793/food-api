@@ -1,12 +1,18 @@
-from app import db
-from app import ma
+"""
+This module defines the database sqlalchemy orm model for ingredients
+"""
 
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
+from app import db, ma
 from app.models.pagination import PaginationSchema
 
 
 class Ingredient(db.Model):
+    """
+    Ingredient model
+    """
+
     __tablename__ = 'ingredients'
     id = db.Column(db.BigInteger, primary_key=True)
     name = db.Column(db.String(), nullable=False)
@@ -32,15 +38,31 @@ class Ingredient(db.Model):
     )
 
     @staticmethod
-    def get_by_id(id):
-        return Ingredient.query.get(id)
+    def get_by_id(ingredient_id: int):
+        """
+        get by id static method
+        :param id: ingredient id int param
+        :return: query result for id param
+        """
+
+        return Ingredient.query.get(ingredient_id)
 
     @staticmethod
     def multiget(ids):
+        """
+        multiget id
+        :param ids: ids int list
+        :return: query result for id list
+        """
+
         return Ingredient.query.filter(Ingredient.id.in_(ids)).all()
 
 
 class IngredientSchema(ma.SQLAlchemyAutoSchema):
+    """
+    Ingredient Schema used to serializa and deserialize an Ingredient
+    """
+
     class Meta:
         model = Ingredient
         load_instance = (
@@ -50,6 +72,12 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
 
     @validates_schema
     def validate_food_group(self, data, **kwargs):
+        """
+        validate that food group and storage params are in within certain values
+        :param data: dict with data of the ingredient for creation
+        :param kwargs:
+        :return: raise exception on errors
+        """
         errors = {}
         if data['food_group'] not in [
             'dairies',
@@ -62,16 +90,12 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
             'condiments',
         ]:
             errors['food_group'] = [
-                '{food_group} \'food_group\' is not a valid supported meal'.format(
-                    food_group=data['food_group']
-                )
+                f'{data["food_group"]} \'food_group\' is not a valid supported meal'
             ]
 
         if data['storage'] not in ['dry', 'refrigerated', 'frozen']:
             errors['storage'] = [
-                '{storage} \'storage\' is not a valid supported meal'.format(
-                    storage=data['storage']
-                )
+                f'{data["storage"]} \'storage\' is not a valid supported meal'
             ]
 
         if errors:
@@ -79,5 +103,9 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
 
 
 class IngredientPaginationSchema(ma.Schema):
+    """
+    Ingredient Pagination Schema for pagination query response
+    """
+
     paging = fields.Nested(PaginationSchema())
     results = fields.Nested(IngredientSchema(), many=True)

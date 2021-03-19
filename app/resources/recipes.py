@@ -106,6 +106,12 @@ class RecipeRecommendation(Resource):
         RecipesRecommendationsQueryParams(unknown=RAISE), location='query'
     )
     def get(self, params: 'RecipesRecommendationsQueryParams'):
+        """
+        get method
+        :param params: params
+        :return: retu
+        """
+
         print(type(params))
         print(params)
         pass
