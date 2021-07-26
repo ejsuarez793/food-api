@@ -8,10 +8,10 @@ from app.models.pagination import PaginationSchema
 
 class Recipe(db.Model):
     __tablename__ = 'recipes'
-    id = db.Column(db.String(), primary_key=True)
-    name = db.Column(db.String(), nullable=False)
-    veggie_friendly = db.Column(db.Boolean(), nullable=False)
-    meal_type = db.Column(db.JSON, nullable=False)
+    id = db.Column(db.String, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+    veggie_friendly = db.Column(db.Boolean, nullable=False)
+    meal_type = db.Column(db.ARRAY(db.String), nullable=False)
     cook_time = db.Column(db.Integer, nullable=False)
     wash_time = db.Column(db.Integer, nullable=False)
     cook_technique = db.Column(db.String, nullable=False)

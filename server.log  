@@ -1,0 +1,279 @@
+2020-10-16 22:46:19,275 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 22:46:19,276 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 22:46:19,924 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 22:46:20,191 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 22:48:08,428 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2020-10-16 22:48:08,429 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2020-10-16 22:48:08,429 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:12]
+2020-10-16 22:48:08,429 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for recipes...
+2020-10-16 22:48:08,444 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,495 INFO werkzeug Thread-3 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,495 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 416
+2020-10-16 22:48:08,497 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,503 INFO werkzeug Thread-4 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,503 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 446
+2020-10-16 22:48:08,505 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,511 INFO werkzeug Thread-5 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,511 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 427
+2020-10-16 22:48:08,513 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,518 INFO werkzeug Thread-6 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,519 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 428
+2020-10-16 22:48:08,521 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,526 INFO werkzeug Thread-7 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,527 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 414
+2020-10-16 22:48:08,528 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,534 INFO werkzeug Thread-8 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,535 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 413
+2020-10-16 22:48:08,536 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,542 INFO werkzeug Thread-9 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,542 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 424
+2020-10-16 22:48:08,544 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,550 INFO werkzeug Thread-10 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,550 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 420
+2020-10-16 22:48:08,552 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,557 INFO werkzeug Thread-11 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,558 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 440
+2020-10-16 22:48:08,560 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,565 INFO werkzeug Thread-12 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,566 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 411
+2020-10-16 22:48:08,568 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,574 INFO werkzeug Thread-13 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,574 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 434
+2020-10-16 22:48:08,576 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,582 INFO werkzeug Thread-14 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /recipes HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,582 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /recipes HTTP/1.1" 201 422
+2020-10-16 22:48:08,582 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:12][errors:0]
+2020-10-16 22:48:08,583 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2020-10-16 22:48:08,583 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:39]
+2020-10-16 22:48:08,583 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2020-10-16 22:48:08,585 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,597 INFO werkzeug Thread-15 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,597 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 297
+2020-10-16 22:48:08,599 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,605 INFO werkzeug Thread-16 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,605 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 276
+2020-10-16 22:48:08,607 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,612 INFO werkzeug Thread-17 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,613 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 285
+2020-10-16 22:48:08,615 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,620 INFO werkzeug Thread-18 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,621 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 277
+2020-10-16 22:48:08,623 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,628 INFO werkzeug Thread-19 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,628 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 281
+2020-10-16 22:48:08,630 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,638 INFO werkzeug Thread-20 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,638 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 287
+2020-10-16 22:48:08,644 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,651 INFO werkzeug Thread-21 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,651 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 279
+2020-10-16 22:48:08,653 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,659 INFO werkzeug Thread-22 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,659 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 288
+2020-10-16 22:48:08,663 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,669 INFO werkzeug Thread-23 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,669 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 280
+2020-10-16 22:48:08,671 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,678 INFO werkzeug Thread-24 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,679 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 282
+2020-10-16 22:48:08,681 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,686 INFO werkzeug Thread-25 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,687 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 292
+2020-10-16 22:48:08,689 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,695 INFO werkzeug Thread-26 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,695 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 286
+2020-10-16 22:48:08,697 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,702 INFO werkzeug Thread-27 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,702 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 285
+2020-10-16 22:48:08,704 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,709 INFO werkzeug Thread-28 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,709 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 277
+2020-10-16 22:48:08,711 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,716 INFO werkzeug Thread-29 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,717 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 274
+2020-10-16 22:48:08,718 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,724 INFO werkzeug Thread-30 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,725 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 282
+2020-10-16 22:48:08,727 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,731 INFO werkzeug Thread-31 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,732 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 281
+2020-10-16 22:48:08,734 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,739 INFO werkzeug Thread-32 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,739 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 279
+2020-10-16 22:48:08,741 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,746 INFO werkzeug Thread-33 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,746 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 292
+2020-10-16 22:48:08,748 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,753 INFO werkzeug Thread-34 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,753 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 280
+2020-10-16 22:48:08,755 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,760 INFO werkzeug Thread-35 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,760 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 285
+2020-10-16 22:48:08,763 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,768 INFO werkzeug Thread-36 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,768 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 277
+2020-10-16 22:48:08,770 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,775 INFO werkzeug Thread-37 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,775 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 274
+2020-10-16 22:48:08,777 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,782 INFO werkzeug Thread-38 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,782 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 274
+2020-10-16 22:48:08,784 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,789 INFO werkzeug Thread-39 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,789 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 275
+2020-10-16 22:48:08,791 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,796 INFO werkzeug Thread-40 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,797 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 278
+2020-10-16 22:48:08,798 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,803 INFO werkzeug Thread-41 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,804 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 290
+2020-10-16 22:48:08,805 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,810 INFO werkzeug Thread-42 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,810 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 287
+2020-10-16 22:48:08,812 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,817 INFO werkzeug Thread-43 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,817 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 280
+2020-10-16 22:48:08,819 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,824 INFO werkzeug Thread-44 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,825 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 278
+2020-10-16 22:48:08,827 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,831 INFO werkzeug Thread-45 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,832 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 280
+2020-10-16 22:48:08,833 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,838 INFO werkzeug Thread-46 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,839 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 293
+2020-10-16 22:48:08,840 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,846 INFO werkzeug Thread-47 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,846 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 292
+2020-10-16 22:48:08,848 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,853 INFO werkzeug Thread-48 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,853 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 290
+2020-10-16 22:48:08,855 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,860 INFO werkzeug Thread-49 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,860 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 290
+2020-10-16 22:48:08,862 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,867 INFO werkzeug Thread-50 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,868 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 291
+2020-10-16 22:48:08,870 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,877 INFO werkzeug Thread-51 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,877 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 282
+2020-10-16 22:48:08,880 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,891 INFO werkzeug Thread-52 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,891 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 281
+2020-10-16 22:48:08,895 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTP connection (1): localhost:5000
+2020-10-16 22:48:08,901 INFO werkzeug Thread-53 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /ingredients HTTP/1.1[0m" 201 -
+2020-10-16 22:48:08,902 DEBUG urllib3.connectionpool Thread-2 : http://localhost:5000 "POST /ingredients HTTP/1.1" 201 278
+2020-10-16 22:48:08,902 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:39][errors:0]
+2020-10-16 22:48:08,903 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 22:48:08] "[37mPOST /jobs/populate_db HTTP/1.1[0m" 200 -
+2020-10-16 23:08:17,567 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2020-10-16 23:08:17,711 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:08:18,430 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:08:18,437 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:08:25,437 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:08:25] "[31m[1mGET /recipes/recommendations?days=8&snacks_number=3&meals=breakfast,dinner,holi&time=451&price=-1&veggie_only=true HTTP/1.1[0m" 400 -
+2020-10-16 23:08:51,008 INFO werkzeug Thread-3 : 127.0.0.1 - - [16/Oct/2020 23:08:51] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:10:35,922 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:10:35,923 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:10:36,519 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:10:36,525 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:10:37,146 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:10:37] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:10:57,969 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/dao/recipes_dao.py', reloading
+2020-10-16 23:10:58,035 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:13:15,985 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:13:15,986 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:13:16,532 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:13:16,539 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:13:17,129 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:13:17] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:17:43,340 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:17:43,341 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:17:44,176 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:17:44,184 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:17:44,233 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:17:44] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:17:59,531 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:17:59,532 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:18:00,153 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:18:00,161 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:18:00,237 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:18:00] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:20:38,275 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:20:38,276 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:20:38,824 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:20:38,832 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:20:38,964 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:20:38] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:21:07,174 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:21:07,175 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:21:07,774 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:21:07,780 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:21:08,033 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:21:08] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:29:07,317 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:29:07,318 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:29:07,892 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:29:07,899 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:29:08,428 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:29:08] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:29:37,282 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:29:37,283 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:29:37,835 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:29:37,847 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:29:37,921 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:29:37] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:30:06,497 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/dao/recipes_dao.py', reloading
+2020-10-16 23:30:06,582 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:30:07,165 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:30:07,173 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:33:23,660 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:33:23,661 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:33:24,364 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:33:24,370 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:33:24,405 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:33:24] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:34:40,796 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:34:40,797 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:34:41,374 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:34:41,380 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:34:41,602 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:34:41] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:35:17,131 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/dao/recipes_dao.py', reloading
+2020-10-16 23:35:17,199 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:35:17,745 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:35:17,751 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:36:43,406 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/dao/recipes_dao.py', reloading
+2020-10-16 23:36:43,479 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:36:44,009 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:36:44,015 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:38:11,811 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2020-10-16 23:38:11,930 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:38:13,481 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:38:13,482 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:38:14,078 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:38:14,087 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:38:16,863 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:38:16] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 500 -
+2020-10-16 23:38:47,561 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:38:47,562 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:38:48,090 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:38:48,096 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:38:48,129 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:38:48] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:38:49,085 INFO werkzeug Thread-3 : 127.0.0.1 - - [16/Oct/2020 23:38:49] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:38:54,705 INFO werkzeug Thread-4 : 127.0.0.1 - - [16/Oct/2020 23:38:54] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:39:02,324 INFO werkzeug Thread-5 : 127.0.0.1 - - [16/Oct/2020 23:39:02] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 200 -
+2020-10-16 23:39:26,677 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:39:26,678 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:39:27,271 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:39:27,278 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:39:27,310 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:39:27] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 200 -
+2020-10-16 23:39:36,554 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2020-10-16 23:39:36,631 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:39:37,182 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:39:37,188 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:39:37,230 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:39:37] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 200 -
+2020-10-16 23:40:19,908 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:40:19,909 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:40:20,595 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:40:20,603 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:40:20,902 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:40:20] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 200 -
+2020-10-16 23:42:18,255 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:42:18,256 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:42:18,848 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:42:18,854 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:42:19,074 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:42:19] "[35m[1mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 500 -
+2020-10-16 23:42:35,015 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-16 23:42:35,017 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-16 23:42:35,533 WARNING werkzeug MainThread :  * Debugger is active!
+2020-10-16 23:42:35,540 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2020-10-16 23:42:35,615 INFO werkzeug Thread-2 : 127.0.0.1 - - [16/Oct/2020 23:42:35] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=false HTTP/1.1[0m" 200 -
+2020-10-16 23:42:45,849 INFO werkzeug Thread-3 : 127.0.0.1 - - [16/Oct/2020 23:42:45] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=breakfast,lunch,dinner&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -
+2020-10-16 23:43:14,755 INFO werkzeug Thread-4 : 127.0.0.1 - - [16/Oct/2020 23:43:14] "[37mGET /recipes/recommendations?days=1&snacks_number=2&meals=shake&time=450&price=1&veggie_only=true HTTP/1.1[0m" 200 -

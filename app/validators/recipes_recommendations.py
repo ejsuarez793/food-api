@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 @dataclass
 class RecipesRecommendationsParams:
     days: int
-    snacks_number: int
+    # snacks_number: int
     meals: list
     time: int
     price: int  # este va a ser dificil de mantener (precios varían mucho)
@@ -21,7 +21,7 @@ class RecipesRecommendationsParams:
 
 class RecipesRecommendationsQueryParams(Schema):
     days = fields.Integer()
-    snacks_number = fields.Integer()
+    # snacks_number = fields.Integer()
     meals = fields.List(fields.String())
     time = fields.Integer()
     price = fields.Decimal()
@@ -44,8 +44,8 @@ class RecipesRecommendationsQueryParser(FlaskParser):
 def _validate_params(request, schema):
     try:
         days = int(request.args.get('days')) if request.args.get('days') is not None else 1
-        snacks_number = int(request.args.get('snacks_number')) if request.args.get('snacks_number') is not None else 0
-        meals = request.args.get('meals').split(',') if request.args.get('meals') is not None else ['breakfast', 'lunch', 'dinner']
+        # snacks_number = int(request.args.get('snacks_number')) if request.args.get('snacks_number') is not None else 0
+        meals = request.args.get('meals').split(',') if request.args.get('meals') is not None else ['breakfast', 'lunch', 'dinner', 'snack', 'shake']
         time = int(request.args.get('time')) if request.args.get('time') is not None else 0
         price = Decimal(request.args.get('price')) if request.args.get('price') is not None else 0
         veggie_only = bool(request.args.get('veggie_only')) if request.args.get('veggie_only') is not None else False
@@ -57,8 +57,8 @@ def _validate_params(request, schema):
     if days < 0 or days > 7:
         errors['days'] = 'param \'days\' is not between 0 and 7'
 
-    if snacks_number < 0 or snacks_number > 2:
-        errors['snacks_number'] = 'param \'snacks_number\' is not between 0 and 2'
+    # if snacks_number < 0 or snacks_number > 2:
+    #     errors['snacks_number'] = 'param \'snacks_number\' is not between 0 and 2'
 
     for meal in meals:
         if meal not in ['breakfast', 'lunch', 'dinner', 'snack', 'drink', 'shake']:  # Todo: dejar esto en una config lista duplicada en otro lado
@@ -74,5 +74,5 @@ def _validate_params(request, schema):
     if errors:
         raise ValidationError(errors)
 
-    params = dict(days=days, snacks_number=snacks_number, meals=meals, time=time, price=price, veggie_only=veggie_only)
+    params = dict(days=days, meals=meals, time=time, price=price, veggie_only=veggie_only)
     return params

@@ -1,11 +1,16 @@
 import uuid
 import logging
-from marshmallow import ValidationError
+
+from app.recommendations_algoritms.recommendation_algorithm import RecommendationAlgorithm
+from app.recommendations_algoritms.strategies.strategies import SimpleRecommendationStrategy
 
 from app import db
 from app.models.recipes import Recipe, RecipeSchema, RecipePaginationSchema
+from app.dao import recipes_dao
 
 log = logging.getLogger(__name__)
+
+recommendation_algorithm = RecommendationAlgorithm(SimpleRecommendationStrategy())
 
 def get_by_id(id: str):
     return RecipeSchema().dump(Recipe.get_by_id(id))
@@ -55,7 +60,7 @@ def update_recipe(id, data):
 
     recipe_schema = RecipeSchema()
     output = recipe_schema.dump(recipe)
-    return jsonify(output)
+    return output
 
 
 def delete_recipe(id):
@@ -65,3 +70,19 @@ def delete_recipe(id):
 
     Recipe.query.filter(Recipe.id == id).delete()
     db.session.commit()
+
+
+def get_recommendations(params):
+    try:
+        recipes = recipes_dao.get_recommendations(params.veggie_only, params.meals)
+    except Exception as e:
+        log.error('there was an error getting recommendations from recipe dao [error:{}]'.format(str(e)))
+        return None, {'msg': 'there was an error getting recommendations', 'status_code': 500}
+
+    try:
+        response = recommendation_algorithm.do_recommendation(recipes, params)
+    except Exception as e:
+        log.error('there was an error preparing recommendation [error:{}]'.format(str(e)))
+        return None, {'msg': 'there was an error getting recommendations', 'status_code': 500}
+
+    return response, None
