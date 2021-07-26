@@ -4,7 +4,7 @@ from typing import Dict
 from app.recommendations_algoritms.strategies.strategies import Strategy
 
 
-class RecommendationAlgorithm():
+class RecommendationAlgorithm:
     def __init__(self, strategy: Strategy) -> None:
         self._strategy = strategy
 
