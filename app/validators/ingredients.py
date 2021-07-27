@@ -1,7 +1,6 @@
 import logging
-import datetime
 from dataclasses import dataclass
-from typing import List
+from typing import List, Dict
 
 from flask import request
 from webargs.flaskparser import FlaskParser
@@ -10,32 +9,53 @@ from werkzeug.exceptions import BadRequest
 
 log = logging.getLogger(__name__)
 
-from app.validators.utils import validate_ids, validate_date_range, validate_pagination_params, validate_sort_by_params
+from app.validators.utils import validate_ids, validate_filters, validate_pagination_params, validate_sort_by_params
+from app.models.ingredients import VALID_FOOD_GROUPS, VALID_STORAGE_TYPE
+
+VALID_FILTERS = {
+    'eq': ['id', 'food_group', 'veggie_friendly', 'storage'],
+    'ne': ['id', 'food_group', 'veggie_friendly', 'storage'],
+    'ilike': ['name'],
+    'notilike': ['name'],
+    'startswith': ['name'],
+    'between': ['date_created', 'price', 'expiration_time'],
+    'ge': ['date_created', 'price', 'expiration_time'],
+    'gt': ['date_created', 'price', 'expiration_time'],
+    'le': ['date_created', 'price', 'expiration_time'],
+    'lt': ['date_created', 'price', 'expiration_time']
+}
+
+FILTERS_DATA_TYPES = {
+    'integer_values': ['id', 'expiration_time'],
+    'real_values': ['price'],
+    'discrete_values': {
+        'food_group': VALID_FOOD_GROUPS,
+        'storage': VALID_STORAGE_TYPE},  # ToDo: pasar esto a una config
+    'boolean_values': ['veggie_friendly'],
+    'date_values': ['date_created']
+}
+
+MAX_MULTIGET_IDS = 20
 
 @dataclass
 class IngredientQueryParam:
     offset: int
     limit: int
-    date_from: str
-    date_to: str
-    name: str
     ids: str
     sort_by: str
     str_sort: str
     asc: bool
-    # filters: List[str] #ToDo: implementar luego
+    filters: List[Dict]
 
 
 class IngredientSearchQuery(Schema): ## Todo: ver diferencia de ma.Schema vs Schema
     offset = fields.Integer()
     limit = fields.Integer()
-    date_to = fields.String(allow_none=True)
-    date_from = fields.String(allow_none=True)
-    name = fields.String(allow_none=True)
     ids = fields.List(fields.Integer(), allow_none=True)
     sort_by = fields.String(allow_none=True)
     str_sort = fields.Boolean(allow_none=True)
     asc = fields.Boolean(allow_none=True)
+    filters = fields.List(fields.Dict(), allow_none=True)
 
     @post_load
     def make_object(self, data, **kwargs):
@@ -51,26 +71,23 @@ class IngredientQueryParser(FlaskParser):
 
 
 def _validate_params(request: 'request', schema):
-    str_date_to = request.args.get('date_to')
-    str_date_from = request.args.get('date_from')
     offset = request.args.get('offset')
     limit = request.args.get('limit')
-    name = request.args.get('name')
     str_ids = request.args.get('ids')
     sort_by = request.args.get('sort_by')
     asc = request.args.get('asc')
 
     validated_params = {}
-    errors = {}
 
-    date_params_available = str_date_from is not None and str_date_to is not None
-    if date_params_available:
-        validated_params['date_to'], validated_params['date_from'], error_msg = validate_date_range(str_date_to, str_date_from)
-        if error_msg:
-            errors['date_range'] = error_msg
+    # eq, ne, ge, le, gt, lt, between, ilike, notilike, startswith
+    # https://flask-rest-jsonapi.readthedocs.io/en/latest/filtering.html#simple-filters what each one means
 
+    # validate filters first, to initialize errors variable
+    validated_params['filters'], errors = validate_filters(request, VALID_FILTERS, FILTERS_DATA_TYPES)
+
+    # ToDo: validar el resto de paramétros a pesar de que si solo viene `ids` se ignora el resto de parámetros ?
     if str_ids:
-        validated_params['ids'], error_msg = validate_ids(str_ids)
+        validated_params['ids'], error_msg = validate_ids(str_ids, MAX_MULTIGET_IDS)
         if error_msg:
             errors['ids'] = error_msg
 
@@ -80,22 +97,20 @@ def _validate_params(request: 'request', schema):
         errors['pagination'] = error_msg
 
     # validate sort_by and asc
-    str_columns = ['name', 'food_group', 'storage']
-    numeric_columns = ['id', 'price', 'expiration_time']
+    if sort_by:
+        str_columns = ['name', 'food_group', 'storage']
+        numeric_columns = ['id', 'price', 'expiration_time']
 
-    validated_params['sort_by'], \
-    validated_params['str_sort'], \
-    validated_params['asc'], \
-    error_msg = validate_sort_by_params(sort_by, asc, str_columns, numeric_columns)
-    if error_msg:
-        errors['sorting'] = error_msg
-
-    # validate name
-    validated_params['name'] = name
+        validated_params['sort_by'], \
+        validated_params['str_sort'], \
+        validated_params['asc'], \
+        error_msg = validate_sort_by_params(sort_by, asc, str_columns, numeric_columns)
+        if error_msg:
+            errors['sorting'] = error_msg
 
     # raise exception if errors exists
     if errors:
         raise ValidationError(errors)
 
-    params = ['date_to', 'date_from', 'offset', 'limit', 'name', 'ids', 'sort_by', 'str_sort', 'asc']
+    params = ['offset', 'limit', 'ids', 'sort_by', 'str_sort', 'asc', 'filters']
     return {param: validated_params[param] if param in validated_params else None for param in params}

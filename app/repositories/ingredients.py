@@ -1,4 +1,5 @@
 import logging
+import traceback
 
 from marshmallow import ValidationError
 
@@ -19,28 +20,11 @@ def get(id: int):
 
 
 def multiget(ids: list):
-    """try:
-        validated_ids = [int(id) for id in ids]
-    except Exception as e:
-        log.debug('invalid params for ingredients multiget [ids:%s]', ','.join(ids))
-        return None, {'msg': 'invalid params for multiget', 'status_code': 400}"""
-
     try:
         ingredients = Ingredient.multiget(ids)
     except Exception as e:
         log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
-
-    return IngredientSchema(many=True).dump(ingredients), None
-
-
-def filter_by_name(name: str):
-
-    try:
-        ingredients = Ingredient.filter_by_name(name)
-    except Exception as e:
-        log.error(f'there was a database error while getting ingredient(s) filtering by name [name:{name}][error:{str(e)}]')
-        return None, {'msg': 'there was an error getting ingredient(s) filtering by name', 'status_code': 500}
 
     return IngredientSchema(many=True).dump(ingredients), None
 
@@ -58,6 +42,7 @@ def search(params: 'IngredientSearchQuery'):
         return ips.dump(res), None
     except Exception as e:
         log.error(f'there was a database error while searching ingredient(s) [error:{str(e)}]')
+        traceback.print_exc()  # ToDo agregar esto en lugares importantes, o en todos los try catch mejor (?)
         return None, {'msg': 'there was an error searching ingredient(s)', 'status_code': 500}
 
 def create(data):
