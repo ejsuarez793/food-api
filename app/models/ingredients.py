@@ -3,6 +3,8 @@ from app import ma
 
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
+from sqlalchemy import func
+
 from app.models.pagination import PaginationSchema
 
 
@@ -26,6 +28,34 @@ class Ingredient(db.Model):
     @staticmethod
     def multiget(ids):
         return Ingredient.query.filter(Ingredient.id.in_(ids)).all()
+
+    @staticmethod
+    def filter_by_name(name):
+        return Ingredient.query.filter(Ingredient.name.ilike(name)).all()
+
+    @staticmethod
+    def search(params):
+
+        query = Ingredient.query
+        if params.name is not None:
+            query = query.filter(Ingredient.name.ilike(f'%{params.name}%'))
+
+        if params.date_to is not None and params.date_from is not None:
+            query = query.filter(Ingredient.date_created.between(params.date_from, params.date_to))
+
+        if params.sort_by is not None:
+            sort_by_func = getattr(Ingredient, params.sort_by)
+            if params.str_sort:
+                sort_by_func = func.lower(getattr(Ingredient, params.sort_by))
+
+            sort_by_asc_func = sort_by_func.asc()
+            if params.asc is False:
+                sort_by_asc_func = sort_by_func.desc()
+
+            query = query.order_by(sort_by_asc_func)
+
+        page = int((params.offset / params.limit) + 1)
+        return query.paginate(page, params.limit, False)
 
 
 class IngredientSchema(ma.SQLAlchemyAutoSchema):
