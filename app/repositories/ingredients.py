@@ -1,9 +1,10 @@
 import logging
+import traceback
 
 from marshmallow import ValidationError
 
 from app import db
-from app.models.ingredients import IngredientSchema, Ingredient
+from app.models.ingredients import IngredientSchema, Ingredient, IngredientPaginationSchema
 
 log = logging.getLogger(__name__)
 
@@ -20,19 +21,30 @@ def get(id: int):
 
 def multiget(ids: list):
     try:
-        validated_ids = [int(id) for id in ids]
+        ingredients = Ingredient.multiget(ids)
     except Exception as e:
-        log.debug('invalid params for ingredients multiget [ids:%s]', ','.join(ids))
-        return None, {'msg': 'invalid params for multiget', 'status_code': 400}
-
-    try:
-        ingredients = Ingredient.multiget(validated_ids)
-    except Exception as e:
-        log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(validated_ids), str(e))
+        log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
 
     return IngredientSchema(many=True).dump(ingredients), None
 
+
+def search(params: 'IngredientSearchQuery'):
+
+    if params.ids is not None:
+        ingredients, error = multiget(params.ids)
+        return ingredients, error
+
+    try:
+        result = Ingredient.search(params)
+        res = {'paging': {'offset': params.offset, 'limit': params.limit},
+               'results': result.items}
+        paginated_response = IngredientPaginationSchema().dump(res)  # Todo Instaciar siempre pagination Schema
+        return paginated_response, None
+    except Exception as e:
+        log.error(f'there was a database error while searching ingredient(s) [error:{str(e)}]')
+        traceback.print_exc()  # ToDo agregar esto en lugares importantes, o en todos los try catch mejor (?)
+        return None, {'msg': 'there was an error searching ingredient(s)', 'status_code': 500}
 
 def create(data):
     schema = IngredientSchema()

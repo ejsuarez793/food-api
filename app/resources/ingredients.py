@@ -3,17 +3,18 @@ from flask_restx import Resource
 
 from webargs import fields
 from webargs.flaskparser import use_args
-
+from marshmallow import RAISE
 from app.repositories import ingredients
+
+from app.validators.ingredients import IngredientSearchQuery, IngredientQueryParser
+
+ingredient_query_parser = IngredientQueryParser()
 
 
 class Ingredient(Resource):
-    # Todo: hace falta el use_args para un parámetro tan simple?
-    #  sobretodo si el error de validación no lo puedo capturar dentro del get
-    @use_args({'ids': fields.DelimitedList(fields.Str())}, location='query')
-    def get(self, args):
-        ids = args['ids']
-        response, error = ingredients.multiget(ids)
+    @ingredient_query_parser.use_args(IngredientSearchQuery(unknown=RAISE), location='query')
+    def get(self, params: 'IngredientSearchQuery'):
+        response, error = ingredients.search(params)
         if error:
             return error, error['status_code']
         return response, 200

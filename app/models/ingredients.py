@@ -3,7 +3,12 @@ from app import ma
 
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
+from sqlalchemy import func, not_
+
 from app.models.pagination import PaginationSchema
+
+VALID_FOOD_GROUPS = ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments']
+VALID_STORAGE_TYPE = ['dry', 'refrigerated', 'frozen']
 
 
 class Ingredient(db.Model):
@@ -27,6 +32,51 @@ class Ingredient(db.Model):
     def multiget(ids):
         return Ingredient.query.filter(Ingredient.id.in_(ids)).all()
 
+    @staticmethod
+    def search(params):
+        query = Ingredient.query
+
+        for f in params.filters:
+            field = f['field']
+            operator = f['operator']
+            value = f['value']
+            if operator == 'eq':
+                query = query.filter(getattr(Ingredient, field) == value)
+            elif operator == 'ne':
+                query = query.filter(getattr(Ingredient, field) != value)
+            elif operator == 'ilike':
+                query = query.filter(getattr(Ingredient, field).ilike(f'%{value}%'))
+            elif operator == 'notilike':
+                query = query.filter(~getattr(Ingredient, field).ilike(f'%{value}%'))
+            elif operator == 'startswith':
+                query = query.filter(getattr(Ingredient, field).ilike(f'{value}%'))
+            elif operator == 'ge':
+                query = query.filter(getattr(Ingredient, field) >= value)
+            elif operator == 'gt':
+                query = query.filter(getattr(Ingredient, field) > value)
+            elif operator == 'le':
+                query = query.filter(getattr(Ingredient, field) <= value)
+            elif operator == 'lt':
+                query = query.filter(getattr(Ingredient, field) < value)
+            elif operator == 'between':
+                _from = value.split(',')[0]  # ToDo: sacar esta lógica de aquí?
+                _to = value.split(',')[1]  # ToDo: sacar esta lógica de aquí?
+                query = query.filter(getattr(Ingredient, field).between(_from, _to))
+
+        if params.sort_by is not None:
+            sort_by_func = getattr(Ingredient, params.sort_by)
+            if params.str_sort:
+                sort_by_func = func.lower(getattr(Ingredient, params.sort_by))
+
+            sort_by_asc_func = sort_by_func.asc()
+            if params.asc is False:
+                sort_by_asc_func = sort_by_func.desc()
+
+            query = query.order_by(sort_by_asc_func)
+
+        page = int((params.offset / params.limit) + 1)
+        return query.paginate(page, params.limit, False)
+
 
 class IngredientSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
@@ -37,11 +87,13 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
     @validates_schema
     def validate_food_group(self, data, **kwargs):
         errors = {}
-        if data['food_group'] not in ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments']:
-            errors['food_group'] = ['{food_group} \'food_group\' is not a valid supported meal'.format(food_group=data['food_group'])]
+        # ToDo: pasar esto a config
+        if data['food_group'] not in VALID_FOOD_GROUPS:
+            errors['food_group'] = ['{food_group} \'food_group\' is not a valid supported food group'.format(food_group=data['food_group'])]
 
-        if data['storage'] not in ['dry', 'refrigerated', 'frozen']:
-            errors['storage'] = ['{storage} \'storage\' is not a valid supported meal'.format(storage=data['storage'])]
+        # ToDo: pasar esto a config
+        if data['storage'] not in VALID_STORAGE_TYPE:
+            errors['storage'] = ['{storage} \'storage\' is not a valid supported storage type'.format(storage=data['storage'])]
 
         if errors:
             raise ValidationError(errors)
