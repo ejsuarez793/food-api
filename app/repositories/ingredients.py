@@ -32,14 +32,15 @@ def multiget(ids: list):
 def search(params: 'IngredientSearchQuery'):
 
     if params.ids is not None:
-        return multiget(params.ids)
+        ingredients, error = multiget(params.ids)
+        return ingredients, error
 
     try:
         result = Ingredient.search(params)
         res = {'paging': {'offset': params.offset, 'limit': params.limit},
                'results': result.items}
-        ips = IngredientPaginationSchema()
-        return ips.dump(res), None
+        paginated_response = IngredientPaginationSchema().dump(res)  # Todo Instaciar siempre pagination Schema
+        return paginated_response, None
     except Exception as e:
         log.error(f'there was a database error while searching ingredient(s) [error:{str(e)}]')
         traceback.print_exc()  # ToDo agregar esto en lugares importantes, o en todos los try catch mejor (?)
