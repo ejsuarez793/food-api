@@ -1,0 +1,696 @@
+2021-07-28 18:28:06,166 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 18:28:06,168 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 18:28:06,869 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 18:28:06,879 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 18:28:26,109 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 18:28:26] "[37mGET /recipes/1 HTTP/1.1[0m" 200 -
+2021-07-28 18:29:17,550 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 18:29:17] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15 HTTP/1.1[0m" 200 -
+2021-07-28 18:30:21,935 INFO werkzeug Thread-4 : 127.0.0.1 - - [28/Jul/2021 18:30:21] "[33mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredient/ HTTP/1.1[0m" 404 -
+2021-07-28 18:34:11,671 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 18:34:11,672 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 18:34:12,130 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 18:34:12,139 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 18:35:44,610 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 18:35:44] "[33mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredient/ HTTP/1.1[0m" 404 -
+2021-07-28 18:35:49,107 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 18:35:49] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 18:38:58,924 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/resources/recipes.py', reloading
+2021-07-28 18:38:58,997 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 18:39:00,040 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 18:39:00,048 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 18:58:52,045 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/routes/routes.py', reloading
+2021-07-28 18:58:52,129 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 18:58:53,196 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 18:58:53,206 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 19:44:03,362 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 19:44:03,488 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 19:53:50,817 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 19:53:50,818 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 19:53:51,304 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 19:53:51,312 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 19:55:59,995 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 19:56:00,084 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 19:56:00,987 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 19:56:00,995 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 19:56:10,899 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 19:56:10] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 19:57:01,745 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 19:57:01,746 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 19:57:02,378 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 19:57:02,384 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 19:57:03,096 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 19:57:03] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:00:57,363 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:00:57,432 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:00:58,306 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:00:58,313 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:01:07,519 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:01:07,602 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:01:08,165 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:01:08,170 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:04:22,974 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:04:22,976 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:04:23,476 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:04:23,480 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:04:24,945 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:04:24] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:05:09,073 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:05:09,074 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:05:09,613 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:05:09,618 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:05:10,568 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:05:10] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:09:09,621 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:09:09,723 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:09:10,573 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:09:10,580 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:09:23,865 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:09:23,939 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:09:24,879 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:09:24,884 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:09:38,200 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:09:38,270 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:09:38,749 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:09:38,754 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:09:47,954 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:09:48,025 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:09:48,500 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:09:48,505 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:10:07,957 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:10:08,023 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:10:08,652 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:10:08,657 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:10:28,103 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:10:28,172 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:10:28,923 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:10:28,928 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:10:56,023 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:10:56,024 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:10:56,486 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:10:56,491 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:11:08,953 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:11:08] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:12:25,783 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:12:25,783 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:12:26,251 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:12:26,256 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:12:28,620 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:12:28] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:15:04,528 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:15:04,615 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:16:04,091 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:16:04,092 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:16:04,553 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:16:04,558 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:16:06,919 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:16:06] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:16:27,290 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:16:27,291 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:16:27,789 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:16:27,795 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:16:28,030 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:16:28] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:21:51,280 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:21:51,283 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:21:51,751 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:21:51,759 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:21:53,825 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:21:53] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:23:37,485 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:23:37,486 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:23:37,963 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:23:37,971 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:23:38,100 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:23:38] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:28:24,825 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:28:24,827 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:28:25,271 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:28:25,279 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:28:26,833 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:28:26] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:32:26,374 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:32:26,465 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:32:27,285 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:32:27,291 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:32:38,549 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:32:38,622 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:38:33,169 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:38:33,171 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:38:33,683 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:38:33,691 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:38:34,209 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:38:34] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:40:08,672 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:40:08,753 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:40:09,550 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:40:09,557 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:40:35,542 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:40:35,543 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:40:36,087 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:40:36,092 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:40:36,138 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:40:36] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:41:41,803 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:41:41,804 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:41:42,256 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:41:42,264 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:41:42,319 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:41:42] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:41:57,827 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:41:57,827 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:41:58,264 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:41:58,269 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:41:58,941 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:41:58] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:43:44,474 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:43:44,572 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:43:45,297 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:43:45,302 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:45:43,801 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:45:43] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:50:56,604 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:50:56,782 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:52:53,475 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:52:53,478 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:52:55,297 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:52:55,308 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:52:57,310 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:52:57,311 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:52:57,913 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:52:57,945 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:52:59,567 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:52:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:53:31,832 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:53:31,832 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:53:32,351 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:53:32,356 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:53:32,992 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:53:32] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:53:47,767 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:53:47,768 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:53:48,218 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:53:48,223 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:53:48,963 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:53:48] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:53:58,755 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:53:58,756 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:53:59,209 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:53:59,214 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:53:59,257 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:53:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:54:44,157 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:54:44,158 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:54:44,645 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:54:44,650 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:54:45,148 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:54:45] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:54:52,260 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:54:52,260 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:54:52,704 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:54:52,709 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:54:53,482 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:54:53] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:55:49,249 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:55:49,250 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:55:49,758 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:55:49,763 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:55:50,078 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:55:50] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 20:57:24,863 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 20:57:24,937 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:58:14,528 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:58:14,529 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:58:15,013 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:58:15,019 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:58:17,870 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:58:17] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:58:42,025 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:58:42,025 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:58:42,463 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:58:42,468 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:58:43,329 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:58:43] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 20:58:51,056 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 20:58:51,057 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 20:58:51,491 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 20:58:51,496 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 20:58:56,255 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 20:58:56] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:00:57,855 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:00:57,856 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:00:58,513 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:00:58,518 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:01:09,013 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:01:09,014 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:01:09,531 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:01:09,537 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:01:09,851 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:01:09] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:01:53,376 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:01:53,377 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:01:53,860 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:01:53,865 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:01:57,056 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:01:57] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:04:31,268 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:04:31,269 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:04:31,774 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:04:31,778 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:04:31,938 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:04:31] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 21:10:40,324 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:10:40,324 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:10:40,884 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:10:40,891 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:11:43,297 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:11:43,298 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:11:43,967 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:11:43,973 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:11:44,034 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:11:44] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:12:29,277 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:12:29,278 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:12:29,751 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:12:29,756 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:12:29,920 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:12:29] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:12:44,532 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:12:44,533 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:12:45,028 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:12:45,033 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:12:46,141 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:12:46] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:14:13,249 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:14:13,250 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:14:13,866 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:14:13,871 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:14:14,070 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:14:14] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 21:15:10,147 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 21:15:10,233 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:15:11,220 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:15:11,227 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:15:39,145 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:15:39,146 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:15:39,689 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:15:39,735 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:15:40,003 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:15:40] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:17:28,676 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:17:28,676 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:17:29,136 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:17:29,141 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:17:29,697 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:17:29] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:18:03,621 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:18:03,622 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:18:04,077 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:18:04,082 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:18:04,823 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:18:04] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:18:58,838 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:18:58,840 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:18:59,310 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:18:59,315 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:18:59,366 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:18:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:19:56,275 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:19:56,276 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:19:56,719 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:19:56,724 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:19:57,260 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:19:57] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:22:03,583 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 21:22:03,786 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:22:04,878 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:22:04,883 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:22:41,077 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:22:41,079 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:22:41,561 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:22:41,567 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:22:41,622 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:22:41] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:22:58,993 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:22:58,993 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:22:59,471 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:22:59,477 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:22:59,845 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:22:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:23:13,965 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:23:13,966 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:23:14,450 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:23:14,454 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:23:14,706 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:23:14] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 21:23:32,572 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:23:32,572 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:23:33,156 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:23:33,164 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:23:33,303 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:23:33] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:23:46,778 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:23:46,778 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:23:47,209 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:23:47,214 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:23:47,379 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:23:47] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:24:03,346 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:24:03,347 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:24:03,786 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:24:03,791 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:24:04,433 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:24:04] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:24:17,080 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:24:17,081 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:24:17,516 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:24:17,521 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:24:19,202 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:24:19] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:24:30,232 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:24:30,232 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:24:30,684 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:24:30,688 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:24:30,803 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:24:30] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:24:43,996 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:24:43,997 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:24:44,491 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:24:44,497 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:24:45,020 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:24:45] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:27:13,180 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:27:13,181 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:27:13,725 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:27:13,734 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:27:14,009 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:27:14] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:27:38,875 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:27:38,876 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:27:39,307 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:27:39,312 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:27:40,801 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:27:40] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:27:47,514 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredient.py', reloading
+2021-07-28 21:27:47,585 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:27:48,063 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:27:48,068 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:27:58,876 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:27:58,877 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:27:59,314 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:27:59,319 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:27:59,375 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:27:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:28:10,225 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:28:10,226 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:28:10,666 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:28:10,671 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:28:10,713 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:28:10] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:29:43,402 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:29:43,403 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:29:43,867 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:29:43,872 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:29:43,920 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:29:43] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:32:44,788 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 21:32:44,868 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:32:45,715 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:32:45,721 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:33:44,226 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:33:44,227 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:33:44,679 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:33:44,683 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:33:44,764 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:33:44] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 21:33:53,522 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:33:53,522 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:33:53,967 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:33:53,972 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:33:54,242 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:33:54] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:34:01,644 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:34:01,645 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:34:02,132 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:34:02,139 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:34:02,201 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:34:02] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:34:59,602 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:34:59,603 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:35:00,081 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:35:00,086 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:35:00,131 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:35:00] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:35:15,768 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:35:15,769 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:35:16,194 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:35:16,199 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:35:17,080 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:35:17] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:35:18,224 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 21:35:18] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:35:31,798 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:35:31,798 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:35:32,225 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:35:32,229 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:35:33,247 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:35:33] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 21:36:11,192 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 21:36:11,193 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 21:36:11,623 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 21:36:11,628 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 21:36:12,415 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 21:36:12] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:34:03,942 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 22:34:03] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:34:25,816 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 22:34:25,919 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:34:26,636 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:34:26,644 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:34:28,923 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:34:28] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:34:54,143 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:34:54,144 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:34:54,611 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:34:54,618 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:34:54,671 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:34:54] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:38:03,994 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:38:03,996 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:38:04,454 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:38:04,461 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:38:04,863 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:38:04] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:38:18,692 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:38:18,693 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:38:19,132 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:38:19,137 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:38:19,295 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:38:19] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:39:10,514 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:39:10,515 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:39:10,960 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:39:10,968 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:39:11,901 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:39:11] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 22:39:18,412 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:39:18,413 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:39:18,863 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:39:18,868 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:39:19,059 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:39:19] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:40:43,273 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:40:43,274 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:40:43,728 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:40:43,733 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:41:15,468 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 22:41:15,544 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:41:16,033 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:41:16,039 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:41:46,747 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:41:46] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:43:22,514 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 22:43:22] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 22:53:27,618 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipes.py', reloading
+2021-07-28 22:53:27,694 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:53:28,290 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:53:28,296 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:56:38,463 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/resources/recipes.py', reloading
+2021-07-28 22:56:38,561 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:58:44,128 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 22:58:44,129 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 22:58:44,604 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 22:58:44,612 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 22:58:45,153 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 22:58:45] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-28 23:11:42,549 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-28 23:11:42,656 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:46:39,406 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 23:46:39,408 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:46:39,937 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:46:39,946 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:49:43,940 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 23:49:43] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-28 23:49:56,598 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 23:49:56] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-28 23:50:38,250 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/routes/routes.py', reloading
+2021-07-28 23:50:38,392 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:50:39,232 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:50:39,239 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:50:39,244 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: ['str' object has no attribute 'copy']
+2021-07-28 23:50:39,245 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 23:50:39] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-28 23:51:05,301 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 23:51:05,302 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:51:05,770 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:51:05,776 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:51:05,780 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: ['str' object has no attribute 'copy']
+2021-07-28 23:51:05,781 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 23:51:05] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-28 23:51:52,135 DEBUG app.repositories.recipe_ingredients Thread-3 : there was an error validating recipe ingredients: [DefaultMeta object argument after ** must be a mapping, not list]
+2021-07-28 23:51:52,135 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Jul/2021 23:51:52] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-28 23:54:36,252 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 23:54:36,253 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:54:36,778 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:54:36,787 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:54:37,137 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [DefaultMeta object argument after ** must be a mapping, not list]
+2021-07-28 23:54:37,138 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 23:54:37] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-28 23:55:03,440 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-28 23:55:03,537 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:55:04,377 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:55:04,382 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:55:59,169 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-28 23:55:59,171 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-28 23:55:59,643 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-28 23:55:59,650 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-28 23:56:00,483 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [DefaultMeta object argument after ** must be a mapping, not list]
+2021-07-28 23:56:00,484 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Jul/2021 23:56:00] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:00:04,217 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:00:04,313 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:02:48,826 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:02:48,827 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:02:49,344 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:02:49,349 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:02:50,187 ERROR app.repositories.recipe_ingredients Thread-2 : there was an error creating recipe ingredients: [(psycopg2.errors.NotNullViolation) null value in column "recipe_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, 1.0000, gr).
+
+[SQL: INSERT INTO recipe_ingredient (amount, measure_unit) VALUES (%(amount)s, %(measure_unit)s)]
+[parameters: {'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:02:50,188 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:02:50] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:03:30,250 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:03:30,344 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:03:30,949 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:03:30,954 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:07:14,409 ERROR app.repositories.recipe_ingredients Thread-2 : there was an error adding ingredients to recipe: [(psycopg2.errors.NotNullViolation) null value in column "recipe_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, 1.0000, gr).
+
+[SQL: INSERT INTO recipe_ingredient (amount, measure_unit) VALUES (%(amount)s, %(measure_unit)s)]
+[parameters: {'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:07:14,410 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:07:14] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:08:51,503 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:08:51,505 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:08:52,050 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:08:52,061 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:08:52,107 ERROR app.repositories.recipe_ingredients Thread-2 : there was an error adding ingredients to recipe: [(psycopg2.errors.NotNullViolation) null value in column "recipe_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, 1.0000, gr).
+
+[SQL: INSERT INTO recipe_ingredient (amount, measure_unit) VALUES (%(amount)s, %(measure_unit)s)]
+[parameters: {'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:08:52,108 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:08:52] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:08:59,494 ERROR app.repositories.recipe_ingredients Thread-3 : there was an error adding ingredients to recipe: [(psycopg2.errors.NotNullViolation) null value in column "recipe_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, 1.0000, gr).
+
+[SQL: INSERT INTO recipe_ingredient (amount, measure_unit) VALUES (%(amount)s, %(measure_unit)s)]
+[parameters: {'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:08:59,494 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:08:59] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:09:08,789 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:09:08,790 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:09:09,320 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:09:09,326 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:09:10,213 ERROR app.repositories.recipe_ingredients Thread-2 : there was an error adding ingredients to recipe: [(psycopg2.errors.NotNullViolation) null value in column "recipe_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, 1.0000, gr).
+
+[SQL: INSERT INTO recipe_ingredient (amount, measure_unit) VALUES (%(amount)s, %(measure_unit)s)]
+[parameters: {'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:09:10,213 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:09:10] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:10:34,212 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredients.py', reloading
+2021-07-29 00:10:34,296 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:11:04,712 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:11:04,713 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:11:05,266 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:11:05,276 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:11:13,613 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/models/recipe_ingredients.py', reloading
+2021-07-29 00:11:13,767 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:11:14,553 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:11:14,558 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:11:21,261 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [{0: {'recipe_id': ['Missing data for required field.']}}]
+2021-07-29 00:11:21,263 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:11:21] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:13:08,704 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:13:08,705 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:13:09,203 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:13:09,210 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:13:16,552 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [{0: {'recipe_id': ['Missing data for required field.']}}]
+2021-07-29 00:13:16,552 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:13:16] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:13:40,679 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:13:40,679 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:13:41,112 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:13:41,118 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:13:43,841 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [{0: {'recipe_id': ['Missing data for required field.']}}]
+2021-07-29 00:13:43,842 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:13:43] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:14:38,112 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:14:38,113 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:14:38,610 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:14:38,614 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:14:38,816 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [{0: {'recipe_id': ['Missing data for required field.']}}]
+2021-07-29 00:14:38,818 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:14:38] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:16:15,392 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:16:15,396 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:16:15,979 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:16:15,985 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:16:16,214 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [the JSON object must be str, bytes or bytearray, not list]
+2021-07-29 00:16:16,216 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:16:16] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:16:54,077 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:16:54,078 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:16:54,539 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:16:54,544 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:16:54,548 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [the JSON object must be str, bytes or bytearray, not list]
+2021-07-29 00:16:54,551 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:16:54] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:17:01,494 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:17:01,494 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:17:01,959 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:17:01,964 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:17:01,970 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [name 'data' is not defined]
+2021-07-29 00:17:01,971 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:17:01] "[31m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 400 -
+2021-07-29 00:17:11,655 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:17:11,655 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:17:12,113 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:17:12,118 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:17:12,191 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:17:12] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:17:48,809 ERROR app.repositories.recipe_ingredients Thread-3 : there was an error adding ingredients to recipe: [(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:17:48,810 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:17:48] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:22:51,273 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/resources/recipe_ingredients.py', reloading
+2021-07-29 00:22:51,416 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:22:52,218 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:22:52,224 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:23:34,711 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:23:34] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:25:22,095 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:25:22,097 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:25:22,756 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:25:22,761 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:25:31,169 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:25:31] "[37mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 201 -
+2021-07-29 00:26:05,822 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/resources/recipes.py', reloading
+2021-07-29 00:26:05,897 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:26:06,401 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:26:06,407 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:26:06,443 ERROR app.repositories.recipe_ingredients Thread-2 : there was an error adding ingredients to recipe: [(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 00:26:06,444 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:26:06] "[35m[1mPOST /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:31:13,122 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:31:13,199 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:31:13,732 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:31:13,737 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:31:33,024 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:31:33] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients HTTP/1.1[0m" 500 -
+2021-07-29 00:31:33,037 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:31:33] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-29 00:31:35,558 INFO werkzeug Thread-4 : 127.0.0.1 - - [29/Jul/2021 00:31:35] "[35m[1mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-29 00:31:56,502 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:31:56,503 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:31:56,964 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:31:56,969 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:31:59,656 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:31:59] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:33:16,849 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:33:16,946 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:33:17,466 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:33:17,471 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:34:07,095 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:34:07] "[37mGET /recipes/69d7e848-37a1-49f5-868b-c92435296800/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:34:58,618 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:34:58] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1a/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:38:19,754 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:38:19,957 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:38:20,802 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:38:20,808 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:38:30,222 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:38:30] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:38:48,688 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:38:48,689 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:38:49,233 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:38:49,240 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:38:49,286 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:38:49] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:40:28,580 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:40:28,694 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:40:29,514 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:40:29,520 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:40:29,565 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:40:29] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:40:43,497 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:40:43] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:40:43,872 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 00:40:43,945 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:40:44,395 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:40:44,402 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:40:53,839 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:40:53,839 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:40:54,285 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:40:54,290 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:40:54,487 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:40:54] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:41:08,113 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:41:08,113 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:41:08,570 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:41:08,575 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:41:10,453 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:41:10] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:48:48,122 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:48:48] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:49:23,685 INFO werkzeug Thread-4 : 127.0.0.1 - - [29/Jul/2021 00:49:23] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:49:37,723 INFO werkzeug Thread-5 : 127.0.0.1 - - [29/Jul/2021 00:49:37] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:50:20,326 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:50:20,328 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:50:20,854 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:50:20,867 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:50:21,930 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:50:21] "[33mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 404 -
+2021-07-29 00:59:04,824 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:59:04,825 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:59:05,391 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:59:05,398 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:59:06,044 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:59:06] "[33mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 404 -
+2021-07-29 00:59:07,837 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:59:07] "[33mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1/ingredients/ HTTP/1.1[0m" 404 -
+2021-07-29 00:59:13,292 INFO werkzeug Thread-4 : 127.0.0.1 - - [29/Jul/2021 00:59:13] "[35m[1mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1a/ingredients/ HTTP/1.1[0m" 500 -
+2021-07-29 00:59:39,819 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-29 00:59:39,820 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 00:59:40,273 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 00:59:40,278 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726
+2021-07-29 00:59:40,333 INFO werkzeug Thread-2 : 127.0.0.1 - - [29/Jul/2021 00:59:40] "[37mGET /recipes/46c5d621-85b5-44df-b7d2-a505b9eb8c1a/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 00:59:48,527 INFO werkzeug Thread-3 : 127.0.0.1 - - [29/Jul/2021 00:59:48] "[37mGET /recipes/fa88ef8d-c414-415d-bb57-c9194e5eff15/ingredients/ HTTP/1.1[0m" 200 -
+2021-07-29 01:00:04,852 INFO werkzeug MainThread :  * Detected change in '/Users/ensuarez/PycharmProjects/food-api/app/repositories/recipe_ingredients.py', reloading
+2021-07-29 01:00:04,942 INFO werkzeug MainThread :  * Restarting with stat
+2021-07-29 01:00:05,756 WARNING werkzeug MainThread :  * Debugger is active!
+2021-07-29 01:00:05,762 INFO werkzeug MainThread :  * Debugger PIN: 291-023-726

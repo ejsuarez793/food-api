@@ -46,6 +46,7 @@ def search(params: 'IngredientSearchQuery'):
         traceback.print_exc()  # ToDo agregar esto en lugares importantes, o en todos los try catch mejor (?)
         return None, {'msg': 'there was an error searching ingredient(s)', 'status_code': 500}
 
+
 def create(data):
     schema = IngredientSchema()
     try:
