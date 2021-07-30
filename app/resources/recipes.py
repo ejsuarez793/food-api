@@ -50,5 +50,5 @@ class RecipeRecommendation(Resource):
     def get(self, params: 'RecipesRecommendationsQueryParams'):
         response, err = recipes.get_recommendations(params)
         if err:
-            return make_response(err, err['status_code'])
+            return make_response(err, err['status_code']) # ToDo: remove make response
         return response
