@@ -1,3 +1,4 @@
+from sqlalchemy import func
 from sqlalchemy.orm import backref
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
@@ -7,7 +8,6 @@ from app import db
 from app import ma
 
 from app.models.ingredients import Ingredient
-from app.models.recipes import Recipe
 
 VALID_MEASURE_UNITS = {
     'gr': 'grams',
@@ -29,7 +29,7 @@ class RecipeIngredient(db.Model):
     measure_unit = db.Column(db.String(), nullable=False)
 
     @staticmethod
-    def get_ingredients(recipe_id):
+    def get_ingredients(recipe_id: str):
 
         subquery = db.session.query(RecipeIngredient.ingredient_id).filter(RecipeIngredient.recipe_id == recipe_id).subquery()
         query = db.session.query(Ingredient).filter(Ingredient.id.in_(subquery))
@@ -40,6 +40,19 @@ class RecipeIngredient(db.Model):
             .filter(RecipeIngredient.recipe_id == recipe_id)"""
 
         return query.all()
+
+    @staticmethod
+    def get_ingredients_number(recipe_id: str):
+        query = db.session.query(func.count(RecipeIngredient.ingredient_id)).filter(
+            RecipeIngredient.recipe_id == recipe_id)
+
+        return query.scalar()
+
+    @staticmethod
+    def delete_all_ingredients(recipe_id: str):
+        db.session.query()
+        query = RecipeIngredient.query.filter(RecipeIngredient.recipe_id == recipe_id)
+        return query.delete()
 
 
 class RecipeIngredientSchema(ma.SQLAlchemyAutoSchema):

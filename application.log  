@@ -52,3 +52,35 @@ DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4
 [SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
 [parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
 (Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 18:50:26,116 DEBUG app.repositories.recipe_ingredients Thread-2 : there was an error validating recipe ingredients: [{0: {'ingredient_id': ['Missing data for required field.']}}]
+2021-07-29 18:52:11,010 ERROR app.repositories.recipe_ingredients Thread-6 : there was an error adding ingredients to recipe: [(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 19:05:06,300 ERROR app.repositories.recipe_ingredients Thread-2 : there was a database error while bulk saving ingredients to recipe: [(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 23:29:35,065 ERROR app.repositories.recipe_ingredients Thread-3 : there was a database error while bulk saving ingredients to recipe: [(psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)]
+2021-07-29 23:35:34,165 ERROR app.repositories.recipe_ingredients Thread-2 : here
+2021-07-29 23:35:34,165 ERROR app.repositories.recipe_ingredients Thread-2 : ('duplicate key value violates unique constraint "recipe_ingredient_pkey"\nDETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.\n',)
+2021-07-29 23:36:25,572 ERROR app.repositories.recipe_ingredients Thread-2 : here
+2021-07-29 23:36:25,572 ERROR app.repositories.recipe_ingredients Thread-2 : duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+2021-07-29 23:36:40,038 ERROR app.repositories.recipe_ingredients Thread-2 : here
+2021-07-29 23:36:40,039 ERROR app.repositories.recipe_ingredients Thread-2 : (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "recipe_ingredient_pkey"
+DETAIL:  Key (recipe_id, ingredient_id)=(fa88ef8d-c414-415d-bb57-c9194e5eff15, 4) already exists.
+
+[SQL: INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, measure_unit) VALUES (%(recipe_id)s, %(ingredient_id)s, %(amount)s, %(measure_unit)s)]
+[parameters: {'recipe_id': 'fa88ef8d-c414-415d-bb57-c9194e5eff15', 'ingredient_id': 4, 'amount': 1.0, 'measure_unit': 'gr'}]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
