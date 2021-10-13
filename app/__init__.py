@@ -18,6 +18,7 @@ def create_app():
     routes.register_routes(api)
     return app
 
+
 def connect_database(app: 'Flask'):
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
     app.config['SQLALCHEMY_ECHO'] = False # para spam de sqlalchemy colocar el True

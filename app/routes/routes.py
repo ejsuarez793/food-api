@@ -3,6 +3,8 @@ from flask_restx import Api
 from app.resources import Recipe, RecipeById, Ingredient, IngredientById, RecipeRecommendation, RecipeByIdIngredient
 
 from app.resources.jobs.populate_db import PopulateDb
+from app.resources.jobs.crawler import RecipeCrawlerJob
+
 
 def register_routes(api: 'Api'):
     # recipes
@@ -21,3 +23,4 @@ def register_routes(api: 'Api'):
 
     # jobs
     api.add_resource(PopulateDb, '/jobs/populate_db', methods=['POST'])
+    api.add_resource(RecipeCrawlerJob, '/jobs/crawl', methods=['POST'])
