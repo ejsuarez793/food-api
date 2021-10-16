@@ -7,7 +7,7 @@ from app.models.pagination import PaginationSchema
 
 
 class Recipe(db.Model):
-    __tablename__ = 'recipes'
+    __tablename__ = 'recipe'
     id = db.Column(db.String, primary_key=True)
     name = db.Column(db.String, nullable=False)
     veggie_friendly = db.Column(db.Boolean, nullable=False)
@@ -15,7 +15,6 @@ class Recipe(db.Model):
     cook_time = db.Column(db.Integer, nullable=False)
     wash_time = db.Column(db.Integer, nullable=False)
     cook_technique = db.Column(db.String, nullable=False)
-    ingredients = db.Column(db.JSON, nullable=False)
     info = db.Column(db.JSON, nullable=False)
     steps = db.Column(db.JSON, nullable=False)
     date_created = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())

@@ -18,16 +18,16 @@ VALID_FILTERS = {
     'ilike': ['name'],
     'notilike': ['name'],
     'startswith': ['name'],
-    'between': ['date_created', 'price', 'expiration_time'],
-    'ge': ['date_created', 'price', 'expiration_time'],
-    'gt': ['date_created', 'price', 'expiration_time'],
-    'le': ['date_created', 'price', 'expiration_time'],
-    'lt': ['date_created', 'price', 'expiration_time']
+    'between': ['date_created', 'expiration_time'],
+    'ge': ['date_created', 'expiration_time'],
+    'gt': ['date_created', 'expiration_time'],
+    'le': ['date_created', 'expiration_time'],
+    'lt': ['date_created', 'expiration_time']
 }
 
 FILTERS_DATA_TYPES = {
     'integer_values': ['id', 'expiration_time'],
-    'real_values': ['price'],
+    'real_values': [],
     'discrete_values': {
         'food_group': VALID_FOOD_GROUPS,
         'storage': VALID_STORAGE_TYPE},  # ToDo: pasar esto a una config
@@ -99,7 +99,7 @@ def _validate_params(request: 'request', schema):
     # validate sort_by and asc
     if sort_by:
         str_columns = ['name', 'food_group', 'storage']
-        numeric_columns = ['id', 'price', 'expiration_time']
+        numeric_columns = ['id', 'expiration_time']
 
         validated_params['sort_by'], \
         validated_params['str_sort'], \
