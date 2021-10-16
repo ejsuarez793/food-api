@@ -106,3 +106,15 @@ def validate_filters(request, valid_filters: Dict, filters_data_types: Dict):
                 errors[param] = f'filter for field \'{param}\' and operator \'{operator}\' is not supported or has an invalid value'
 
     return filters, errors
+
+
+def validate_fields(fields: str, valid_fields: Dict):
+
+    splitted_fields = fields.split(',')
+    errors = {}
+
+    for field in splitted_fields:
+        if field not in valid_fields:
+            errors['fields'] = f'field \'{field}\' in fields query params is not supported'
+
+    return splitted_fields, errors

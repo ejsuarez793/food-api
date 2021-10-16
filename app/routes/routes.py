@@ -11,7 +11,7 @@ def register_routes(api: 'Api'):
 
     # ingredients
     api.add_resource(Ingredient, '/ingredients', methods=['GET', 'POST'])
-    api.add_resource(IngredientById, '/ingredients/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+    api.add_resource(IngredientById, '/ingredients/<int:ingredient_id>', methods=['GET', 'PUT', 'DELETE'])
 
     # recipes ingredients
     api.add_resource(RecipeByIdIngredient, '/recipes/<string:recipe_id>/ingredients', methods=['GET', 'POST', 'PUT', 'DELETE'])

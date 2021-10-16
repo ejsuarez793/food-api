@@ -23,16 +23,37 @@ class Ingredient(db.Model):
     last_updated = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())
 
     @staticmethod
-    def get_by_id(id):
-        return Ingredient.query.get(id)
+    def get_by_id(id, fields):
+        query = Ingredient.query
+
+        if fields is not None:
+            query = query.with_entities(*fields)
+
+        return query\
+            .filter(Ingredient.id == id)\
+            .first()
 
     @staticmethod
-    def multiget(ids):
-        return Ingredient.query.filter(Ingredient.id.in_(ids)).all()
+    def multiget(ids, fields):
+        query = Ingredient.query
+
+        if fields is not None:
+            query = query.with_entities(*fields)
+
+        return query\
+            .filter(Ingredient.id.in_(ids))\
+            .all()
 
     @staticmethod
     def search(params):
         query = Ingredient.query
+
+        # had to implement this 'with_entities' one diff than two methods above
+        entities_list = []
+        if params.fields is not None:
+            for field in params.fields:
+                entities_list.append(getattr(Ingredient, field))
+            query = query.with_entities(*tuple(entities_list))
 
         for f in params.filters:
             field = f['field']
