@@ -14,6 +14,7 @@ VALID_MEASURE_UNITS = {
     'kg': 'kilograms',
     'ml': 'milliliters',
     'l': 'liters',
+    'u': 'unit'
 }
 
 

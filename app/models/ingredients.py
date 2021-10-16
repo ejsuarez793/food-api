@@ -7,7 +7,7 @@ from sqlalchemy import func, not_
 
 from app.models.pagination import PaginationSchema
 
-VALID_FOOD_GROUPS = ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments']
+VALID_FOOD_GROUPS = ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments', 'waters']
 VALID_STORAGE_TYPE = ['dry', 'refrigerated', 'frozen']
 
 

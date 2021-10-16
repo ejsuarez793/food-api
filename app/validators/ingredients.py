@@ -13,7 +13,7 @@ from app.validators.utils import validate_ids, validate_filters, validate_pagina
 from app.models.ingredients import VALID_FOOD_GROUPS, VALID_STORAGE_TYPE
 
 VALID_FILTERS = {
-    'eq': ['id', 'food_group', 'veggie_friendly', 'storage'],
+    'eq': ['id', 'name', 'food_group', 'veggie_friendly', 'storage'],
     'ne': ['id', 'food_group', 'veggie_friendly', 'storage'],
     'ilike': ['name'],
     'notilike': ['name'],
