@@ -15,7 +15,6 @@ class RecipesRecommendationsParams:
     # snacks_number: int
     meals: list
     time: int
-    price: int  # este va a ser dificil de mantener (precios varían mucho)
     veggie_only: bool
 
 
@@ -24,7 +23,6 @@ class RecipesRecommendationsQueryParams(Schema):
     # snacks_number = fields.Integer()
     meals = fields.List(fields.String())
     time = fields.Integer()
-    price = fields.Decimal()
     veggie_only = fields.Boolean()
 
     @post_load
@@ -47,7 +45,6 @@ def _validate_params(request, schema):
         # snacks_number = int(request.args.get('snacks_number')) if request.args.get('snacks_number') is not None else 0
         meals = request.args.get('meals').split(',') if request.args.get('meals') is not None else ['breakfast', 'lunch', 'dinner', 'snack', 'shake']
         time = int(request.args.get('time')) if request.args.get('time') is not None else 0
-        price = Decimal(request.args.get('price')) if request.args.get('price') is not None else 0
         veggie_only = bool(request.args.get('veggie_only')) if request.args.get('veggie_only') is not None else False
     except Exception as e:
         log.error('there was an error parsing params [error:{}]'.format(str(e)))
@@ -68,11 +65,8 @@ def _validate_params(request, schema):
     if time < 0 and time > 450: # 450 minutes is 7.5 hours of cooking + washing
         errors['time'] = 'param \'time\' is not between 0 and 450'
 
-    if price < 0:
-        errors['price'] = 'param \'price\' is below 0'
-
     if errors:
         raise ValidationError(errors)
 
-    params = dict(days=days, meals=meals, time=time, price=price, veggie_only=veggie_only)
+    params = dict(days=days, meals=meals, time=time, veggie_only=veggie_only)
     return params

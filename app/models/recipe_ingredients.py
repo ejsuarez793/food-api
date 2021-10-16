@@ -20,14 +20,15 @@ VALID_MEASURE_UNITS = {
 
 class RecipeIngredient(db.Model):
     __tablename__ = 'recipe_ingredient'
-    recipe_id = db.Column(db.ForeignKey('recipes.id'), primary_key=True)
-    ingredient_id = db.Column(db.ForeignKey('ingredients.id'), primary_key=True)
+    recipe_id = db.Column(db.ForeignKey('recipe.id'), primary_key=True)
+    ingredient_id = db.Column(db.ForeignKey('ingredient.id'), primary_key=True)
     ingredients = db.relationship("Ingredient", backref=backref("ingredient", lazy="joined"))
     recipes = db.relationship("Recipe", backref=backref("recipe", lazy="joined"))
 
     # extra field of relation
     amount = db.Column(db.Numeric(precision=1000, scale=4, asdecimal=False), nullable=False)
     measure_unit = db.Column(db.String(), nullable=False)
+    optional = db.Column(db.Boolean, default=False)
 
     @staticmethod
     def get_ingredients(recipe_id: str):

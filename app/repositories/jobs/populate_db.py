@@ -51,7 +51,11 @@ def __read_recipes_csv():
                         ingredient_name = splitted[0]
                         amount = splitted[1]
                         measure_unit = splitted[2]
-                        optional = True if splitted[3] == 'opcional' else False
+                        optional = True if splitted[3] == 'opcional' else None
+                        if 'gratinado' in recipe['name']:
+                            print(splitted)
+                            print(splitted[3])
+                            print(splitted[3] == 'opcional')
 
                         ingredients.append({'ingredient_name': ingredient_name,
                                             'amount': amount,
@@ -106,9 +110,10 @@ def __add_ingredient_ids_to_recipes(recipe: Recipe) -> Recipe:
                 return None, True
             else:
                 ingredients_info.append({'ingredient_id': ingredient_id,
-                                       'amount': ingredient_dict['amount'],
-                                       'measure_unit': ingredient_dict['measure_unit'],
-                                       'ingredient_name': ingredient_dict['ingredient_name']})
+                                         'amount': ingredient_dict['amount'],
+                                         'measure_unit': ingredient_dict['measure_unit'],
+                                         'ingredient_name': ingredient_dict['ingredient_name'],
+                                         'optional': ingredient_dict['optional']})
     except Exception as e:
         error_msg = 'there was an error making requests [error: {}]'.format(str(e))
         traceback.print_exc()
@@ -187,8 +192,6 @@ def read_ingredients():
                 ingredient['name'] = row['name']
                 ingredient['food_group'] = row['food_group']
                 ingredient['veggie_friendly'] = bool(row['veggie_friendly'])
-                ingredient['price'] = float(row['price'])
-                ingredient['currency'] = row['currency']
                 ingredient['storage'] = row['storage']
                 ingredient['expiration_time'] = int(row['expiration_time'])
                 ingredients.append(ingredient)

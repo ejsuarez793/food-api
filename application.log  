@@ -2357,3 +2357,191 @@
 2021-10-16 16:34:30,986 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
 2021-10-16 16:34:32,828 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
 2021-10-16 16:34:32,828 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:00:11,303 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:00:11,304 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:00:11,304 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:00:11,304 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:00:11,927 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:00:11,927 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:00:11,927 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:00:11,949 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:11,950 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:11,966 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:11,966 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:11,980 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:11,981 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:11,997 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:11,997 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,012 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,012 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,026 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,026 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,044 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,044 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,060 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,060 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,076 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,076 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,090 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,091 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,106 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,106 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,122 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,122 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,138 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,138 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,164 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,164 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,190 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,191 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,214 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,214 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,239 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,239 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,258 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,258 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,273 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,273 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,290 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error getting ingredient id by name Invalid status code
+2021-10-16 17:00:12,290 ERROR app.repositories.jobs.populate_db Thread-2 : there was an error making requests [error: Invalid status code]
+2021-10-16 17:00:12,290 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:0][skipped:20]
+2021-10-16 17:00:12,290 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: Smoothie de frutos rojos,Omellete con pan tostado y palta,Desayuno criollo,Ensalada de frutas,Cereal con granola,Croissant potente,Vegetales al horno,pechuga de pollo a la plancha y al horno,caraotas negras,arroz,french toast con nutella,caldito de papas con arepa,panquecas americanas saladas,vegetales gratinados,arvejas,crema de auyama,pure de papas con pollo a la plancha y ensalada,Desayuno americano con palta,pasta con pollo en salsa blanca,avena caliente
+2021-10-16 17:01:09,977 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:01:09,978 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:01:09,978 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:01:09,978 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:01:10,586 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:01:10,586 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:01:10,587 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:01:12,474 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:01:12,475 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:01:55,137 INFO app.resources.jobs.populate_db Thread-252 : Starting db populate job...
+2021-10-16 17:01:55,137 INFO app.repositories.jobs.populate_db Thread-252 : going to read ingredients input file...
+2021-10-16 17:01:55,137 INFO app.repositories.jobs.populate_db Thread-252 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:01:55,138 INFO app.repositories.jobs.populate_db Thread-252 : going to make POST requests for ingredients...
+2021-10-16 17:01:55,724 INFO app.repositories.jobs.populate_db Thread-252 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:01:55,724 INFO app.repositories.jobs.populate_db Thread-252 : going to read recipes input file...
+2021-10-16 17:01:55,724 INFO app.repositories.jobs.populate_db Thread-252 : finished reading recipes input files [recipes:20]
+2021-10-16 17:01:57,386 INFO app.repositories.jobs.populate_db Thread-252 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:01:57,387 INFO app.repositories.jobs.populate_db Thread-252 : skipped recipes: 
+2021-10-16 17:08:34,500 INFO app.resources.jobs.populate_db Thread-3 : Starting db populate job...
+2021-10-16 17:08:34,501 INFO app.repositories.jobs.populate_db Thread-3 : going to read ingredients input file...
+2021-10-16 17:08:34,503 INFO app.repositories.jobs.populate_db Thread-3 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:08:34,503 INFO app.repositories.jobs.populate_db Thread-3 : going to make POST requests for ingredients...
+2021-10-16 17:08:35,078 INFO app.repositories.jobs.populate_db Thread-3 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:08:35,078 INFO app.repositories.jobs.populate_db Thread-3 : going to read recipes input file...
+2021-10-16 17:08:35,079 INFO app.repositories.jobs.populate_db Thread-3 : finished reading recipes input files [recipes:20]
+2021-10-16 17:08:36,829 INFO app.repositories.jobs.populate_db Thread-3 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:08:36,829 INFO app.repositories.jobs.populate_db Thread-3 : skipped recipes: 
+2021-10-16 17:09:04,367 INFO app.resources.jobs.populate_db Thread-253 : Starting db populate job...
+2021-10-16 17:09:04,367 INFO app.repositories.jobs.populate_db Thread-253 : going to read ingredients input file...
+2021-10-16 17:09:04,368 INFO app.repositories.jobs.populate_db Thread-253 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:09:04,368 INFO app.repositories.jobs.populate_db Thread-253 : going to make POST requests for ingredients...
+2021-10-16 17:09:04,940 INFO app.repositories.jobs.populate_db Thread-253 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:09:04,941 INFO app.repositories.jobs.populate_db Thread-253 : going to read recipes input file...
+2021-10-16 17:09:04,941 INFO app.repositories.jobs.populate_db Thread-253 : finished reading recipes input files [recipes:20]
+2021-10-16 17:09:06,593 INFO app.repositories.jobs.populate_db Thread-253 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:09:06,594 INFO app.repositories.jobs.populate_db Thread-253 : skipped recipes: 
+2021-10-16 17:12:50,505 INFO app.resources.jobs.populate_db Thread-3 : Starting db populate job...
+2021-10-16 17:12:50,505 INFO app.repositories.jobs.populate_db Thread-3 : going to read ingredients input file...
+2021-10-16 17:12:50,506 INFO app.repositories.jobs.populate_db Thread-3 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:12:50,506 INFO app.repositories.jobs.populate_db Thread-3 : going to make POST requests for ingredients...
+2021-10-16 17:12:51,082 INFO app.repositories.jobs.populate_db Thread-3 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:12:51,083 INFO app.repositories.jobs.populate_db Thread-3 : going to read recipes input file...
+2021-10-16 17:12:51,083 INFO app.repositories.jobs.populate_db Thread-3 : finished reading recipes input files [recipes:20]
+2021-10-16 17:12:53,019 INFO app.repositories.jobs.populate_db Thread-3 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:12:53,019 INFO app.repositories.jobs.populate_db Thread-3 : skipped recipes: 
+2021-10-16 17:13:20,076 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:13:20,077 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:13:20,078 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:13:20,078 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:13:20,666 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:13:20,666 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:13:20,666 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:13:22,475 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:13:22,476 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:14:02,820 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:14:02,821 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:14:02,821 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:14:02,821 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:14:03,440 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:14:03,440 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:14:03,441 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:14:05,252 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:14:05,253 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:15:17,205 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:15:17,205 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:15:17,207 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:15:17,207 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:15:17,895 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:15:17,896 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:15:17,897 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:15:19,753 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:15:19,753 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:19:10,869 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:19:10,869 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:19:10,870 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:19:10,870 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:19:11,472 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:19:11,472 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:19:11,473 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:19:11,544 DEBUG app.repositories.recipe_ingredients Thread-81 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,549 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Smoothie de frutos rojos'
+2021-10-16 17:19:11,640 DEBUG app.repositories.recipe_ingredients Thread-91 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,641 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Omellete con pan tostado y palta'
+2021-10-16 17:19:11,785 DEBUG app.repositories.recipe_ingredients Thread-102 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}, 8: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,787 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Desayuno criollo'
+2021-10-16 17:19:11,848 DEBUG app.repositories.recipe_ingredients Thread-109 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,849 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Ensalada de frutas'
+2021-10-16 17:19:11,907 DEBUG app.repositories.recipe_ingredients Thread-116 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,908 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Cereal con granola'
+2021-10-16 17:19:11,957 DEBUG app.repositories.recipe_ingredients Thread-122 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:11,958 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Croissant potente'
+2021-10-16 17:19:12,045 DEBUG app.repositories.recipe_ingredients Thread-130 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,047 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Vegetales al horno'
+2021-10-16 17:19:12,139 DEBUG app.repositories.recipe_ingredients Thread-138 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,140 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'pechuga de pollo a la plancha y al horno'
+2021-10-16 17:19:12,189 DEBUG app.repositories.recipe_ingredients Thread-144 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,190 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'caraotas negras'
+2021-10-16 17:19:12,238 DEBUG app.repositories.recipe_ingredients Thread-150 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,239 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'arroz'
+2021-10-16 17:19:12,398 DEBUG app.repositories.recipe_ingredients Thread-163 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}, 8: {'optional': ['Field may not be null.']}, 9: {'optional': ['Field may not be null.']}, 10: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,400 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'french toast con nutella'
+2021-10-16 17:19:12,495 DEBUG app.repositories.recipe_ingredients Thread-173 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,496 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'caldito de papas con arepa'
+2021-10-16 17:19:12,661 DEBUG app.repositories.recipe_ingredients Thread-187 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}, 8: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,663 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'panquecas americanas saladas'
+2021-10-16 17:19:12,769 DEBUG app.repositories.recipe_ingredients Thread-195 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,771 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'vegetales gratinados'
+2021-10-16 17:19:12,857 DEBUG app.repositories.recipe_ingredients Thread-203 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,858 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'arvejas'
+2021-10-16 17:19:12,940 DEBUG app.repositories.recipe_ingredients Thread-210 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:12,942 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'crema de auyama'
+2021-10-16 17:19:13,053 DEBUG app.repositories.recipe_ingredients Thread-221 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 7: {'optional': ['Field may not be null.']}, 8: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:13,054 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'pure de papas con pollo a la plancha y ensalada'
+2021-10-16 17:19:13,112 DEBUG app.repositories.recipe_ingredients Thread-228 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:13,113 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'Desayuno americano con palta'
+2021-10-16 17:19:13,283 DEBUG app.repositories.recipe_ingredients Thread-242 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}, 8: {'optional': ['Field may not be null.']}, 9: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:13,285 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'pasta con pollo en salsa blanca'
+2021-10-16 17:19:13,384 DEBUG app.repositories.recipe_ingredients Thread-251 : there was an error validating recipe ingredients: [{0: {'optional': ['Field may not be null.']}, 1: {'optional': ['Field may not be null.']}, 2: {'optional': ['Field may not be null.']}, 3: {'optional': ['Field may not be null.']}, 4: {'optional': ['Field may not be null.']}, 5: {'optional': ['Field may not be null.']}, 6: {'optional': ['Field may not be null.']}}]
+2021-10-16 17:19:13,385 INFO app.repositories.jobs.populate_db Thread-2 : Error procesing recipe 'avena caliente'
+2021-10-16 17:19:13,385 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:0][errors:20][skipped:0]
+2021-10-16 17:19:13,385 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:19:40,606 INFO app.resources.jobs.populate_db Thread-2 : Starting db populate job...
+2021-10-16 17:19:40,606 INFO app.repositories.jobs.populate_db Thread-2 : going to read ingredients input file...
+2021-10-16 17:19:40,607 INFO app.repositories.jobs.populate_db Thread-2 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:19:40,607 INFO app.repositories.jobs.populate_db Thread-2 : going to make POST requests for ingredients...
+2021-10-16 17:19:41,230 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:19:41,231 INFO app.repositories.jobs.populate_db Thread-2 : going to read recipes input file...
+2021-10-16 17:19:41,231 INFO app.repositories.jobs.populate_db Thread-2 : finished reading recipes input files [recipes:20]
+2021-10-16 17:19:43,314 INFO app.repositories.jobs.populate_db Thread-2 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:19:43,314 INFO app.repositories.jobs.populate_db Thread-2 : skipped recipes: 
+2021-10-16 17:19:55,070 INFO app.resources.jobs.populate_db Thread-252 : Starting db populate job...
+2021-10-16 17:19:55,072 INFO app.repositories.jobs.populate_db Thread-252 : going to read ingredients input file...
+2021-10-16 17:19:55,073 INFO app.repositories.jobs.populate_db Thread-252 : finished reading ingredients input files [recipes:71]
+2021-10-16 17:19:55,073 INFO app.repositories.jobs.populate_db Thread-252 : going to make POST requests for ingredients...
+2021-10-16 17:19:55,645 INFO app.repositories.jobs.populate_db Thread-252 : finished making POST requests for ingredients [success:71][errors:0]
+2021-10-16 17:19:55,645 INFO app.repositories.jobs.populate_db Thread-252 : going to read recipes input file...
+2021-10-16 17:19:55,645 INFO app.repositories.jobs.populate_db Thread-252 : finished reading recipes input files [recipes:20]
+2021-10-16 17:19:57,279 INFO app.repositories.jobs.populate_db Thread-252 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
+2021-10-16 17:19:57,279 INFO app.repositories.jobs.populate_db Thread-252 : skipped recipes: 

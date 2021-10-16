@@ -12,13 +12,11 @@ VALID_STORAGE_TYPE = ['dry', 'refrigerated', 'frozen']
 
 
 class Ingredient(db.Model):
-    __tablename__ = 'ingredients'
+    __tablename__ = 'ingredient'
     id = db.Column(db.BigInteger, primary_key=True)
     name = db.Column(db.String(), nullable=False)
     food_group = db.Column(db.String(), nullable=False)
     veggie_friendly = db.Column(db.Boolean(), nullable=False)
-    price = db.Column(db.Numeric(precision=10, scale=4, asdecimal=False), nullable=False)
-    currency = db.Column(db.String(), nullable=False)
     storage = db.Column(db.String(), nullable=False)
     expiration_time = db.Column(db.Interval(native=True), nullable=False)  ## native=True supports Postgrseslq and Oracle native type
     date_created = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())

@@ -4,8 +4,8 @@ from app import db
 log = logging.getLogger(__name__)
 
 COLUMNS = ['id', 'name', 'veggie_friendly', 'meal_type', 'cook_time', 'wash_time', 'cook_technique', 'ingredients', 'info', 'steps']
-QUERY = "SELECT {columns} FROM recipes WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type}))";
-QUERY_VEGGIE_ONLY = "SELECT {columns} FROM recipes WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type})) AND veggie_friendly = true";
+QUERY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type}))";
+QUERY_VEGGIE_ONLY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type})) AND veggie_friendly = true";
 
 
 def get_recommendations(veggie_only: bool, meals: list):
