@@ -1,40 +1,72 @@
 name,food_group,veggie_friendly,price,currency,storage,expiration_time
-frutos rojos congelados,fruits,TRUE,100,ARS,frozen,90
-banana,fruits,TRUE,100,ARS,dry,7
-leche,dairies,TRUE,100,ARS,refrigerated,7
-miel,sweets,TRUE,100,ARS,dry,9999
-helado,dairies,TRUE,100,ARS,frozen,90
-yogurt,dairies,TRUE,100,ARS,refrigerated,14
-huevos,proteins,TRUE,100,ARS,dry,30
-huevos,proteins,VERDADERO,100,ARS,refrigerated,45
-tomate,vegetables,TRUE,100,ARS,dry,7
-cebolla,vegetables,TRUE,100,ARS,dry,30
-pimenton,vegetables,TRUE,100,ARS,refrigerated,14
-jamon,proteins,FALSE,100,ARS,refrigerated,7
-queso,dairies,TRUE,100,ARS,refrigerated,7
-aceite,fats,TRUE,100,ARS,dry,9999
-pan,grains,TRUE,100,ARS,dry,30
-aguacate,vegetables,TRUE,100,ARS,dry,5
-harina pan,grains,TRUE,100,ARS,dry,90
-caraotas,grains,TRUE,100,ARS,dry,90
-carne vacío,proteins,FALSE,100,ARS,frozen,90
-sal,condiments,TRUE,100,ARS,dry,9999
-pimienta,condiments,TRUE,100,ARS,dry,9999
-manzana,fruits,TRUE,100,ARS,dry,7
-pera,fruits,TRUE,100,ARS,dry,7
-kiwi,fruits,TRUE,100,ARS,dry,7
-fresa,fruits,TRUE,100,ARS,dry,7
-nutella,sweets,TRUE,100,ARS,dry,90
-azucar impalpable,sweets,TRUE,100,ARS,dry,9999
-cereal de maiz,grains,TRUE,100,ARS,dry,9999
-granola,grains,TRUE,100,ARS,dry,9999
-avena,grains,TRUE,100,ARS,dry,9999
-croissant,grains,TRUE,100,ARS,dry,30
-zanahoria,vegetables,TRUE,100,ARS,refrigerated,30
-berenjena,vegetables,TRUE,100,ARS,refrigerated,7
-batata,vegetables,TRUE,100,ARS,refrigerated,30
-zukini,vegetables,TRUE,100,ARS,refrigerated,14
-brocoli,vegetables,TRUE,100,ARS,refrigerated,14
-zapallo,vegetables,TRUE,100,ARS,dry,30
-pollo,proteins,FALSE,100,ARS,frozen,90
-arroz,grains,TRUE,100,ARS,dry,9999
+frutos rojos congelados,fruits,VERDADERO,100,ARS,frozen,90
+banana,fruits,VERDADERO,100,ARS,dry,7
+leche,dairies,VERDADERO,100,ARS,refrigerated,7
+miel,sweets,VERDADERO,100,ARS,dry,9999
+helado,dairies,VERDADERO,100,ARS,frozen,90
+yogurt,dairies,VERDADERO,100,ARS,refrigerated,14
+huevo,proteins,VERDADERO,100,ARS,dry,30
+huevo,proteins,VERDADERO,100,ARS,refrigerated,45
+tomate,vegetables,VERDADERO,100,ARS,dry,7
+cebolla,vegetables,VERDADERO,100,ARS,dry,30
+pimenton,vegetables,VERDADERO,100,ARS,refrigerated,14
+jamon,proteins,FALSO,100,ARS,refrigerated,7
+queso,dairies,VERDADERO,100,ARS,refrigerated,7
+aceite,fats,VERDADERO,100,ARS,dry,9999
+pan,grains,VERDADERO,100,ARS,dry,30
+aguacate,vegetables,VERDADERO,100,ARS,dry,5
+harina pan,grains,VERDADERO,100,ARS,dry,90
+caraota,grains,VERDADERO,100,ARS,dry,90
+carne vacio,proteins,FALSO,100,ARS,frozen,90
+sal,condiments,VERDADERO,100,ARS,dry,9999
+pimienta,condiments,VERDADERO,100,ARS,dry,9999
+manzana,fruits,VERDADERO,100,ARS,dry,7
+pera,fruits,VERDADERO,100,ARS,dry,7
+kiwi,fruits,VERDADERO,100,ARS,dry,7
+fresa,fruits,VERDADERO,100,ARS,dry,7
+nutella,sweets,VERDADERO,100,ARS,dry,90
+azucar impalpable,sweets,VERDADERO,100,ARS,dry,9999
+cereal de maiz,grains,VERDADERO,100,ARS,dry,9999
+granola,grains,VERDADERO,100,ARS,dry,9999
+avena,grains,VERDADERO,100,ARS,dry,9999
+croissant,grains,VERDADERO,100,ARS,dry,30
+zanahoria,vegetables,VERDADERO,100,ARS,refrigerated,30
+berenjena,vegetables,VERDADERO,100,ARS,refrigerated,7
+batata,vegetables,VERDADERO,100,ARS,refrigerated,30
+zukini,vegetables,VERDADERO,100,ARS,refrigerated,14
+brocoli,vegetables,VERDADERO,100,ARS,refrigerated,14
+auyama,vegetables,VERDADERO,100,ARS,dry,30
+pollo,proteins,FALSO,100,ARS,frozen,90
+arroz,grains,VERDADERO,100,ARS,dry,9999
+ajo,vegetables,VERDADERO,100,ARS,dry,50
+helado de vainilla,dairies,VERDADERO,100,ARS,frozen,9999
+queso blanco,dairies,VERDADERO,100,ARS,refrigerated,7
+pechuga de pollo,proteins,FALSO,100,ARS,frozen,90
+aji en polvo,condiments,VERDADERO,100,ARS,dry,9999
+mostaza,condiments,VERDADERO,100,ARS,refrigerated,9999
+aceite de oliva,fats,VERDADERO,100,ARS,dry,9999
+adobo,condiments,VERDADERO,100,ARS,dry,9999
+tocineta,proteins,FALSO,100,ARS,refrigerated,7
+queso amarillo,dairies,VERDADERO,100,ARS,refrigerated,7
+queso mozzarella,dairies,VERDADERO,100,ARS,refrigerated,7
+arveja,grains,VERDADERO,100,ARS,dry,90
+cilantro,vegetables,VERDADERO,100,ARS,refrigerated,14
+cebollin,vegetables,VERDADERO,100,ARS,refrigerated,14
+polvo para hornear,grains,VERDADERO,100,ARS,dry,9999
+papa,vegetables,VERDADERO,100,ARS,refrigerated,14
+mantequilla,dairies,VERDADERO,100,ARS,refrigerated,90
+harina de trigo,grains,VERDADERO,100,ARS,dry,90
+salsa de tomate,condiments,VERDADERO,100,ARS,refrigerated,7
+salsa bechamel,condiments,VERDADERO,100,ARS,refrigerated,7
+pasta larga,grains,VERDADERO,100,ARS,dry,9999
+nuez moscada,condiments,VERDADERO,100,ARS,dry,9999
+maiz en lata,grains,VERDADERO,100,ARS,dry,9999
+perejil,vegetables,VERDADERO,100,ARS,refrigerated,14
+crema de leche,dairies,VERDADERO,100,ARS,refrigerated,14
+champiñon,vegetables,VERDADERO,100,ARS,refrigerated,14
+vainilla,condiments,VERDADERO,100,ARS,dry,9999
+clavitos de olor,condiments,VERDADERO,100,ARS,dry,9999
+agua,waters,VERDADERO,100,ARS,dry,9999
+canela,condiments,VERDADERO,100,ARS,dry,9999
+lechuga,vegetables,VERDADERO,100,ARS,refrigerated,14
+azucar,sweets,VERDADERO,100,ARS,dry,9999
