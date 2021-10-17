@@ -15,7 +15,8 @@ search_query_parser = SearchQueryParser(valid_filters=VALID_FILTERS,
                                         filters_data_types=FILTERS_DATA_TYPES,
                                         str_columns=STR_COLUMNS,
                                         numeric_columns=NUMERIC_COLUMNS,
-                                        valid_fields=VALID_FIELDS_FOR_SEARCH)
+                                        valid_fields=VALID_FIELDS_FOR_SEARCH,
+                                        int_ids=False)
 
 fields_query_parser = SearchQueryParser(valid_fields=VALID_FIELDS_FOR_SEARCH)
 

@@ -20,15 +20,17 @@ def validate_date_range(str_date_from: str, str_date_to: str):
         return None, None, error_msg
 
 
-def validate_ids(str_ids: str, max_multiget_lengt):
+def validate_ids(str_ids: str, int_ids: bool, max_multiget_length: int):
     try:
-        ids = [int(_id) for _id in str_ids.split(',')]
-        if len(ids) > max_multiget_lengt:
-            return None, f'max number of ids to search is {max_multiget_lengt} but {len(ids)} was given'
+        ids = [_id for _id in str_ids.split(',')]
+        if int_ids:
+            [int(_id) for _id in ids]  # validate correct int str
+        if len(ids) > max_multiget_length:
+            return None, f'max number of ids to search is {max_multiget_length} but {len(ids)} was given'
         return ids, None
     except Exception as e:
         log.error('there was an error parsing ids params [error:{}]'.format(str(e)))
-        error_msg = 'there was an error parsing \'ids\', ids must be integers'
+        error_msg = 'there was an error parsing \'ids\''
         return None, error_msg
 
 

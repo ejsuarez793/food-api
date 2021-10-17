@@ -28,7 +28,7 @@ class SearchQueryParam:
 class SearchQuery(Schema): ## Todo: ver diferencia de ma.Schema vs Schema
     offset = fields.Integer()
     limit = fields.Integer()
-    ids = fields.List(fields.Integer(), allow_none=True)
+    ids = fields.List(fields.String(), allow_none=True)
     sort_by = fields.String(allow_none=True)
     str_sort = fields.Boolean(allow_none=True)
     asc = fields.Boolean(allow_none=True)
@@ -52,7 +52,8 @@ class SearchQueryParser(FlaskParser):
                  str_columns=None,
                  numeric_columns=None,
                  valid_fields=None,
-                 valid_fields_ingredients=None):
+                 valid_fields_ingredients=None,
+                 int_ids=True):
 
         self.valid_filters = valid_filters
         self.filters_data_types = filters_data_types
@@ -62,6 +63,7 @@ class SearchQueryParser(FlaskParser):
         self.numeric_columns = numeric_columns
         self.valid_fields = valid_fields
         self.valid_fields_ingredients = valid_fields_ingredients
+        self.int_ids = int_ids
 
         self.is_offset_and_limit_validation_on = self.max_limit is not None
         self.is_filters_validation_on = self.valid_filters is not None and self.filters_data_types is not None
@@ -96,7 +98,7 @@ class SearchQueryParser(FlaskParser):
             validated_params['filters'], errors = validate_filters(request, self.valid_filters, self.filters_data_types)
 
         if self.is_multiget_length_validation_on and str_ids:
-            validated_params['ids'], error_msg = validate_ids(str_ids, self.max_multiget_ids)
+            validated_params['ids'], error_msg = validate_ids(str_ids, self.int_ids, self.max_multiget_ids)
             if error_msg:
                 errors['ids'] = error_msg
 
