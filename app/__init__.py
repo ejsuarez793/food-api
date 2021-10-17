@@ -1,22 +1,44 @@
 from logging.config import fileConfig
 
 from flask import Flask
-from flask_restx import Api
-from app.database import db
-from app.database import ma
+from flasgger import Swagger
+
+from app.server import app, api
+from app.database import db, ma
 from app.routes import routes
+
+template = {
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "API for my data",
+    "contact": {
+      "responsibleOrganization": "ME",
+      "responsibleDeveloper": "Me",
+      "email": "me@me.com",
+      "url": "www.me.com",
+    },
+    "termsOfService": "http://me.com/terms",
+    "version": "0.0.1"
+  },
+  "host": "mysite.com",  # overrides localhost:500
+  "basePath": "/api",  # base bash for blueprint registration
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "operationId": "getmyData"
+}
 
 
 def create_app():
     fileConfig('logging.cfg', disable_existing_loggers=False)
 
-    app = Flask(__name__)
     # accepts both /endpoint and /endpoint/ as valid URLs
     app.url_map.strict_slashes = False
     connect_database(app)
-    api = Api(app)
     routes.register_routes(api)
-    return app
+    swagger = Swagger(app)
 
 def connect_database(app: 'Flask'):
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'

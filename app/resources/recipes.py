@@ -1,7 +1,9 @@
 from flask import request, make_response
 from flask_restx import Resource
 from marshmallow import RAISE
+from flasgger import swag_from
 
+from app.swagger.recipes import spec_dict
 from app.repositories import recipes
 from app.validators.recipes_recommendations import RecipesRecommendationsQueryParser, RecipesRecommendationsQueryParams
 from app.validators.searchs import SearchQuery, SearchQueryParser, SearchQueryParam
@@ -19,6 +21,8 @@ search_query_parser = SearchQueryParser(valid_filters=VALID_FILTERS,
                                         int_ids=False)
 
 fields_query_parser = SearchQueryParser(valid_fields=VALID_FIELDS_FOR_SEARCH)
+
+from app.models.recipes import RecipeSchema
 
 
 class Recipe(Resource):
@@ -41,14 +45,16 @@ class Recipe(Resource):
 class RecipeById(Resource):
 
     @fields_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
+    @swag_from(spec_dict['recipe_by_id']['get'])
     def get(self,  params: 'FieldsQueryParam', id: str):
-        print(params)
         return recipes.get_by_id(id, params)
 
+    @swag_from(spec_dict['recipe_by_id']['put'])
     def put(self, id: str):
         json_data = request.get_json()
         return recipes.update_recipe(id, json_data)
 
+    @swag_from(spec_dict['recipe_by_id']['delete'])
     def delete(self, id: str):
         return recipes.delete_recipe(id), 204
 

@@ -2728,3 +2728,4 @@ LINE 1: ...ndly,meal_type,cook_time,wash_time,cook_technique,ingredient...
 2021-10-16 22:02:45,163 ERROR app.repositories.recipes Thread-2 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
 2021-10-16 22:02:45,843 ERROR app.repositories.recipes Thread-3 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
 2021-10-17 00:37:14,666 ERROR app.validators.utils Thread-4 : there was an error parsing ids params [error:invalid literal for int() with base 10: 'h87']
+2021-10-17 15:40:59,526 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['NoneType' object does not support item assignment]

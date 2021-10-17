@@ -4,6 +4,7 @@ from app.resources import Recipe, RecipeById, Ingredient, IngredientById, Recipe
 
 from app.resources.jobs.populate_db import PopulateDb
 
+
 def register_routes(api: 'Api'):
     # recipes
     api.add_resource(Recipe, '/recipes', methods=['GET', 'POST'])

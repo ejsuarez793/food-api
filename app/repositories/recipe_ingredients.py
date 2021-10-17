@@ -87,7 +87,7 @@ def delete_recipe_ingredients(recipe_id: str):
         RecipeIngredient.delete_all_ingredients(recipe_id)
         db.session.commit()
     except SQLAlchemyError as e:
-        log.error(f'there was a databae error while deleting recipe {recipe_id} ingredients')
+        log.error(f'there was a database error while deleting recipe {recipe_id} ingredients')
         traceback.print_exc()
         db.session.rollback()
         return None, {'msg': f'there was a database error while deleting ingredients for recipe {recipe_id}', 'status_code': 500}
