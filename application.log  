@@ -2545,3 +2545,186 @@
 2021-10-16 17:19:55,645 INFO app.repositories.jobs.populate_db Thread-252 : finished reading recipes input files [recipes:20]
 2021-10-16 17:19:57,279 INFO app.repositories.jobs.populate_db Thread-252 : finished making POST requests for recipes [success:20][errors:0][skipped:0]
 2021-10-16 17:19:57,279 INFO app.repositories.jobs.populate_db Thread-252 : skipped recipes: 
+2021-10-16 19:28:32,935 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:Invalid fields for <IngredientPaginationSchema(many=False)>: {'id', 'name'}.]
+2021-10-16 19:31:39,532 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:__init__() missing 1 required positional argument: 'fields']
+2021-10-16 19:31:45,574 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:__init__() missing 1 required positional argument: 'fields']
+2021-10-16 19:35:57,247 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:"only" should be a list of strings]
+2021-10-16 19:35:58,018 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:"only" should be a list of strings]
+2021-10-16 19:36:31,926 ERROR app.repositories.ingredients Thread-4 : there was a database error while searching ingredient(s) [error:"only" should be a list of strings]
+2021-10-16 19:36:32,746 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:'dict' object has no attribute 'results']
+2021-10-16 19:52:49,688 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:"only" should be a list of strings]
+2021-10-16 20:00:50,825 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:'BaseQuery' object is not callable]
+2021-10-16 20:01:21,264 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:get() can only be used against a single mapped class.]
+2021-10-16 20:01:22,098 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:788][error:get() can only be used against a single mapped class.]
+2021-10-16 20:04:42,380 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:'BaseQuery' object is not callable]
+2021-10-16 20:04:43,286 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:788][error:'BaseQuery' object is not callable]
+2021-10-16 20:06:35,068 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:get() can only be used against a single mapped class.]
+2021-10-16 20:06:35,951 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:788][error:get() can only be used against a single mapped class.]
+2021-10-16 20:08:00,573 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:'BaseQuery' object has no attribute 'where']
+2021-10-16 20:11:17,344 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:SQL expression, column, or mapped entity expected - got '[<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7fd88bb00db0>, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7fd88bb00e50>]']
+2021-10-16 20:12:18,534 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:SQL expression, column, or mapped entity expected - got '(<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f96722bc310>, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f967242eea0>)']
+2021-10-16 20:13:02,544 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:Union[arg, ...]: each arg must be a type. Got <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f9cf2aeedb0>.]
+2021-10-16 20:13:03,062 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:788][error:Union[arg, ...]: each arg must be a type. Got <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f9cf2aeedb0>.]
+2021-10-16 20:15:09,076 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:with_entities() argument after ** must be a mapping, not list]
+2021-10-16 20:15:30,239 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:SQL expression, column, or mapped entity expected - got '['name', 'id']']
+2021-10-16 20:17:59,101 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name, id, storage 
+               ^
+
+[SQL: SELECT name, id, storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:22:12,889 ERROR app.repositories.ingredients Thread-4 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name, id, storage 
+               ^
+
+[SQL: SELECT name, id, storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:22:53,506 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name, id, storage
+               ^
+
+[SQL: SELECT name, id, storage]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:23:24,045 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT Ingredient.name 
+               ^
+
+[SQL: SELECT Ingredient.name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:23:44,573 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT "name" 
+               ^
+
+[SQL: SELECT "name" 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:24:47,641 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name, id, storage 
+               ^
+
+[SQL: SELECT name, id, storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:31:42,477 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name, id, storage 
+               ^
+
+[SQL: SELECT name, id, storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:32:14,159 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "ingredient_name" does not exist
+LINE 1: SELECT ingredient_name, ingredient_id, ingredient_storage 
+               ^
+
+[SQL: SELECT ingredient_name, ingredient_id, ingredient_storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:32:14,854 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "ingredient_name" does not exist
+LINE 1: SELECT ingredient_name, ingredient_id, ingredient_storage 
+               ^
+
+[SQL: SELECT ingredient_name, ingredient_id, ingredient_storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:32:55,626 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT ingredient.name, ingredient.id, ingredient.storage 
+               ^
+
+[SQL: SELECT ingredient.name, ingredient.id, ingredient.storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:32:56,383 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT ingredient.name, ingredient.id, ingredient.storage 
+               ^
+
+[SQL: SELECT ingredient.name, ingredient.id, ingredient.storage 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:35:35,232 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name 
+               ^
+
+[SQL: SELECT name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:35:36,240 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "name" does not exist
+LINE 1: SELECT name 
+               ^
+
+[SQL: SELECT name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:35:50,379 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT ingredient.name 
+               ^
+
+[SQL: SELECT ingredient.name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:35:55,952 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedColumn) column "ingredient_name" does not exist
+LINE 1: SELECT ingredient_name 
+               ^
+
+[SQL: SELECT ingredient_name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:38:20,454 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT Ingredient.name 
+               ^
+
+[SQL: SELECT Ingredient.name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:38:36,748 ERROR app.repositories.ingredients Thread-3 : there was a database error while searching ingredient(s) [error:(psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "ingredient"
+LINE 1: SELECT Ingredient.name 
+               ^
+
+[SQL: SELECT Ingredient.name 
+ LIMIT %(param_1)s OFFSET %(param_2)s]
+[parameters: {'param_1': 10, 'param_2': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:41:08,631 ERROR app.repositories.ingredients Thread-2 : there was a database error while searching ingredient(s) [error:'tuple' object has no attribute 'append']
+2021-10-16 20:47:27,287 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:with_entities() argument after * must be an iterable, not NoneType]
+2021-10-16 20:47:37,722 ERROR app.repositories.ingredients Thread-2 : there was a database error while getting ingredient [id:788][error:with_entities() argument after * must be an iterable, not NoneType]
+2021-10-16 20:47:42,107 ERROR app.repositories.ingredients Thread-3 : there was a database error while getting ingredient [id:788][error:with_entities() argument after * must be an iterable, not NoneType]
+2021-10-16 20:56:55,994 ERROR app.dao.recipes_dao Thread-2 : there was a database error getting recipes [error:(psycopg2.errors.UndefinedColumn) column "ingredients" does not exist
+LINE 1: ...ndly,meal_type,cook_time,wash_time,cook_technique,ingredient...
+                                                             ^
+
+[SQL: SELECT id,name,veggie_friendly,meal_type,cook_time,wash_time,cook_technique,ingredients,info,steps FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ('breakfast','lunch','dinner','snack','shake'))]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 20:56:55,994 ERROR app.repositories.recipes Thread-2 : there was an error getting recommendations from recipe dao [error:(psycopg2.errors.UndefinedColumn) column "ingredients" does not exist
+LINE 1: ...ndly,meal_type,cook_time,wash_time,cook_technique,ingredient...
+                                                             ^
+
+[SQL: SELECT id,name,veggie_friendly,meal_type,cook_time,wash_time,cook_technique,ingredients,info,steps FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ('breakfast','lunch','dinner','snack','shake'))]
+(Background on this error at: http://sqlalche.me/e/13/f405)]
+2021-10-16 21:59:11,081 ERROR app.repositories.recipes Thread-7 : there was a database error while searching recipes(s) [error:'NoneType' object is not iterable]
+2021-10-16 21:59:13,139 ERROR app.repositories.recipes Thread-8 : there was a database error while searching recipes(s) [error:'NoneType' object is not iterable]
+2021-10-16 21:59:51,568 ERROR app.validators.utils Thread-9 : there was an error parsing ids params [error:invalid literal for int() with base 10: 'be8e2b99-18c2-4c0a-960e-d8cea3f096a0']
+2021-10-16 22:00:59,084 ERROR app.validators.utils Thread-10 : there was an error parsing ids params [error:invalid literal for int() with base 10: 'be8e2b99-18c2-4c0a-960e-d8cea3f096a0']
+2021-10-16 22:01:05,463 ERROR app.repositories.recipes Thread-13 : there was a database error while searching recipes(s) [error:'NoneType' object is not iterable]
+2021-10-16 22:01:15,491 ERROR app.repositories.ingredients Thread-14 : there was a database error while searching ingredient(s) [error:'NoneType' object is not iterable]
+2021-10-16 22:01:38,598 ERROR app.repositories.recipes Thread-15 : there was a database error while searching recipes(s) [error:'NoneType' object is not iterable]
+2021-10-16 22:01:42,450 ERROR app.repositories.recipes Thread-16 : there was a database error while searching recipes(s) [error:'NoneType' object is not iterable]
+2021-10-16 22:02:45,163 ERROR app.repositories.recipes Thread-2 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
+2021-10-16 22:02:45,843 ERROR app.repositories.recipes Thread-3 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
+2021-10-17 00:37:14,666 ERROR app.validators.utils Thread-4 : there was an error parsing ids params [error:invalid literal for int() with base 10: 'h87']

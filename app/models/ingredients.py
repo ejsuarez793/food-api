@@ -3,12 +3,24 @@ from app import ma
 
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
-from sqlalchemy import func, not_
+from sqlalchemy import func
 
 from app.models.pagination import PaginationSchema
 
 VALID_FOOD_GROUPS = ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments', 'waters']
 VALID_STORAGE_TYPE = ['dry', 'refrigerated', 'frozen']
+
+# valid fields for 'fields' query param
+VALID_FIELDS = {
+    'id',
+    'name',
+    'food_group',
+    'veggie_friendly',
+    'storage',
+    'expiration_time',
+    'date_created',
+    'last_updated'
+}
 
 
 class Ingredient(db.Model):
@@ -23,16 +35,37 @@ class Ingredient(db.Model):
     last_updated = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())
 
     @staticmethod
-    def get_by_id(id):
-        return Ingredient.query.get(id)
+    def get_by_id(id, fields):
+        query = Ingredient.query
+
+        if fields is not None:
+            query = query.with_entities(*fields)
+
+        return query\
+            .filter(Ingredient.id == id)\
+            .first()
 
     @staticmethod
-    def multiget(ids):
-        return Ingredient.query.filter(Ingredient.id.in_(ids)).all()
+    def multiget(ids, fields):
+        query = Ingredient.query
+
+        if fields is not None:
+            query = query.with_entities(*fields)
+
+        return query\
+            .filter(Ingredient.id.in_(ids))\
+            .all()
 
     @staticmethod
     def search(params):
         query = Ingredient.query
+
+        # had to implement this 'with_entities' one diff than two methods above
+        entities_list = []
+        if params.fields is not None:
+            for field in params.fields:
+                entities_list.append(getattr(Ingredient, field))
+            query = query.with_entities(*tuple(entities_list))
 
         for f in params.filters:
             field = f['field']

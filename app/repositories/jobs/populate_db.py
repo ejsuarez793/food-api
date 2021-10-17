@@ -52,10 +52,6 @@ def __read_recipes_csv():
                         amount = splitted[1]
                         measure_unit = splitted[2]
                         optional = True if splitted[3] == 'opcional' else None
-                        if 'gratinado' in recipe['name']:
-                            print(splitted)
-                            print(splitted[3])
-                            print(splitted[3] == 'opcional')
 
                         ingredients.append({'ingredient_name': ingredient_name,
                                             'amount': amount,

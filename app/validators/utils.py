@@ -20,26 +20,28 @@ def validate_date_range(str_date_from: str, str_date_to: str):
         return None, None, error_msg
 
 
-def validate_ids(str_ids: str, max_multiget_lengt):
+def validate_ids(str_ids: str, int_ids: bool, max_multiget_length: int):
     try:
-        ids = [int(_id) for _id in str_ids.split(',')]
-        if len(ids) > max_multiget_lengt:
-            return None, f'max number of ids to search is {max_multiget_lengt} but {len(ids)} was given'
+        ids = [_id for _id in str_ids.split(',')]
+        if int_ids:
+            [int(_id) for _id in ids]  # validate correct int str
+        if len(ids) > max_multiget_length:
+            return None, f'max number of ids to search is {max_multiget_length} but {len(ids)} was given'
         return ids, None
     except Exception as e:
         log.error('there was an error parsing ids params [error:{}]'.format(str(e)))
-        error_msg = 'there was an error parsing \'ids\', ids must be integers'
+        error_msg = 'there was an error parsing \'ids\''
         return None, error_msg
 
 
-def validate_pagination_params(offset: str, limit: str):
+def validate_pagination_params(offset: str, limit: str, max_limit: int):
     try:
         offset = int(offset) if offset is not None else 0
         limit = int(limit) if limit is not None else 10
 
         # we do not raise error for bad limit and offset params, we adjust them
         offset = 0 if offset < 0 else offset
-        limit = 10 if limit <= 0 or limit > 10 else limit
+        limit = 10 if limit <= 0 or limit > max_limit else limit
         return offset, limit, None
     except Exception as e:
         log.error('there was an error parsing pagination params [error:{}]'.format(str(e)))
@@ -106,3 +108,15 @@ def validate_filters(request, valid_filters: Dict, filters_data_types: Dict):
                 errors[param] = f'filter for field \'{param}\' and operator \'{operator}\' is not supported or has an invalid value'
 
     return filters, errors
+
+
+def validate_fields(fields: str, valid_fields: Dict):
+
+    splitted_fields = fields.split(',')
+    errors = {}
+
+    for field in splitted_fields:
+        if field not in valid_fields:
+            errors['fields'] = f'field \'{field}\' in fields query params is not supported'
+
+    return splitted_fields, errors

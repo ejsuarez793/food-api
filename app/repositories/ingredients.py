@@ -9,37 +9,42 @@ from app.models.ingredients import IngredientSchema, Ingredient, IngredientPagin
 log = logging.getLogger(__name__)
 
 
-def get(id: int):
+def get(id: int, params: 'IngredientQuery'):
     try:
-        ingredient = Ingredient.get_by_id(id)
+        ingredient = Ingredient.get_by_id(id, params.fields)
     except Exception as e:
         log.error('there was a database error while getting ingredient [id:{}][error:{}]'.format(id, str(e)))
         return None, {'msg': 'there was and error while looking for ingredient', 'status_code': 500}
 
-    return IngredientSchema().dump(ingredient), None
+    return IngredientSchema(only=params.fields).dump(ingredient), None
 
 
-def multiget(ids: list):
+def multiget(ids: list, fields: list):
     try:
-        ingredients = Ingredient.multiget(ids)
+        ingredients = Ingredient.multiget(ids, fields)
     except Exception as e:
         log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
 
-    return IngredientSchema(many=True).dump(ingredients), None
+    return IngredientSchema(many=True, only=fields).dump(ingredients), None
 
 
-def search(params: 'IngredientSearchQuery'):
+def search(params: 'SearchQueryParam'):
 
     if params.ids is not None:
-        ingredients, error = multiget(params.ids)
+        ingredients, error = multiget(params.ids, params.fields)
         return ingredients, error
 
     try:
         result = Ingredient.search(params)
         res = {'paging': {'offset': params.offset, 'limit': params.limit},
                'results': result.items}
-        paginated_response = IngredientPaginationSchema().dump(res)  # Todo Instaciar siempre pagination Schema
+        # fields implementation to include only certain fields in response
+        only=None
+        if params.fields is not None:
+            only = [f'results.{field}' for field in params.fields]
+            only.append('paging')
+        paginated_response = IngredientPaginationSchema(only=only).dump(res)  # Todo Instaciar siempre pagination Schema
         return paginated_response, None
     except Exception as e:
         log.error(f'there was a database error while searching ingredient(s) [error:{str(e)}]')
