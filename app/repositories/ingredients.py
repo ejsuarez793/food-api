@@ -29,7 +29,7 @@ def multiget(ids: list, fields: list):
     return IngredientSchema(many=True, only=fields).dump(ingredients), None
 
 
-def search(params: 'IngredientSearchQuery'):
+def search(params: 'SearchQueryParam'):
 
     if params.ids is not None:
         ingredients, error = multiget(params.ids, params.fields)
@@ -40,8 +40,10 @@ def search(params: 'IngredientSearchQuery'):
         res = {'paging': {'offset': params.offset, 'limit': params.limit},
                'results': result.items}
         # fields implementation to include only certain fields in response
-        only = [f'results.{field}' for field in params.fields]
-        only.append('paging')
+        only=None
+        if params.fields is not None:
+            only = [f'results.{field}' for field in params.fields]
+            only.append('paging')
         paginated_response = IngredientPaginationSchema(only=only).dump(res)  # Todo Instaciar siempre pagination Schema
         return paginated_response, None
     except Exception as e:

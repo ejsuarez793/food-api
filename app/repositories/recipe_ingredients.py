@@ -11,11 +11,11 @@ from app.models.recipe_ingredients import RecipeIngredient, RecipeIngredientSche
 log = logging.getLogger(__name__)
 
 
-def get_recipe_with_ingredients(recipe_id):
+def get_recipe_with_ingredients(recipe_id, params):
     #ToDo: mejorar try catch, revisar como validar que exista la recipe y ver que pasa si no tiene ingredientes
     # ToDo (cont): si no tiene ingredientes no pasa nada :D
     try:
-        recipe = Recipe.get_by_id(recipe_id)
+        recipe = Recipe.get_by_id(recipe_id, params.fields)
     except SQLAlchemyError:
         log.error(f'there was a database error while looking recipe with ingredients [recipe:{recipe_id}]')
         traceback.print_exc()
@@ -31,8 +31,8 @@ def get_recipe_with_ingredients(recipe_id):
         traceback.print_exc()
         return None, {'msg': 'there was and error while looking for recipe ingredients', 'status_code': 500}
 
-    response = RecipeSchema().dump(recipe)
-    response['ingredients'] = IngredientSchema(many=True).dump(ingredients)
+    response = RecipeSchema(only=params.fields).dump(recipe)
+    response['ingredients'] = IngredientSchema(many=True, only=params.fields_ingredients).dump(ingredients)
 
     return response, None
 

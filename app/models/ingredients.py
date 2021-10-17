@@ -3,12 +3,24 @@ from app import ma
 
 from marshmallow import fields, EXCLUDE, validates_schema, ValidationError
 
-from sqlalchemy import func, not_
+from sqlalchemy import func
 
 from app.models.pagination import PaginationSchema
 
 VALID_FOOD_GROUPS = ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments', 'waters']
 VALID_STORAGE_TYPE = ['dry', 'refrigerated', 'frozen']
+
+# valid fields for 'fields' query param
+VALID_FIELDS = {
+    'id',
+    'name',
+    'food_group',
+    'veggie_friendly',
+    'storage',
+    'expiration_time',
+    'date_created',
+    'last_updated'
+}
 
 
 class Ingredient(db.Model):

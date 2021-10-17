@@ -3,7 +3,7 @@ from app import db
 
 log = logging.getLogger(__name__)
 
-COLUMNS = ['id', 'name', 'veggie_friendly', 'meal_type', 'cook_time', 'wash_time', 'cook_technique', 'ingredients', 'info', 'steps']
+COLUMNS = ['id', 'name', 'veggie_friendly', 'meal_type', 'cook_time', 'wash_time', 'cook_technique', 'info', 'steps']
 QUERY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type}))";
 QUERY_VEGGIE_ONLY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type})) AND veggie_friendly = true";
 

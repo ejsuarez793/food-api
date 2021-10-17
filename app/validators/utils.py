@@ -32,14 +32,14 @@ def validate_ids(str_ids: str, max_multiget_lengt):
         return None, error_msg
 
 
-def validate_pagination_params(offset: str, limit: str):
+def validate_pagination_params(offset: str, limit: str, max_limit: int):
     try:
         offset = int(offset) if offset is not None else 0
         limit = int(limit) if limit is not None else 10
 
         # we do not raise error for bad limit and offset params, we adjust them
         offset = 0 if offset < 0 else offset
-        limit = 10 if limit <= 0 or limit > 10 else limit
+        limit = 10 if limit <= 0 or limit > max_limit else limit
         return offset, limit, None
     except Exception as e:
         log.error('there was an error parsing pagination params [error:{}]'.format(str(e)))
