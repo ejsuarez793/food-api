@@ -22,6 +22,7 @@ class SearchQueryParam:
     asc: bool
     filters: List[Dict]
     fields: List[str]
+    fields_ingredients: List[str]
 
 
 class SearchQuery(Schema): ## Todo: ver diferencia de ma.Schema vs Schema
@@ -83,7 +84,7 @@ class SearchQueryParser(FlaskParser):
         sort_by = request.args.get('sort_by')
         asc = request.args.get('asc')
         fields = request.args.get('fields')
-        fields_ingredients = request.args.get('fields')
+        fields_ingredients = request.args.get('fields_ingredients')
 
         validated_params = {}
         errors = {}
@@ -131,5 +132,5 @@ class SearchQueryParser(FlaskParser):
         if errors:
             raise ValidationError(errors)
 
-        params = ['offset', 'limit', 'ids', 'sort_by', 'str_sort', 'asc', 'filters', 'fields']
+        params = ['offset', 'limit', 'ids', 'sort_by', 'str_sort', 'asc', 'filters', 'fields', 'fields_ingredients']
         return {param: validated_params[param] if param in validated_params else None for param in params}
