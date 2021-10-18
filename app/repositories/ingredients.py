@@ -1,6 +1,7 @@
 import logging
 import traceback
 
+from flask import jsonify
 from sqlalchemy.exc import SQLAlchemyError
 from marshmallow import ValidationError
 
@@ -17,29 +18,25 @@ log = logging.getLogger(__name__)
 def multiget(ids: list, fields: list):
     try:
         ingredients = Ingredient.multiget(ids, fields)
-    except Exception as e:
+    except SQLAlchemyError as e:
         log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
 
-    return IngredientSchema(many=True, only=fields).dump(ingredients), None
+    return IngredientSchema(many=True).dump(ingredients), None
 
 
 def search(params: 'SearchQueryParam'):
 
+    # ToDo: la respuesta del search cambia dependiendo de los parámetros (lista vs paginación) revisar si mover esto (?)
     if params.ids is not None:
         ingredients, error = multiget(params.ids, params.fields)
-        return ingredients, error
+        return jsonify(ingredients), error # Note this jsonify is necessary
 
     try:
         result = Ingredient.search(params)
         res = {'paging': {'offset': params.offset, 'limit': params.limit},
                'results': result.items}
-        # fields implementation to include only certain fields in response
-        only=None
-        if params.fields is not None:
-            only = [f'results.{field}' for field in params.fields]
-            only.append('paging')
-        paginated_response = IngredientPaginationSchema(only=only).dump(res)  # Todo Instaciar siempre pagination Schema
+        paginated_response = IngredientPaginationSchema().dump(res)  # Todo Instaciar siempre pagination Schema
         return paginated_response, None
     except Exception as e:
         log.error(f'there was a database error while searching ingredient(s) [error:{str(e)}]')
@@ -47,23 +44,25 @@ def search(params: 'SearchQueryParam'):
         return None, {'msg': 'there was an error searching ingredient(s)', 'status_code': 500}
 
 
-def create(data):
-    schema = IngredientSchema()
+def create_ingredient(data: dict):
+
     try:
+        schema = IngredientSchema()
         validated_data = schema.load(data)
         new_ingredient = Ingredient(**validated_data)
-    except ValidationError as e:
-        log.debug('there was an error validating ingredient: [{error}]'.format(error=str(e)))
-        return None, {'msg': 'there was an error validating ingredient', 'status_code': 400}
 
-    try:
         db.session.add(new_ingredient)
         db.session.commit()
-    except Exception as e:
-        log.debug('there was a database error creating ingredient', str(e))
-        return None, {'msg': 'there was an error creating ingredient', 'status_code': 500}
 
-    return schema.dump(new_ingredient), None
+        return schema.dump(new_ingredient), None
+    except ValidationError:
+        log.debug('there was an error validating ingredient')
+        traceback.print_exc()
+        return None, {'msg': 'there was an error validating ingredient', 'status_code': 400}
+    except SQLAlchemyError:
+        log.error('there was a database error creating ingredient')
+        traceback.print_exc()
+        return None, {'msg': 'there was an error creating ingredient', 'status_code': 500}
 
 
 """

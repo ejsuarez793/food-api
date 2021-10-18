@@ -22,18 +22,18 @@ search_query_parser = SearchQueryParser(valid_filters=VALID_FILTERS,
 
 fields_query_parser = SearchQueryParser(valid_fields=VALID_FIELDS_FOR_SEARCH)
 
-from app.models.recipes import RecipeSchema
-
 
 class Recipe(Resource):
 
+    @swag_from(spec_dict['recipe']['get'])
     @search_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
     def get(self, params: 'SearchQueryParam'):
         response, error = recipes.search(params)
         if error:
-            return error, error['status_code']
-        return response, 200
+            return make_response(error, error['status_code'])
+        return make_response(response, 200)
 
+    @swag_from(spec_dict['recipe']['post'])
     def post(self):
         json_data = request.get_json()
         response, err = recipes.create_recipe(json_data)

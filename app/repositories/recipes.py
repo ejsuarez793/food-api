@@ -2,6 +2,7 @@ import uuid
 import logging
 import traceback
 
+from flask import jsonify
 from sqlalchemy.exc import SQLAlchemyError
 from marshmallow.exceptions import ValidationError
 
@@ -29,25 +30,20 @@ def multiget(ids: list, fields: list):
         log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
 
-    return RecipeSchema(many=True, only=fields).dump(ingredients), None
+    return RecipeSchema(many=True).dump(ingredients), None
 
 
 def search(params: 'SearchQueryParam'):
-
+    # ToDo: la respuesta del search cambia dependiendo de los parámetros (lista vs paginación) revisar si mover esto (?)
     if params.ids is not None:
         recipes, error = multiget(params.ids, params.fields)
-        return recipes, error
+        return jsonify(recipes), error  # note that this jsonify is necessary
 
     try:
         result = Recipe.search(params)
         res = {'paging': {'offset': params.offset, 'limit': params.limit},
                'results': result.items}
-        # fields implementation to include only certain fields in response
-        only = None
-        if params.fields is not None:
-            only = [f'results.{field}' for field in params.fields]
-            only.append('paging')
-        paginated_response = RecipePaginationSchema(only=only).dump(res)
+        paginated_response = RecipePaginationSchema().dump(res)
         return paginated_response, None
     except Exception as e:
         log.error(f'there was a database error while searching recipes(s) [error:{str(e)}]')

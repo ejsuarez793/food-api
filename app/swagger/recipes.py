@@ -64,6 +64,138 @@ RECIPE = {
           }
         }
 
+PAGINATION = {
+    "type": "object",
+    "properties": {
+        "offset": {
+            "type": "integer",
+            "description": "offset of search"
+        },
+        "limit": {
+            "type": "integer",
+            "description": "limit of search"
+        },
+        "total": {
+            "type": "integer",
+            "description": "total results of search"
+        }
+    }
+}
+
+RECIPE_SEARCH = {
+    "type": "object",
+    "properties": {
+        "results": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Recipe"
+            }
+        },
+        "pagination": {
+            "type": "object",
+            "schema": {"$ref": "#/definitions/Pagination"}
+        }
+    }
+}
+
+recipe_get = {
+    "parameters": [
+        {
+            "name": "ids",
+            "in": "query",
+            "type": "str",
+            "description": "ids of the recipes to search separated by comma (max ids is 20). if set all other parameters are ignored",
+        },
+        {
+            "name": "fields",
+            "in": "query",
+            "type": "string",
+            "description": "fields needed in response separated by comma. e.g: id,name,veggie_friendly"
+        },
+        {
+            "name": "offset",
+            "in": "query",
+            "type": "integer",
+            "description": "offset for result pagination",
+            "default": "0"
+        },
+        {
+            "name": "limit",
+            "in": "query",
+            "type": "integer",
+            "description": "limit for result pagination (max_limit is 10)",
+            "default": "10"
+        },
+        {
+            "name": "sort_by",
+            "in": "query",
+            "type": "string",
+            "description": "field to sort by in search"
+        },
+        {
+            "name": "asc",
+            "in": "query",
+            "type": "boolean",
+            "description": "if true sorting will be ascending by \'sort_by\' field, false otherwise",
+            "default": "true"
+        }
+    ],
+
+    "definitions": {
+        "Ingredient": RECIPE,
+        "ErrorMsg": ERROR_MSG,
+        "Pagination": PAGINATION,
+        "RecipeSearch": RECIPE_SEARCH
+    },
+
+    "responses": {
+        "200": {
+            "description": "recipes list of search results (fields may be filtered)",
+            "type": "array",
+            "schema": {"$ref": "#/definitions/RecipeSearch"}
+        },
+        "500": {
+              "description": "server error message",
+              "schema": {"$ref": "#/definitions/ErrorMsg"}
+            }
+        }
+    }
+
+recipe_post = {
+    "consumes": ['application/json'],
+
+    "parameters": [
+        {
+            "name": "body",
+            "in": "body",
+            "required": "true",
+            "description": "recipe data",
+            "type": "object",
+            "schema": {"$ref": "#/definitions/Recipe"}
+        },
+    ],
+
+    "definitions": {
+        "Ingredient": RECIPE,
+        "ErrorMsg": ERROR_MSG
+    },
+
+    "responses": {
+        "200": {
+          "description": "the recipe newly created",
+          "schema": {"$ref": "#/definitions/Recipe"},
+        },
+        "400": {
+          "description": "validation error message",
+          "schema": {"$ref": "#/definitions/ErrorMsg"}
+        },
+        "500": {
+          "description": "server error message",
+          "schema": {"$ref": "#/definitions/ErrorMsg"}
+        }
+      }
+}
+
 recipe_by_id_get = {
       "parameters": [
           {
@@ -171,7 +303,10 @@ recipe_by_id_delete = {
 
 
 spec_dict = {
-  'recipe': {},
+  'recipe': {
+      'get': recipe_get,
+      'post': recipe_post
+  },
   'recipe_by_id': {
     'get': recipe_by_id_get,
     'delete': recipe_by_id_delete,

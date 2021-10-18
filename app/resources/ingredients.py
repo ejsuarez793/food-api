@@ -21,16 +21,18 @@ fields_query_parser = SearchQueryParser(valid_fields=VALID_FIELDS_FOR_SEARCH)
 
 class Ingredient(Resource):
 
+    @swag_from(spec_dict['ingredient']['get'])
     @search_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
     def get(self, params: 'SearchQueryParam'):
         response, error = ingredients.search(params)
         if error:
-            return error, error['status_code']
-        return response, 200
+            return make_response(error, error['status_code'])
+        return make_response(response, 200)
 
+    @swag_from(spec_dict['ingredient']['post'])
     def post(self):
         json_data = request.get_json()
-        response, err = ingredients.create(json_data)
+        response, err = ingredients.create_ingredient(json_data)
         if err:
             return make_response(err, err['status_code'])
         return make_response(response, 201)

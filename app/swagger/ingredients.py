@@ -52,6 +52,139 @@ INGREDIENT = {
           }
         }
 
+PAGINATION = {
+    "type": "object",
+    "properties": {
+        "offset": {
+            "type": "integer",
+            "description": "offset of search"
+        },
+        "limit": {
+            "type": "integer",
+            "description": "limit of search"
+        },
+        "total": {
+            "type": "integer",
+            "description": "total results of search"
+        }
+    }
+}
+
+INGREDIENT_SEARCH = {
+    "type": "object",
+    "properties": {
+        "results": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Ingredient"
+            }
+        },
+        "pagination": {
+            "type": "object",
+            "schema": {"$ref": "#/definitions/Pagination"}
+        }
+    }
+}
+
+
+ingredient_get = {
+    "parameters": [
+        {
+            "name": "ids",
+            "in": "query",
+            "type": "str",
+            "description": "ids of the ingredient to search separated by comma (max ids is 20). if set all other parameters are ignored",
+        },
+        {
+            "name": "fields",
+            "in": "query",
+            "type": "string",
+            "description": "fields needed in response separated by comma. e.g: id,name,storage"
+        },
+        {
+            "name": "offset",
+            "in": "query",
+            "type": "integer",
+            "description": "offset for result pagination",
+            "default": "0"
+        },
+        {
+            "name": "limit",
+            "in": "query",
+            "type": "integer",
+            "description": "limit for result pagination (max_limit is 10)",
+            "default": "10"
+        },
+        {
+            "name": "sort_by",
+            "in": "query",
+            "type": "string",
+            "description": "field to sort by in search"
+        },
+        {
+            "name": "asc",
+            "in": "query",
+            "type": "boolean",
+            "description": "if true sorting will be ascending by \'sort_by\' field, false otherwise",
+            "default": "true"
+        }
+    ],
+
+    "definitions": {
+        "Ingredient": INGREDIENT,
+        "ErrorMsg": ERROR_MSG,
+        "Pagination": PAGINATION,
+        "IngredientSearch": INGREDIENT_SEARCH
+    },
+
+    "responses": {
+        "200": {
+            "description": "ingredient list of search results (fields may be filtered)",
+            "type": "array",
+            "schema": {"$ref": "#/definitions/IngredientSearch"}
+        },
+        "500": {
+              "description": "Server error message",
+              "schema": {"$ref": "#/definitions/ErrorMsg"}
+            }
+        }
+    }
+
+ingredient_post = {
+    "consumes": ['application/json'],
+
+    "parameters": [
+        {
+            "name": "body",
+            "in": "body",
+            "required": "true",
+            "description": "ingredient data",
+            "type": "object",
+            "schema": {"$ref": "#/definitions/Ingredient"}
+        },
+    ],
+
+    "definitions": {
+        "Ingredient": INGREDIENT,
+        "ErrorMsg": ERROR_MSG
+    },
+
+    "responses": {
+        "200": {
+          "description": "the ingredient newly created",
+          "schema": {"$ref": "#/definitions/Ingredient"},
+        },
+        "400": {
+          "description": "validation error message",
+          "schema": {"$ref": "#/definitions/ErrorMsg"}
+        },
+        "500": {
+          "description": "server error message",
+          "schema": {"$ref": "#/definitions/ErrorMsg"}
+        }
+      }
+}
+
 ingredient_by_id_get = {
       "parameters": [
           {
@@ -120,15 +253,15 @@ ingredient_by_id_put = {
 
     "responses": {
         "200": {
-          "description": "The ingredient updated",
+          "description": "the ingredient updated",
           "schema": {"$ref": "#/definitions/Ingredient"},
         },
-        "404": {
-          "description": "Not found message",
+        "400": {
+          "description": "validation error message",
           "schema": {"$ref": "#/definitions/ErrorMsg"}
         },
         "500": {
-          "description": "Server error message",
+          "description": "server error message",
           "schema": {"$ref": "#/definitions/ErrorMsg"}
         }
       }
@@ -162,7 +295,10 @@ ingredient_by_id_delete = {
 }
 
 spec_dict = {
-  'ingredient': {},
+  'ingredient': {
+      'get': ingredient_get,
+      'post': ingredient_post
+  },
   'ingredient_by_id': {
     'get': ingredient_by_id_get,
     'put': ingredient_by_id_put,
