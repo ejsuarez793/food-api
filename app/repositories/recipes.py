@@ -27,7 +27,7 @@ def multiget(ids: list, fields: list):
     try:
         ingredients = Recipe.multiget(ids, fields)
     except Exception as e:
-        log.error('there was a database error while getting ingredients [ids:%s][error:%s]', ','.join(ids), str(e))
+        log.error('there was a database error while performing multiget on recipes [ids:%s][error:%s]', ','.join(ids), str(e))
         return None, {'msg': 'there was an error getting ingredients', 'status_code': 500}
 
     return RecipeSchema(many=True).dump(ingredients), None
@@ -45,30 +45,31 @@ def search(params: 'SearchQueryParam'):
                'results': result.items}
         paginated_response = RecipePaginationSchema().dump(res)
         return paginated_response, None
-    except Exception as e:
+    except SQLAlchemyError as e:
         log.error(f'there was a database error while searching recipes(s) [error:{str(e)}]')
         traceback.print_exc()
         return None, {'msg': 'there was an error searching recipes(s)', 'status_code': 500}
 
 
 def create_recipe(data):
-    recipe_schema = RecipeSchema()
+
     try:
+        recipe_schema = RecipeSchema()
         data['id'] = str(uuid.uuid4())
         validated_data = recipe_schema.load(data)
         new_recipe = Recipe(**validated_data)
-    except Exception as e:
-        log.debug('there was an error validating recipe: [{error}]'.format(error=str(e)))
-        return None, {'msg': 'there was an error validating recipe', 'status_code': 400}
 
-    try:
         db.session.add(new_recipe)
         db.session.commit()
-    except Exception as e:
-        log.error('there was an error creating recipe: [{error}]'.format(error=str(e)))
+        return recipe_schema.dump(new_recipe), None
+    except ValidationError:
+        log.debug('invalid recipe data') # ToDo: reenviar msg asignados en la validación
+        traceback.print_exc()
+        return None, {'msg': 'there was an error validating recipe', 'status_code': 400}
+    except SQLAlchemyError:
+        log.error('there was a databaser error while creating recipe')
+        traceback.print_exc()
         return None, {'msg': 'there was an error creating recipe', 'status_code': 500}
-
-    return recipe_schema.dump(new_recipe), None
 
 
 """
