@@ -46,17 +46,26 @@ class RecipeById(Resource):
 
     @fields_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
     @swag_from(spec_dict['recipe_by_id']['get'])
-    def get(self,  params: 'FieldsQueryParam', id: str):
-        return recipes.get_by_id(id, params)
+    def get(self,  params: 'SearchQueryParam', id: str):
+        response, error = recipes.get_recipe_by_id(id, params)
+        if error:
+            make_response(error, error['status_code'])
+        return make_response(response, 200)
 
     @swag_from(spec_dict['recipe_by_id']['put'])
     def put(self, id: str):
         json_data = request.get_json()
-        return recipes.update_recipe(id, json_data)
+        response, err = recipes.update_recipe(id, json_data)
+        if err:
+            return make_response(err, err['status_code'])
+        return make_response(response, 200)
 
     @swag_from(spec_dict['recipe_by_id']['delete'])
     def delete(self, id: str):
-        return recipes.delete_recipe(id), 204
+        response, error = recipes.delete_recipe(id)
+        if error:
+            make_response(error, error['status_code'])
+        return make_response(response, 204)
 
 
 class RecipeRecommendation(Resource):

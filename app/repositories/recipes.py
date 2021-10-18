@@ -1,6 +1,10 @@
 import uuid
 import logging
 import traceback
+
+from sqlalchemy.exc import SQLAlchemyError
+from marshmallow.exceptions import MarshmallowError, ValidationError
+
 from app.recommendations_algoritms.recommendation_algorithm import RecommendationAlgorithm
 from app.recommendations_algoritms.strategies.strategies import SimpleRecommendationStrategy
 
@@ -11,6 +15,11 @@ from app.dao import recipes_dao
 log = logging.getLogger(__name__)
 
 recommendation_algorithm = RecommendationAlgorithm(SimpleRecommendationStrategy())
+
+
+"""
+    RECOMMENDATIONS METHODS
+"""
 
 
 def multiget(ids: list, fields: list):
@@ -46,10 +55,6 @@ def search(params: 'SearchQueryParam'):
         return None, {'msg': 'there was an error searching recipes(s)', 'status_code': 500}
 
 
-def get_by_id(id: str, params):
-    return RecipeSchema().dump(Recipe.get_by_id(id, params.fields))
-
-
 def create_recipe(data):
     recipe_schema = RecipeSchema()
     try:
@@ -70,26 +75,61 @@ def create_recipe(data):
     return recipe_schema.dump(new_recipe), None
 
 
+"""
+    RECIPE BY ID METHODS
+"""
+
+
+def get_recipe_by_id(id: str, params):
+
+    try:
+        recipe = Recipe.get_by_id(id, params.fields)
+        return RecipeSchema().dump(recipe), None
+    except SQLAlchemyError:
+        log.error(f'there was a database error while getting recipe by id [id:{id}]')
+        traceback.print_exc()
+        return None, {'msg': 'there was an error getting recipe', 'status_code': 500}
+
+
 def update_recipe(id, data):
-    recipe = Recipe.get_by_id(id)
 
-    recipe.name = data['name']
-
-    db.session.add(recipe)
-    db.session.commit()
-
-    recipe_schema = RecipeSchema()
-    output = recipe_schema.dump(recipe)
-    return output
+    try:
+        recipe_schema = RecipeSchema()
+        validated_data = recipe_schema.load(data, partial=True)
+        recipe = Recipe.get_by_id(id)
+        for attribute in validated_data:
+            setattr(recipe, attribute, validated_data[attribute])
+        db.session.add(recipe)
+        db.session.commit()
+        return recipe_schema.dump(recipe), None
+    except ValidationError:
+        log.error(f'there was an error while parsing data for recipe update [id:{id}]')
+        traceback.print_exc()
+        return None, {'msg': 'invalid data for recipe', 'status_code': 400}
+    except SQLAlchemyError:
+        log.error(f'there was a database error while updating recipe [id:{id}]')
+        traceback.print_exc()
+        return None, {'msg': 'there was an error while updating recipe', 'status_code': 500}
 
 
 def delete_recipe(id):
-    recipe = Recipe.query.filter(Recipe.id == id).first()
-    if not recipe:
-        return
 
-    Recipe.query.filter(Recipe.id == id).delete()
-    db.session.commit()
+    try:
+        recipe = Recipe.query.filter(Recipe.id == id).first()
+        if recipe:
+            Recipe.query.filter(Recipe.id == id).delete()
+            db.session.commit()
+    except SQLAlchemyError:
+        log.error(f'there was a database error while deleting recipe [id:{id}]')
+        traceback.print_exc()
+        return None, {'msg': 'there was an error deleting ingredient', 'status_code': 500}
+
+    return {}, None
+
+
+"""
+    RECOMMENDATIONS METHODS
+"""
 
 
 def get_recommendations(params):
