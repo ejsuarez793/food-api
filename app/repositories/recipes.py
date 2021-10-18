@@ -3,7 +3,7 @@ import logging
 import traceback
 
 from sqlalchemy.exc import SQLAlchemyError
-from marshmallow.exceptions import MarshmallowError, ValidationError
+from marshmallow.exceptions import ValidationError
 
 from app.recommendations_algoritms.recommendation_algorithm import RecommendationAlgorithm
 from app.recommendations_algoritms.strategies.strategies import SimpleRecommendationStrategy
@@ -18,7 +18,7 @@ recommendation_algorithm = RecommendationAlgorithm(SimpleRecommendationStrategy(
 
 
 """
-    RECOMMENDATIONS METHODS
+    RECIPES METHODS
 """
 
 
@@ -80,7 +80,7 @@ def create_recipe(data):
 """
 
 
-def get_recipe_by_id(id: str, params):
+def get_recipe_by_id(id: str, params: 'SearchQueryParam'):
 
     try:
         recipe = Recipe.get_by_id(id, params.fields)
@@ -91,7 +91,7 @@ def get_recipe_by_id(id: str, params):
         return None, {'msg': 'there was an error getting recipe', 'status_code': 500}
 
 
-def update_recipe(id, data):
+def update_recipe(id: str, data: dict):
 
     try:
         recipe_schema = RecipeSchema()

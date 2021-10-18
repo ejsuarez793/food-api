@@ -44,8 +44,8 @@ class Recipe(Resource):
 
 class RecipeById(Resource):
 
-    @fields_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
     @swag_from(spec_dict['recipe_by_id']['get'])
+    @fields_query_parser.use_args(SearchQuery(unknown=RAISE), location='query')
     def get(self,  params: 'SearchQueryParam', id: str):
         response, error = recipes.get_recipe_by_id(id, params)
         if error:
