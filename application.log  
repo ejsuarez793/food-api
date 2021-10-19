@@ -2728,3 +2728,21 @@ LINE 1: ...ndly,meal_type,cook_time,wash_time,cook_technique,ingredient...
 2021-10-16 22:02:45,163 ERROR app.repositories.recipes Thread-2 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
 2021-10-16 22:02:45,843 ERROR app.repositories.recipes Thread-3 : there was a database error while searching recipes(s) [error:local variable 'only' referenced before assignment]
 2021-10-17 00:37:14,666 ERROR app.validators.utils Thread-4 : there was an error parsing ids params [error:invalid literal for int() with base 10: 'h87']
+2021-10-17 15:40:59,526 DEBUG app.repositories.recipes Thread-4 : there was an error validating recipe: ['NoneType' object does not support item assignment]
+2021-10-17 23:06:06,540 ERROR app.repositories.recipes Thread-2 : there was an error while parsing data for recipe update [id:f0637bd4-0667-4f4e-9da8-4029f08d2852]
+2021-10-17 23:18:11,137 INFO app.repositories.recipes Thread-4 : HERE
+2021-10-17 23:18:11,137 INFO app.repositories.recipes Thread-4 : {'name': 'caraotas blancas'}
+2021-10-17 23:20:34,322 INFO app.repositories.recipes Thread-2 : HERE
+2021-10-17 23:20:34,322 INFO app.repositories.recipes Thread-2 : {'name': 'caraotas blancas'}
+2021-10-17 23:22:59,542 INFO app.repositories.recipes Thread-2 : HERE
+2021-10-17 23:22:59,542 INFO app.repositories.recipes Thread-2 : {'name': 'caraotas blancas'}
+2021-10-17 23:23:04,799 INFO app.repositories.recipes Thread-3 : HERE
+2021-10-17 23:23:04,799 INFO app.repositories.recipes Thread-3 : {'name': 'caraotas negras'}
+2021-10-17 23:23:29,662 INFO app.repositories.recipes Thread-4 : HERE
+2021-10-17 23:23:29,663 INFO app.repositories.recipes Thread-4 : {'wash_time': 45, 'name': 'caraotas negras'}
+2021-10-17 23:28:04,969 ERROR app.repositories.recipes Thread-2 : there was an error while parsing data for recipe update [id:f0637bd4-0667-4f4e-9da8-4029f08d2852]
+2021-10-17 23:28:24,434 ERROR app.repositories.recipes Thread-2 : there was a database error while updating recipe [id:f0637bd4-0667-4f4e-9da8-4029f08d2852]
+2021-10-17 23:29:16,975 ERROR app.repositories.recipes Thread-2 : there was a database error while updating recipe [id:f0637bd4-0667-4f4e-9da8-4029f08d2852]
+2021-10-18 21:20:42,144 DEBUG app.repositories.recipe_ingredients Thread-5 : there was an error validating recipe ingredients: ['str' object does not support item assignment]
+2021-10-18 21:20:58,818 DEBUG app.repositories.recipe_ingredients Thread-6 : there was an error validating recipe ingredients: ['str' object does not support item assignment]
+2021-10-18 21:21:43,071 DEBUG app.repositories.recipe_ingredients Thread-7 : there was an error validating recipe ingredients: [{0: {'measure_unit': ["ajo 'measure_unit' is not a valid supported measure_unit"]}}]

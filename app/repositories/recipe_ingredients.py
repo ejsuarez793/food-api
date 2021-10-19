@@ -1,19 +1,18 @@
 import logging
 import traceback
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
+from flask import jsonify
 
 from app import db
 
 from app.models.recipes import Recipe, RecipeSchema
-from app.models.ingredients import IngredientSchema
-from app.models.recipe_ingredients import RecipeIngredient, RecipeIngredientSchema
+from app.models.recipe_ingredients import RecipeIngredient, RecipeIngredientSchema, RecipeIngredientResponseSchema
 
 log = logging.getLogger(__name__)
 
 
 def get_recipe_with_ingredients(recipe_id, params):
-    #ToDo: mejorar try catch, revisar como validar que exista la recipe y ver que pasa si no tiene ingredientes
-    # ToDo (cont): si no tiene ingredientes no pasa nada :D
+
     try:
         recipe = Recipe.get_by_id(recipe_id, params.fields)
     except SQLAlchemyError:
@@ -32,16 +31,16 @@ def get_recipe_with_ingredients(recipe_id, params):
         return None, {'msg': 'there was and error while looking for recipe ingredients', 'status_code': 500}
 
     response = RecipeSchema(only=params.fields).dump(recipe)
-    response['ingredients'] = IngredientSchema(many=True, only=params.fields_ingredients).dump(ingredients)
+    response['ingredients'] = RecipeIngredientResponseSchema(many=True).dump(ingredients)
 
     return response, None
 
 
-def add_ingredients_to_recipe(recipe_id, json_data, validate_empty_ingredients):
+def add_ingredients_to_recipe(recipe_id, json_data):
     recipe_ingredient_schema = RecipeIngredientSchema(many=True)
 
     # check if recipe already has ingredients associated
-    try:
+    """try:
         if validate_empty_ingredients:
             ingredients_number = RecipeIngredient.get_ingredients_number(recipe_id)
             if ingredients_number != 0:
@@ -50,7 +49,7 @@ def add_ingredients_to_recipe(recipe_id, json_data, validate_empty_ingredients):
     except SQLAlchemyError:
         log.error('there was a database error counting number of ingredients for recipe: [{error}]'.format(error=str(e)))
         traceback.print_exc()
-        return None, {'msg': 'there was an error adding ingredients to recipe', 'status_code': 500}
+        return None, {'msg': 'there was an error adding ingredients to recipe', 'status_code': 500}"""
 
     # validate recipe_id
     try:
@@ -78,7 +77,7 @@ def add_ingredients_to_recipe(recipe_id, json_data, validate_empty_ingredients):
         log.error(f'there was a database error while bulk saving ingredients to recipe: [error:{str(e)}]')
         return None, {'msg': 'there was an error adding ingredients to recipe', 'status_code': 500}
 
-    return recipe_ingredient_schema.dump(new_recipe_ingredients), None
+    return jsonify(recipe_ingredient_schema.dump(new_recipe_ingredients)), None
 
 
 def delete_recipe_ingredients(recipe_id: str):
@@ -87,8 +86,21 @@ def delete_recipe_ingredients(recipe_id: str):
         RecipeIngredient.delete_all_ingredients(recipe_id)
         db.session.commit()
     except SQLAlchemyError as e:
-        log.error(f'there was a databae error while deleting recipe {recipe_id} ingredients')
+        log.error(f'there was a database error while deleting recipe {recipe_id} ingredients')
         traceback.print_exc()
         db.session.rollback()
         return None, {'msg': f'there was a database error while deleting ingredients for recipe {recipe_id}', 'status_code': 500}
+    return "", None
+
+
+def delete_recipe_ingredient(recipe_id: str, ingredient_id: str):
+
+    try:
+        RecipeIngredient.delete_ingredient(recipe_id, ingredient_id)
+        db.session.commit()
+    except SQLAlchemyError as e:
+        log.error(f'there was a database error while deleting recipe {recipe_id} ingredient {ingredient_id}')
+        traceback.print_exc()
+        db.session.rollback()
+        return None, {'msg': f'there was a database error while deleting ingredient {ingredient_id} for recipe {recipe_id}', 'status_code': 500}
     return "", None

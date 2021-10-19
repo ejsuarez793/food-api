@@ -123,15 +123,23 @@ class RecipeSchema(ma.SQLAlchemyAutoSchema):
     def validate_types_values(self, data, **kwargs):
         errors = {}
         not_supported_meals = []
-        for meal in data['meal_type']:
-            if meal not in VALID_MEAL_TYPES:  # Todo: dejar esto en una config lista duplicada en otro lado
-                not_supported_meals.append(meal)
+        partial = kwargs['partial']
+
+        if 'meal_type' in data:
+            for meal in data['meal_type']:
+                if meal not in VALID_MEAL_TYPES:  # Todo: dejar esto en una config lista duplicada en otro lado
+                    not_supported_meals.append(meal)
+        elif not partial:
+            errors['meal_type'] = ['attribute \'meal_type\' is a required']
 
         if not_supported_meals:
             errors['meal_type'] = ['{} \'meal_type\' is not a valid supported meal'.format(','.join(not_supported_meals))]
 
-        if data['cook_technique'] not in VALID_COOKING_TECHNIQUES:
-            errors['cook_technique'] = ['{} \'cook_technique\' is not a valid supported cooking technique'.format(data['cook_technique'])]
+        if 'cook_technique' in data:
+            if data['cook_technique'] not in VALID_COOKING_TECHNIQUES:
+                errors['cook_technique'] = ['{} \'cook_technique\' is not a valid supported cooking technique'.format(data['cook_technique'])]
+        elif not partial:
+            errors['cook_technique'] = ['attribute \'cook_technique\' is a required']
 
         if errors:
             raise ValidationError(errors)

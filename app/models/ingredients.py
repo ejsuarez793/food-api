@@ -35,7 +35,7 @@ class Ingredient(db.Model):
     last_updated = db.Column(db.TIMESTAMP, default=db.func.now(), onupdate=db.func.current_timestamp())
 
     @staticmethod
-    def get_by_id(id, fields):
+    def get_by_id(id, fields=None):
         query = Ingredient.query
 
         if fields is not None:
@@ -118,13 +118,20 @@ class IngredientSchema(ma.SQLAlchemyAutoSchema):
     @validates_schema
     def validate_food_group(self, data, **kwargs):
         errors = {}
+        partial = kwargs['partial']
         # ToDo: pasar esto a config
-        if data['food_group'] not in VALID_FOOD_GROUPS:
-            errors['food_group'] = ['{food_group} \'food_group\' is not a valid supported food group'.format(food_group=data['food_group'])]
+        if 'food_group' in data:
+            if data['food_group'] not in VALID_FOOD_GROUPS:
+                errors['food_group'] = ['{food_group} \'food_group\' is not a valid supported food group'.format(food_group=data['food_group'])]
+        elif not partial:
+            errors['food_group'] = ['attribute \'food_group\' is required']
 
         # ToDo: pasar esto a config
-        if data['storage'] not in VALID_STORAGE_TYPE:
-            errors['storage'] = ['{storage} \'storage\' is not a valid supported storage type'.format(storage=data['storage'])]
+        if 'storage' in data:
+            if data['storage'] not in VALID_STORAGE_TYPE:
+                errors['storage'] = ['{storage} \'storage\' is not a valid supported storage type'.format(storage=data['storage'])]
+        elif not partial:
+            errors['storage'] = ['attribute \'storage\' is required']
 
         if errors:
             raise ValidationError(errors)
