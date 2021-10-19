@@ -154,7 +154,7 @@ RECIPE_SEARCH = {
     }
 }
 
-RECIPE_BY_ID = {
+RECIPE_BY_ID_INGREDIENT = {
           "type": "object",
           "properties": {
             "id": {
@@ -269,7 +269,7 @@ DEFINITIONS = {
     "IngredientSearch": INGREDIENT_SEARCH,
     "Recipe": RECIPE,
     "RecipeSearch": RECIPE_SEARCH,
-    "RecipeById": RECIPE_BY_ID,
+    "RecipeByIdIngredient": RECIPE_BY_ID_INGREDIENT,
     "RecipeIngredient": RECIPE_INGREDIENT,
     "RecipeIngredientPut": RECIPE_INGREDIENT_PUT
 }
