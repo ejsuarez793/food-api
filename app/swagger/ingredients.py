@@ -1,142 +1,10 @@
-ERROR_MSG = {
-          "type": "object",
-          "properties": {
-            "msg": {
-              "type": "string",
-              "description": "Message of the error"
-            },
-            "status_code": {
-              "type": "integer",
-              "description": "status code returned in response"
-            }
-          }
-        }
-
-INGREDIENT = {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer",
-              "description": "The id of the ingredient"
-            },
-            "name": {
-              "type": "string",
-              "description": "The name of the ingredient"
-            },
-            "veggie_friendly": {
-              "type": "boolean",
-              "description": "if the ingredient is vegetarian friendly"
-            },
-            "food_group": {
-              "type": "string",
-              "enum": ['dairies', 'proteins', 'fruits', 'vegetables', 'fats', 'grains', 'sweets', 'condiments', 'waters'],
-              "description": "food group in which the ingredient falls in"
-            },
-            "storage": {
-              "type": "string",
-              "enum": ['dry', 'refrigerated', 'frozen'],
-              "description": "indicates how the ingredient will need to be storage"
-            },
-            "expiration_time": {
-              "type": "integer",
-              "description": "time of duration of the ingredient before it expires (in days)"
-            },
-            "date_created": {
-              "type": "string",
-              "description": "timestamp of recipe creation"
-            },
-            "last_updated": {
-              "type": "string",
-              "description": "timestamp of recipe last update"
-            }
-          }
-        }
-
-PAGINATION = {
-    "type": "object",
-    "properties": {
-        "offset": {
-            "type": "integer",
-            "description": "offset of search"
-        },
-        "limit": {
-            "type": "integer",
-            "description": "limit of search"
-        },
-        "total": {
-            "type": "integer",
-            "description": "total results of search"
-        }
-    }
-}
-
-INGREDIENT_SEARCH = {
-    "type": "object",
-    "properties": {
-        "results": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/Ingredient"
-            }
-        },
-        "pagination": {
-            "type": "object",
-            "schema": {"$ref": "#/definitions/Pagination"}
-        }
-    }
-}
-
+from app.swagger import DEFINITIONS, SEARCH_PARAMETERS, ERROR_RESPONSE
 
 ingredient_get = {
     "description": "endpoint for making ingredients multiget, and ingredient searchs (filters, sorting and pagination available)",
-    "parameters": [
-        {
-            "name": "ids",
-            "in": "query",
-            "type": "str",
-            "description": "ids of the ingredient to search separated by comma (max ids is 20). if set all other parameters are ignored",
-        },
-        {
-            "name": "fields",
-            "in": "query",
-            "type": "string",
-            "description": "fields needed in response separated by comma. e.g: id,name,storage"
-        },
-        {
-            "name": "offset",
-            "in": "query",
-            "type": "integer",
-            "description": "offset for result pagination",
-            "default": "0"
-        },
-        {
-            "name": "limit",
-            "in": "query",
-            "type": "integer",
-            "description": "limit for result pagination (max_limit is 10)",
-            "default": "10"
-        },
-        {
-            "name": "sort_by",
-            "in": "query",
-            "type": "string",
-            "description": "field to sort by in search"
-        },
-        {
-            "name": "asc",
-            "in": "query",
-            "type": "boolean",
-            "description": "if true sorting will be ascending by \'sort_by\' field, false otherwise",
-            "default": "true"
-        }
-    ],
+    "parameters": SEARCH_PARAMETERS,
 
-    "definitions": {
-        "Ingredient": INGREDIENT,
-        "ErrorMsg": ERROR_MSG,
-        "Pagination": PAGINATION,
-        "IngredientSearch": INGREDIENT_SEARCH
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "200": {
@@ -144,10 +12,7 @@ ingredient_get = {
             "type": "array",
             "schema": {"$ref": "#/definitions/IngredientSearch"}
         },
-        "500": {
-              "description": "Server error message",
-              "schema": {"$ref": "#/definitions/ErrorMsg"}
-            }
+        "500": ERROR_RESPONSE
         }
     }
 
@@ -166,24 +31,15 @@ ingredient_post = {
         },
     ],
 
-    "definitions": {
-        "Ingredient": INGREDIENT,
-        "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "200": {
           "description": "the ingredient newly created",
           "schema": {"$ref": "#/definitions/Ingredient"},
         },
-        "400": {
-          "description": "validation error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        },
-        "500": {
-          "description": "server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "400": ERROR_RESPONSE,
+        "500": ERROR_RESPONSE,
       }
 }
 
@@ -206,24 +62,15 @@ ingredient_by_id_get = {
           }
       ],
 
-      "definitions": {
-        "Ingredient": INGREDIENT,
-        "ErrorMsg": ERROR_MSG
-      },
+      "definitions": DEFINITIONS,
 
       "responses": {
         "200": {
           "description": "The ingredient (fields may be filtered)",
           "schema": {"$ref": "#/definitions/Ingredient"},
         },
-        "404": {
-          "description": "Not found message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        },
-        "500": {
-          "description": "Server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "404": ERROR_RESPONSE,
+        "500": ERROR_RESPONSE
       }
 }
 
@@ -250,24 +97,15 @@ ingredient_by_id_put = {
         },
     ],
 
-    "definitions": {
-        "Ingredient": INGREDIENT,
-        "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "200": {
           "description": "the ingredient updated",
           "schema": {"$ref": "#/definitions/Ingredient"},
         },
-        "400": {
-          "description": "validation error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        },
-        "500": {
-          "description": "server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "400": ERROR_RESPONSE,
+        "500": ERROR_RESPONSE
       }
 }
 
@@ -284,18 +122,13 @@ ingredient_by_id_delete = {
         }
     ],
 
-    "definitions": {
-      "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "204": {
           "description": "Empty body response",
         },
-        "500": {
-          "description": "Server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "500": ERROR_RESPONSE
       }
 }
 

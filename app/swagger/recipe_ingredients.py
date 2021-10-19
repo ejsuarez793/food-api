@@ -1,129 +1,10 @@
-ERROR_MSG = {
-          "type": "object",
-          "properties": {
-            "msg": {
-              "type": "string",
-              "description": "Message of the error"
-            },
-            "status_code": {
-              "type": "integer",
-              "description": "status code returned in response"
-            }
-          }
-        }
-
-RECIPE_BY_ID = {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "description": "The id of the recipe"
-            },
-            "name": {
-              "type": "string",
-              "description": "The name of the recipe"
-            },
-            "veggie_friendly": {
-              "type": "boolean",
-              "description": "if recipe is vegetarian friendly"
-            },
-            "meal_type": {
-              "type": "string",
-              "enum": ['lunch', 'dinner', 'breakfast', 'snack', 'shake'],
-              "description": "category of meal type in which recipes falls in"
-            },
-            "cook_technique": {
-              "type": "string",
-              "enum": ['batch_cooking', 'single_cooking'],
-              "description": "indicates if recipe is meant for one meal or for several meals in which case you need to storage it for latter days"
-            },
-            "wash_time": {
-              "type": "integer",
-              "description": "estimated time needed to wash all things used during the recipe making (in minutes)"
-            },
-            "cook_time": {
-              "type": "integer",
-              "description": "estimated time needed to cook recipe (in minutes)"
-            },
-            "date_created": {
-              "type": "string",
-              "description": "timestamp of recipe creation"
-            },
-            "last_updated": {
-              "type": "string",
-              "description": "timestamp of recipe last update"
-            },
-            "info": {
-              "type": "object",
-              "description": "information about the recipe"
-            },
-            "steps": {
-              "type": "object",
-              "description": "steps of the recipe"
-            },
-            "ingredients":{
-                "type": "array",
-                "description": "list of ingredients associated with recipe, with their amount and measure unit",
-                "items": {
-                    "$ref": "#/definitions/RecipeIngredient"
-                }
-            }
-          }
-        }
-
-RECIPE_INGREDIENT = {
-    "type": "object",
-    "properties": {
-        "id": {
-            "type": "integer",
-            "description": "the id of the ingredient"
-        },
-        "name": {
-            "type": "string",
-            "description": "The name of the ingredient"
-        },
-        "measure_unit": {
-          "type": "string",
-          "description": "measure unit for ingredient quantity"
-        },
-        "amount": {
-          "type": "string",
-          "description": "amount of ingredient to use in recipe"
-        },
-        "optional":{
-              "type": "boolean",
-              "description": "indicates if ingredient is optional or not"
-        }
-      }
-}
-
-RECIPE_INGREDIENT_PUT = {
-    "type": "object",
-    "properties": {
-        "ingredient_id": {
-            "type": "integer",
-            "description": "the id of the ingredient"
-        },
-        "measure_unit": {
-          "type": "string",
-          "description": "measure unit for ingredient quantity"
-        },
-        "amount": {
-          "type": "string",
-          "description": "amount of ingredient to use in recipe"
-        },
-        "optional":{
-              "type": "boolean",
-              "description": "indicates if ingredient is optional or not"
-        }
-      }
-}
+from app.swagger import DEFINITIONS, ERROR_RESPONSE
 
 recipe_by_id_ingredient_get = {
     "description": "endpoint to retrieve recipe and its ingredients by recipe id",
     "parameters": [
         {
-            "name": "id",
+            "name": "recipe_id",
             "in": "path",
             "type": "string",
             "required": "true",
@@ -138,21 +19,14 @@ recipe_by_id_ingredient_get = {
           }
     ],
 
-    "definitions": {
-        "RecipeByIdIngredient": RECIPE_BY_ID,
-        "ErrorMsg": ERROR_MSG,
-        "RecipeIngredient": RECIPE_INGREDIENT
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "200": {
             "description": "Recipe with its ingredients",
             "schema": {"$ref": "#/definitions/RecipeByIdIngredient"}
         },
-        "500": {
-              "description": "Server error message",
-              "schema": {"$ref": "#/definitions/ErrorMsg"}
-            }
+        "500": ERROR_RESPONSE
         }
     }
 
@@ -178,24 +52,15 @@ recipe_by_id_ingredient_put = {
         },
     ],
 
-    "definitions": {
-        "RecipeIngredientPut": RECIPE_INGREDIENT_PUT,
-        "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
 
     "responses": {
         "200": {
           "description": "the ingredient updated",
           "schema": {"$ref": "#/definitions/Ingredient"},
         },
-        "400": {
-          "description": "validation error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        },
-        "500": {
-          "description": "server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "400": ERROR_RESPONSE,
+        "500": ERROR_RESPONSE
       }
 }
 
@@ -210,17 +75,12 @@ recipe_by_id_ingredient_delete = {
             "description": "recipe id"
         }
     ],
-    "definitions": {
-      "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
     "responses": {
         "204": {
           "description": "Empty body response",
         },
-        "500": {
-          "description": "Server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "500": ERROR_RESPONSE
       }
 }
 
@@ -242,17 +102,12 @@ recipe_by_id_ingredient_by_id_delete = {
             "description": "ingredient id"
         }
     ],
-    "definitions": {
-      "ErrorMsg": ERROR_MSG
-    },
+    "definitions": DEFINITIONS,
     "responses": {
         "204": {
           "description": "empty body response",
         },
-        "500": {
-          "description": "server error message",
-          "schema": {"$ref": "#/definitions/ErrorMsg"}
-        }
+        "500": ERROR_RESPONSE
       }
 }
 
