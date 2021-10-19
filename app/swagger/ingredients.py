@@ -88,6 +88,7 @@ INGREDIENT_SEARCH = {
 
 
 ingredient_get = {
+    "description": "endpoint for making ingredients multiget, and ingredient searchs (filters, sorting and pagination available)",
     "parameters": [
         {
             "name": "ids",
@@ -151,6 +152,7 @@ ingredient_get = {
     }
 
 ingredient_post = {
+    "description": "endpoint for ingredient creation",
     "consumes": ['application/json'],
 
     "parameters": [
@@ -186,6 +188,7 @@ ingredient_post = {
 }
 
 ingredient_by_id_get = {
+    "description": "endpoint to retrieve ingredient by id",
       "parameters": [
           {
             "name": "ingredient_id",
@@ -226,6 +229,7 @@ ingredient_by_id_get = {
 
 
 ingredient_by_id_put = {
+    "description": "endpoint to update ingredient data",
     "consumes": ['application/json'],
 
     "parameters": [
@@ -269,6 +273,7 @@ ingredient_by_id_put = {
 
 
 ingredient_by_id_delete = {
+    "description": "endpoint to delete ingredient",
     "parameters": [
         {
             "name": "ingredient_id",

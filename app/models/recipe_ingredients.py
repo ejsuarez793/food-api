@@ -8,6 +8,7 @@ from app import db
 from app import ma
 
 from app.models.ingredients import Ingredient
+from app.models.recipes import Recipe
 
 VALID_MEASURE_UNITS = {
     'gr': 'grams',
@@ -30,18 +31,26 @@ class RecipeIngredient(db.Model):
     measure_unit = db.Column(db.String(), nullable=False)
     optional = db.Column(db.Boolean, default=False)
 
+
+    @staticmethod
+    def test(recipe_id: str):
+        query = db.session.query(Recipe, Ingredient, RecipeIngredient)  \
+            .join(RecipeIngredient, Recipe.id == RecipeIngredient.recipe_id)\
+            .join(Ingredient, Ingredient.id == RecipeIngredient.ingredient_id)\
+            .filter(Recipe.id == recipe_id)\
+
+
+        return query.with_entities(Recipe).all(), query.with_entities(Ingredient.name,  Ingredient.name, RecipeIngredient.amount, RecipeIngredient.measure_unit).all()
+
     @staticmethod
     def get_ingredients(recipe_id: str):
 
-        subquery = db.session.query(RecipeIngredient.ingredient_id).filter(RecipeIngredient.recipe_id == recipe_id).subquery()
-        query = db.session.query(Ingredient).filter(Ingredient.id.in_(subquery))
-        # ToDo: revisar el LEFT OUTER JOIN que hace acá (hace un join y un left outer join)
-        # ToDo, no me gusto que tuviera que proyectar RecipeIngredient o ambos, RecipeIngredient
-        """query = db.session.query(RecipeIngredient) \
-            .join(Ingredient)\
-            .filter(RecipeIngredient.recipe_id == recipe_id)"""
+        query = db.session.query(Recipe, Ingredient, RecipeIngredient) \
+                    .join(RecipeIngredient, Recipe.id == RecipeIngredient.recipe_id) \
+                    .join(Ingredient, Ingredient.id == RecipeIngredient.ingredient_id) \
+                    .filter(Recipe.id == recipe_id)
 
-        return query.all()
+        return query.with_entities(Ingredient.id, Ingredient.name, RecipeIngredient.amount, RecipeIngredient.measure_unit, RecipeIngredient.optional).all()
 
     @staticmethod
     def get_ingredients_number(recipe_id: str):
@@ -52,8 +61,16 @@ class RecipeIngredient(db.Model):
 
     @staticmethod
     def delete_all_ingredients(recipe_id: str):
-        db.session.query()
+        # db.session.query()
         query = RecipeIngredient.query.filter(RecipeIngredient.recipe_id == recipe_id)
+        return query.delete()
+
+    @staticmethod
+    def delete_ingredient(recipe_id: str, ingredient_id):
+        # db.session.query()
+        query = RecipeIngredient.query\
+            .filter(RecipeIngredient.recipe_id == recipe_id)\
+            .filter(RecipeIngredient.ingredient_id == ingredient_id)
         return query.delete()
 
 
@@ -76,3 +93,11 @@ class RecipeIngredientSchema(ma.SQLAlchemyAutoSchema):
 
         if errors:
             raise ValidationError(errors)
+
+
+class RecipeIngredientResponseSchema(ma.Schema):
+    id = fields.Integer()
+    name = fields.String()
+    amount = fields.Integer()
+    measure_unit = fields.String()
+    optional = fields.Boolean()

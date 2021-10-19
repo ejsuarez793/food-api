@@ -77,47 +77,47 @@ def create_recipe(data):
 """
 
 
-def get_recipe_by_id(id: str, params: 'SearchQueryParam'):
+def get_recipe_by_id(recipe_id: str, params: 'SearchQueryParam'):
 
     try:
-        recipe = Recipe.get_by_id(id, params.fields)
+        recipe = Recipe.get_by_id(recipe_id, params.fields)
         return RecipeSchema().dump(recipe), None
     except SQLAlchemyError:
-        log.error(f'there was a database error while getting recipe by id [id:{id}]')
+        log.error(f'there was a database error while getting recipe by id [recipe_id:{recipe_id}]')
         traceback.print_exc()
         return None, {'msg': 'there was an error getting recipe', 'status_code': 500}
 
 
-def update_recipe(id: str, data: dict):
+def update_recipe(recipe_id: str, data: dict):
 
     try:
         recipe_schema = RecipeSchema()
         validated_data = recipe_schema.load(data, partial=True)
-        recipe = Recipe.get_by_id(id)
+        recipe = Recipe.get_by_id(recipe_id)
         for attribute in validated_data:
             setattr(recipe, attribute, validated_data[attribute])
         db.session.add(recipe)
         db.session.commit()
         return recipe_schema.dump(recipe), None
     except ValidationError:
-        log.error(f'there was an error while parsing data for recipe update [id:{id}]')
+        log.error(f'there was an error while parsing data for recipe update [id:{recipe_id}]')
         traceback.print_exc()
         return None, {'msg': 'invalid data for recipe', 'status_code': 400}
     except SQLAlchemyError:
-        log.error(f'there was a database error while updating recipe [id:{id}]')
+        log.error(f'there was a database error while updating recipe [id:{recipe_id}]')
         traceback.print_exc()
         return None, {'msg': 'there was an error while updating recipe', 'status_code': 500}
 
 
-def delete_recipe(id):
+def delete_recipe(recipe_id: str):
 
     try:
-        recipe = Recipe.query.filter(Recipe.id == id).first()
+        recipe = Recipe.query.filter(Recipe.id == recipe_id).first()
         if recipe:
-            Recipe.query.filter(Recipe.id == id).delete()
+            Recipe.query.filter(Recipe.id == recipe_id).delete()
             db.session.commit()
     except SQLAlchemyError:
-        log.error(f'there was a database error while deleting recipe [id:{id}]')
+        log.error(f'there was a database error while deleting recipe [id:{recipe_id}]')
         traceback.print_exc()
         return None, {'msg': 'there was an error deleting ingredient', 'status_code': 500}
 

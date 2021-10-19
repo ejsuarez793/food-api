@@ -99,6 +99,7 @@ RECIPE_SEARCH = {
 }
 
 recipe_get = {
+    "description": "endpoint for making recipes multiget, and ingredient searchs (filters, sorting and pagination available)",
     "parameters": [
         {
             "name": "ids",
@@ -162,6 +163,7 @@ recipe_get = {
     }
 
 recipe_post = {
+    "description": "endpoint for recipe creation",
     "consumes": ['application/json'],
 
     "parameters": [
@@ -197,6 +199,7 @@ recipe_post = {
 }
 
 recipe_by_id_get = {
+    "description": "endpoint to retrieve recipe by id",
       "parameters": [
           {
             "name": "id",
@@ -236,6 +239,7 @@ recipe_by_id_get = {
 }
 
 recipe_by_id_put = {
+    "description": "endpoint to update recipe",
     "consumes": ['application/json'],
 
     "parameters": [{
@@ -277,6 +281,7 @@ recipe_by_id_put = {
 }
 
 recipe_by_id_delete = {
+    "description": "endpoint to delete recipe",
     "parameters": [{
       "name": "id",
       "in": "path",
