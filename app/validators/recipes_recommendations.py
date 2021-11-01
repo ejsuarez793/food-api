@@ -38,7 +38,6 @@ class RecipesRecommendationsQueryParser(FlaskParser):
         raise BadRequest(error.messages)
 
 
-
 def _validate_params(request, schema):
     try:
         days = int(request.args.get('days')) if request.args.get('days') is not None else 1
