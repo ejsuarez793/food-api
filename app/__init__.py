@@ -42,7 +42,7 @@ def create_app():
     swagger = Swagger(app)
 
 def connect_database(app: 'Flask'):
-    #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
     app.config['SQLALCHEMY_ECHO'] = True # para spam de sqlalchemy colocar el True
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
