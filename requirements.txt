@@ -17,7 +17,8 @@ marshmallow==3.8.0
 marshmallow-sqlalchemy==0.23.1
 packaging==20.4
 pluggy==0.13.1
-psycopg2-binary==2.8.6
+psycopg2 # --no-cache-dir
+psycopg2-binary # --no-cache-dir
 py==1.9.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
