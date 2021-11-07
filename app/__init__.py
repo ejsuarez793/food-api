@@ -41,6 +41,7 @@ def create_app():
     routes.register_routes(api)
     swagger = Swagger(app)
 
+
 def connect_database(app: 'Flask'):
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
