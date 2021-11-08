@@ -1,4 +1,4 @@
-from flask import request, make_response
+from flask import request, make_response, jsonify
 from flask_restx import Resource
 from marshmallow import RAISE
 from flasgger import swag_from
@@ -77,4 +77,4 @@ class RecipeRecommendation(Resource):
         response, err = recipes.get_recommendations(params)
         if err:
             return make_response(err, err['status_code'])  # ToDo: remove make response
-        return response
+        return make_response(jsonify(response), 200)
