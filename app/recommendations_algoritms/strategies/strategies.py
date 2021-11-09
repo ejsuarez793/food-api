@@ -24,6 +24,7 @@ Concrete Strategies implement the algorithm while following the base Strategy
 interface. The interface makes them interchangeable in the Context.
 """
 
+
 class SimpleRecommendationStrategy(Strategy):
     def do_algorithm(self, recipes: Dict, params: Dict) -> Dict:
         recommendation = {}

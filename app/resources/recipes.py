@@ -1,7 +1,8 @@
-from flask import request, make_response
+from flask import request, make_response, jsonify
 from flask_restx import Resource
 from marshmallow import RAISE
 from flasgger import swag_from
+from flask_cors import cross_origin
 
 from app.swagger.recipes import spec_dict
 from app.repositories import recipes
@@ -70,9 +71,10 @@ class RecipeById(Resource):
 
 class RecipeRecommendation(Resource):
 
+    @cross_origin()
     @rrqp.use_args(RecipesRecommendationsQueryParams(unknown=RAISE), location='query')
     def get(self, params: 'RecipesRecommendationsQueryParams'):
         response, err = recipes.get_recommendations(params)
         if err:
             return make_response(err, err['status_code'])  # ToDo: remove make response
-        return response
+        return make_response(jsonify(response), 200)

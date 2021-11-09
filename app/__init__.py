@@ -1,3 +1,4 @@
+import os
 from logging.config import fileConfig
 
 from flask import Flask
@@ -39,11 +40,20 @@ def create_app():
     connect_database(app)
     routes.register_routes(api)
     swagger = Swagger(app)
+    return app
+
 
 def connect_database(app: 'Flask'):
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
-    app.config['SQLALCHEMY_ECHO'] = True # para spam de sqlalchemy colocar el True
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    is_prod = os.environ.get('IS_HEROKU', False)
+    if is_prod:
+        app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+        app.config['SQLALCHEMY_ECHO'] = False
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    else:
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/FoodDB'
+        app.config['SQLALCHEMY_ECHO'] = True  # para spam de sqlalchemy colocar el True
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
     db.init_app(app)
     ma.init_app(app)
     return db

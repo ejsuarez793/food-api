@@ -1,3 +1,5 @@
+gunicorn==19.9.0
+flask-cors==3.0.10
 aniso8601==8.0.0
 attrs==20.2.0
 certifi==2020.6.20
@@ -17,7 +19,8 @@ marshmallow==3.8.0
 marshmallow-sqlalchemy==0.23.1
 packaging==20.4
 pluggy==0.13.1
-psycopg2-binary==2.8.6
+psycopg2 # --no-cache-dir
+psycopg2-binary # --no-cache-dir
 py==1.9.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
@@ -31,3 +34,4 @@ urllib3==1.25.10
 webargs==6.1.1
 Werkzeug==1.0.1
 flasgger
+
