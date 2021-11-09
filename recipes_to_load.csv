@@ -1,13 +1,21 @@
 name,veggie_friendly,meal_type,cook_time,wash_time,cook_technique,ingredients,info,steps
-Smoothie de frutos rojos,TRUE,shake,10,10,single_cooking,placeholder,placeholder,placeholder
-Omellete con pan tostado y aguacate,TRUE,breakfast/dinner,25,20,single_cooking,placeholder,placeholder,placeholder
-Desayuno criollo,FALSE,breakfast/dinner,60,45,single_cooking,placeholder,placeholder,placeholder
-Ensalada de frutas,TRUE,breakfast/snack,20,10,single_cooking,placeholder,placeholder,placeholder
-Cereal con granola,TRUE,breakfast,10,10,single_cooking,placeholder,placeholder,placeholder
-Croissant potente,FALSE,breakfast,30,20,single_cooking,placeholder,placeholder,placeholder
-Vegetales al horno,TRUE,lunch/dinner,75,20,batch_cooking,placeholder,placeholder,placeholder
-pollo al horno,FALSE,lunch/dinner,90,45,batch_cooking,placeholder,placeholder,placeholder
-caraotas negras,TRUE,breakfast/lunch/dinner,270,30,batch_cooking,placeholder,placeholder,placeholder
-arroz,TRUE,lunch/dinner,50,30,batch_cooking,placeholder,placeholder,placeholder
-french toast con nutella,TRUE,breakfast/snack,30,10,single_cooking,placeholder,placeholder,placeholder
-caldito de papas con arepa,TRUE,breakfast,60,30,single_cooking,placeholder,placeholder,placeholder
+Smoothie de frutos rojos,VERDADERO,shake,10,10,single_cooking,frutos rojos congelados;125;gr;|leche;150;ml;|banana;1;u;|miel;15;ml;|yogurt;120;gr;opcional|helado de vainilla;200;gr;opcional,placeholder,placeholder
+Omellete con pan tostado y palta,VERDADERO,breakfast/dinner,25,20,single_cooking,huevo;2;u;|pimenton;15;gr;|cebolla;15;gr;|tomate;15;gr;|jamon;10;gr;|queso amarillo;10;gr;|pan;2;u;|aguacate;1;u;,placeholder,placeholder
+Desayuno criollo,FALSO,breakfast/dinner,60,45,single_cooking,harina pan;250;gr;|carne vacio;125;gr;|queso blanco;50;gr;|caraota;1;kg;|huevo;2;u;|tomate;1;u;|cebolla;2;u;|pimenton;2;u;|ajo;4;u;,placeholder,placeholder
+Ensalada de frutas,VERDADERO,breakfast/snack,20,10,single_cooking,banana;0.5;u;|manzana;0.5;u;|pera;0.5;u;|fresa;0.5;u;|kiwi;0.5;u;,placeholder,placeholder
+Cereal con granola,VERDADERO,breakfast,10,10,single_cooking,cereal de maiz;100;gr;|leche;200;ml;|granola;50;gr;|banana;1;u;opcional|avena;50;gr;opcional,placeholder,placeholder
+Croissant potente,FALSO,breakfast,90,20,single_cooking,croissant;1;u;|huevo;2;u;|tocineta;2;u;|aguacate;1;u;,placeholder,placeholder
+Vegetales al horno,VERDADERO,lunch/dinner,75,20,batch_cooking,berenjena;1;u;|batata;2;u;|zanahoria;2;u;|auyama;150;gr;|zukini;2;u;|aceite de oliva;75;ml;,placeholder,placeholder
+pechuga de pollo a la plancha y al horno,FALSO,lunch/dinner,90,45,batch_cooking,pechuga de pollo;400;gr;|sal;10;gr;|adobo;10;gr;opcional|aceite de oliva;20;ml;|mostaza;20;gr;opcional|aji en polvo;10;gr;opcional,placeholder,placeholder
+caraotas negras,VERDADERO,breakfast/lunch/dinner,270,30,batch_cooking,caraota;1;kg;|cebolla;1;u;|pimenton;1;u;|ajo;3;u;,placeholder,placeholder
+arroz,VERDADERO,lunch/dinner,50,30,batch_cooking,arroz;250;gr;|cebolla;0.5;u;|pimenton;0.50;u;|ajo;2;u;,placeholder,placeholder
+french toast con nutella,VERDADERO,breakfast/snack,30,10,single_cooking,pan;2;u;|leche;50;ml;|huevo;1;u;|vainilla;2;ml;|polvo para hornear;2;gr;|azucar;25;gr;|nutella;50;gr;|fresa;5;u;|banana;1;u;|azucar impalpable;10;gr;|mantequilla;10;gr;,placeholder,placeholder
+caldito de papas con arepa,VERDADERO,breakfast,60,30,single_cooking,papa;2;u;|harina pan;125;gr;|queso blanco;50;gr;|cilantro;10;gr;|huevo;2;u;|cebollin;10;gr;|ajo;1;u;|mantequilla;10;gr;,placeholder,placeholder
+panquecas americanas saladas,FALSO,breakfast/dinner,60,30,single_cooking,harina de trigo;125;gr;|leche;75;ml;|huevo;1;u;|vainilla;5;ml;|polvo para hornear;5;ml;|azucar;30;gr;|mantequilla;20;gr;|aguacate;1;u;|tocineta;2;u;|jamon;20;gr;opcional|queso amarillo;20;gr;opcional|queso blanco;20;gr;opcional,placeholder,placeholder
+vegetales gratinados,VERDADERO,lunch/dinner,90,30,batch_cooking,brocoli;1;u;|berenjena;2;u;|papa;4;u;|salsa de tomate;500;ml;opcional|salsa bechamel;500;ml;opcional|queso mozzarella;300;gr;,placeholder,placeholder
+arvejas,VERDADERO,lunch/dinner,180,30,batch_cooking,arveja;1;kg;|pimenton;1;u;|cebolla;1;u;|ajo;1;u;|papa;2;u;|zanahoria;2;u;,placeholder,placeholder
+crema de auyama,VERDADERO,lunch/dinner,60,30,batch_cooking,auyama;500;gr;|pimenton;0.5;u;|cebolla;0.5;u;|ajo;2;u;|cilantro;10;gr;,placeholder,placeholder
+pure de papas con pollo a la plancha y ensalada,VERDADERO,lunch/dinner,45,20,single_cooking,papa;200;gr;|mantequilla;10;gr;|leche;10;ml;|ajo;1;u;|pechuga de pollo;200;gr;|aceite de oliva;10;ml;|tomate;1;u;|lechuga;0.25;u;|cebolla;0.5;u;,placeholder,placeholder
+Desayuno americano con palta,FALSO,breakfast/dinner,60,30,single_cooking,huevo;2;u;|pan;3;u;|tocineta;3;u;|aguacate;1;u;|mantequilla;10;gr;,placeholder,placeholder
+pasta con pollo en salsa blanca,FALSO,lunch/dinner,120,45,batch_cooking,pasta larga;150;gr;|pechuga de pollo;400;gr;|champiñon;200;gr;|cebollin;50;gr;|cebolla;1;u;|mantequilla;50;gr;|crema de leche;200;ml;|maiz en lata;100;gr;opcional|tocineta;150;gr;|harina de trigo;50;gr;|perejil;25;gr;opcional|nuez moscada;25;gr;opcional,placeholder,placeholder
+avena caliente,VERDADERO,breakfast/snack,45,20,batch_cooking,avena;200;gr;|leche;100;ml;|azucar;75;gr;|canela;10;gr;|vainilla;10;ml;|agua;200;ml;|clavitos de olor;10;u;,placeholder,placeholder
