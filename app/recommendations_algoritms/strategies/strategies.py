@@ -24,25 +24,24 @@ Concrete Strategies implement the algorithm while following the base Strategy
 interface. The interface makes them interchangeable in the Context.
 """
 
+
 class SimpleRecommendationStrategy(Strategy):
     def do_algorithm(self, recipes: Dict, params: Dict) -> Dict:
-        """recommendation = {}
+        recommendation = {}
         for day in range(0, params.days):
             day_key = 'day_' + str(day)
             recommendation[day_key] = {}
             for meal_type in params.meals:
-                recommendation[day_key][meal_type] = []"""
-
-        recommendations = []
+                recommendation[day_key][meal_type] = []
 
         seed(datetime.now())  # for choice function below
         for day in range(0, params.days):
-            # day_key = 'day_' + str(day)
+            day_key = 'day_' + str(day)
             for meal_type in params.meals:
                 if recipes[meal_type]:
                     enoughMealTypesForAllDays = len(recipes[meal_type]) >= params.days
                     index = randint(0, len(recipes[meal_type]) - 1)
-                    recommendations.append(recipes[meal_type].pop(index) if \
-                        enoughMealTypesForAllDays else recipes[meal_type][index])
+                    recommendation[day_key][meal_type] = recipes[meal_type].pop(index) if \
+                        enoughMealTypesForAllDays else recipes[meal_type][index]
 
-        return recommendations
+        return recommendation
