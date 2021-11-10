@@ -2,17 +2,13 @@ from flask import request, make_response, jsonify
 from flask_restx import Resource
 from marshmallow import RAISE
 from flasgger import swag_from
-from flask_cors import cross_origin
 
 from app.swagger.recipes import spec_dict
 from app.repositories import recipes
-from app.validators.recipes_recommendations import RecipesRecommendationsQueryParser, RecipesRecommendationsQueryParams
 from app.validators.searchs import SearchQuery, SearchQueryParser, SearchQueryParam
 
 from app.validators.recipes_search import VALID_FIELDS_FOR_SEARCH, \
     VALID_FILTERS, FILTERS_DATA_TYPES, STR_COLUMNS, NUMERIC_COLUMNS
-
-rrqp = RecipesRecommendationsQueryParser()
 
 search_query_parser = SearchQueryParser(valid_filters=VALID_FILTERS,
                                         filters_data_types=FILTERS_DATA_TYPES,
@@ -67,14 +63,3 @@ class RecipeById(Resource):
         if error:
             make_response(error, error['status_code'])
         return make_response(response, 204)
-
-
-class RecipeRecommendation(Resource):
-
-    @cross_origin()
-    @rrqp.use_args(RecipesRecommendationsQueryParams(unknown=RAISE), location='query')
-    def get(self, params: 'RecipesRecommendationsQueryParams'):
-        response, err = recipes.get_recommendations(params)
-        if err:
-            return make_response(err, err['status_code'])  # ToDo: remove make response
-        return make_response(jsonify(response), 200)

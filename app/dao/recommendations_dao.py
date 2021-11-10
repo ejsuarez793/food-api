@@ -8,7 +8,7 @@ QUERY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_typ
 QUERY_VEGGIE_ONLY = "SELECT {columns} FROM recipe WHERE id in(SELECT id FROM unnest(meal_type) mt WHERE mt in ({meals_type})) AND veggie_friendly = true";
 
 
-def get_recommendations(veggie_only: bool, meals: list):
+def get_recommendation(veggie_only: bool, meals: list):
     base_query = QUERY_VEGGIE_ONLY if veggie_only else QUERY
     query = base_query.format(columns=','.join(COLUMNS), meals_type=','.join(['\'{}\''.format(meal) for meal in meals]))
 

@@ -31,17 +31,6 @@ class RecipeIngredient(db.Model):
     measure_unit = db.Column(db.String(), nullable=False)
     optional = db.Column(db.Boolean, default=False)
 
-
-    @staticmethod
-    def test(recipe_id: str):
-        query = db.session.query(Recipe, Ingredient, RecipeIngredient)  \
-            .join(RecipeIngredient, Recipe.id == RecipeIngredient.recipe_id)\
-            .join(Ingredient, Ingredient.id == RecipeIngredient.ingredient_id)\
-            .filter(Recipe.id == recipe_id)\
-
-
-        return query.with_entities(Recipe).all(), query.with_entities(Ingredient.name,  Ingredient.name, RecipeIngredient.amount, RecipeIngredient.measure_unit).all()
-
     @staticmethod
     def get_ingredients(recipe_id: str):
 

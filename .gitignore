@@ -7,3 +7,4 @@ __pycache__/
 *.log
 *.csv
 *.log
+.DS_Store

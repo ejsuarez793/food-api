@@ -1,6 +1,13 @@
 from flask_restx import Api
 
-from app.resources import Recipe, RecipeById, Ingredient, IngredientById, RecipeRecommendation, RecipeByIdIngredient, RecipeByIdIngredientById
+from app.resources import Recipe, \
+    RecipeById, \
+    Ingredient, \
+    IngredientById, \
+    RecipeByIdIngredient, \
+    RecipeByIdIngredientById, \
+    Recommendation, \
+    Summary
 
 from app.resources.jobs.populate_db import PopulateDb
 
@@ -16,10 +23,12 @@ def register_routes(api: 'Api'):
 
     # recipes ingredients
     api.add_resource(RecipeByIdIngredient, '/recipes/<string:recipe_id>/ingredients', methods=['GET', 'POST', 'PUT', 'DELETE'])
-    api.add_resource(RecipeByIdIngredientById, '/recipes/<string:recipe_id>/ingredients/<int:ingredient_id>',methods=['DELETE'])
+    api.add_resource(RecipeByIdIngredientById, '/recipes/<string:recipe_id>/ingredients/<int:ingredient_id>', methods=['DELETE'])
 
     # recommendations
-    api.add_resource(RecipeRecommendation, '/recipes/recommendations', methods=['GET'])
+    api.add_resource(Recommendation, '/recommendations', methods=['GET'])
+
+    api.add_resource(Summary, '/summaries', methods=['POST'])
 
     # jobs
     api.add_resource(PopulateDb, '/jobs/populate_db', methods=['POST'])

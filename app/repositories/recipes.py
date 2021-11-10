@@ -6,16 +6,10 @@ from flask import jsonify
 from sqlalchemy.exc import SQLAlchemyError
 from marshmallow.exceptions import ValidationError
 
-from app.recommendations_algoritms.recommendation_algorithm import RecommendationAlgorithm
-from app.recommendations_algoritms.strategies.strategies import SimpleRecommendationStrategy
-
 from app import db
 from app.models.recipes import Recipe, RecipeSchema, RecipePaginationSchema
-from app.dao import recipes_dao
 
 log = logging.getLogger(__name__)
-
-recommendation_algorithm = RecommendationAlgorithm(SimpleRecommendationStrategy())
 
 
 """
@@ -122,24 +116,3 @@ def delete_recipe(recipe_id: str):
         return None, {'msg': 'there was an error deleting ingredient', 'status_code': 500}
 
     return {}, None
-
-
-"""
-    RECOMMENDATIONS METHODS
-"""
-
-
-def get_recommendations(params):
-    try:
-        recipes = recipes_dao.get_recommendations(params.veggie_only, params.meals)
-    except Exception as e:
-        log.error('there was an error getting recommendations from recipe dao [error:{}]'.format(str(e)))
-        return None, {'msg': 'there was an error getting recommendations', 'status_code': 500}
-
-    try:
-        response = recommendation_algorithm.do_recommendation(recipes, params)
-    except Exception as e:
-        log.error('there was an error preparing recommendation [error:{}]'.format(str(e)))
-        return None, {'msg': 'there was an error getting recommendations', 'status_code': 500}
-
-    return response, None
